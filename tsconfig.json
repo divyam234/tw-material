@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+
+    "allowJs": true,
+
+    "strict": true,
+
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts"]
+}
