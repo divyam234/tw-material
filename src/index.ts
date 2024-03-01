@@ -1,6 +1,5 @@
 import plugin from 'tailwindcss/plugin'
 import { borderColor, borderRadius } from './border'
-import { colors } from './color'
 import { createTheme } from './createTheme'
 import { opacity } from './opacity'
 import { boxShadow, boxShadowColor } from './shadow'
@@ -18,14 +17,16 @@ interface CustomColor {
 export type Options = {
   sourceColor: string
   customColors: CustomColor[]
+  defaultTheme?: "light" | "dark"
 }
 
-export const material3 = ({ sourceColor, customColors }: Options) => {
+export const material3 = ({ sourceColor, customColors,defaultTheme }: Options) => {
 
-  const m3Theme = createTheme({ sourceColor, customColors })
+  const m3Theme = createTheme({ sourceColor, customColors})
   
-  const resolved = resolveTwcConfig(colors(m3Theme), {
+  const resolved = resolveTwcConfig(m3Theme, {
     produceCssVariable: (colorName) => `--m3-${colorName}`,
+    defaultTheme,
   })
 
   return plugin(
@@ -37,15 +38,15 @@ export const material3 = ({ sourceColor, customColors }: Options) => {
     },
     {
       theme: {
-        borderRadius: borderRadius,
-        borderColor: borderColor,
-        boxShadow: boxShadow,
-        boxShadowColor: boxShadowColor,
-        fontSize: typography,
-        transitionDuration: transitionDuration,
-        transitionTimingFunction: transitionTimingFunction,
-        zIndex: zIndex,
         extend: {
+          borderRadius: borderRadius,
+          borderColor: borderColor,
+          boxShadow: boxShadow,
+          boxShadowColor: boxShadowColor,
+          fontSize: typography,
+          transitionDuration: transitionDuration,
+          transitionTimingFunction: transitionTimingFunction,
+          zIndex: zIndex,
           opacity: opacity,
           // @ts-ignore tailwind types are broken
           colors: resolved.colors,
