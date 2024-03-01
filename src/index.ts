@@ -1,6 +1,6 @@
 import plugin from 'tailwindcss/plugin'
 import { borderColor, borderRadius } from './border'
-import { createTheme } from './createTheme'
+import { colors, createTheme } from './createTheme'
 import { opacity } from './opacity'
 import { boxShadow, boxShadowColor } from './shadow'
 import { transitionDuration, transitionTimingFunction } from './transition'
@@ -24,7 +24,7 @@ export const material3 = ({ sourceColor, customColors,defaultTheme }: Options) =
 
   const m3Theme = createTheme({ sourceColor, customColors})
   
-  const resolved = resolveTwcConfig(m3Theme, {
+  const resolved = resolveTwcConfig(colors(m3Theme), {
     produceCssVariable: (colorName) => `--m3-${colorName}`,
     defaultTheme,
   })

@@ -98,6 +98,19 @@ const paletteColors = (palette: Record<string, TonalPalette>) => {
   return result
 }
 
+export const colors = (m3Theme: ReturnType<typeof createTheme>) => {
+  return {
+    light: {
+      ...m3Theme.schemes.light,
+      ...m3Theme.palettes
+    },
+    dark: {
+      ...m3Theme.schemes.dark,
+      ...m3Theme.palettes
+    },
+  }
+}
+
 export function createTheme({ sourceColor, customColors }: Omit<Options, 'defaultTheme'>) {
   const theme = generateTheme(
     argbFromHex(sourceColor),
