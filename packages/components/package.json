@@ -1,0 +1,120 @@
+{
+  "name": "tw-material3-react",
+  "version": "2.0.26",
+  "description": "Buttons allow users to perform actions and choose with a single tap.",
+  "author": "Junior Garcia <jrgarciadev@gmail.com>",
+  "homepage": "https://nextui.org",
+  "license": "MIT",
+  "sideEffects": false,
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "./button": {
+      "import": {
+        "types": "./dist/button/index.d.mts",
+        "default": "./dist/button/index.mjs"
+      }
+    },
+    "./menu": {
+      "import": {
+        "types": "./dist/menu/index.d.mts",
+        "default": "./dist/menu/index.mjs"
+      }
+    },
+    "./modal": {
+      "import": {
+        "types": "./dist/modal/index.d.mts",
+        "default": "./dist/modal/index.mjs"
+      }
+    },
+    "./popover": {
+      "import": {
+        "types": "./dist/popover/index.d.mts",
+        "default": "./dist/popover/index.mjs"
+      }
+    },
+    "./dropdown": {
+      "import": {
+        "types": "./dist/dropdown/index.d.mts",
+        "default": "./dist/dropdown/index.mjs"
+      }
+    },
+    "./box": {
+      "import": {
+        "types": "./dist/box/index.d.mts",
+        "default": "./dist/box/index.mjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextui-org/nextui.git",
+    "directory": "packages/components/button"
+  },
+  "bugs": {
+    "url": "https://github.com/nextui-org/nextui/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src"
+  },
+  "peerDependencies": {
+    "framer-motion": ">=4.0.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@nextui-org/aria-utils": "^2.0.15",
+    "@nextui-org/framer-transitions": "^2.0.15",
+    "@nextui-org/react-utils": "^2.0.10",
+    "@nextui-org/ripple": "^2.0.24 ",
+    "@nextui-org/shared-utils": "^2.0.4",
+    "@nextui-org/system": "^2.0.15",
+    "@nextui-org/use-aria-modal-overlay": "^2.0.6",
+    "@nextui-org/use-disclosure": "^2.0.6",
+    "@nextui-org/use-is-mobile": "^2.0.6",
+    "@nextui-org/use-safe-layout-effect": "^2.0.4",
+    "@react-aria/button": "^3.8.4",
+    "@react-aria/dialog": "^3.5.12",
+    "@react-aria/focus": "^3.14.3",
+    "@react-aria/interactions": "^3.19.1",
+    "@react-aria/listbox": "^3.11.5",
+    "@react-aria/menu": "^3.13.1",
+    "@react-aria/overlays": "^3.21.1",
+    "@react-aria/utils": "^3.21.1",
+    "@react-stately/list": "^3.10.3",
+    "@react-stately/menu": "^3.6.1",
+    "@react-stately/overlays": "^3.6.5",
+    "@react-stately/tree": "^3.7.6",
+    "@react-types/button": "^3.9.0",
+    "@react-types/overlays": "^3.8.5",
+    "react-aria-components": "^1.1.1",
+    "react-remove-scroll": "^2.5.7",
+    "tailwind-merge": "^2.2.1",
+    "tailwind-variants": "^0.2.0"
+  },
+  "devDependencies": {
+    "@nextui-org/shared-icons": "^2.0.6",
+    "@react-types/menu": "^3.9.7",
+    "@react-types/shared": "^3.22.1",
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-lorem-component": "^0.13.0"
+  }
+}
