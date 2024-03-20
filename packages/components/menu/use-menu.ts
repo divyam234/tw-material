@@ -1,23 +1,30 @@
-import type {
-  HTMLNextUIProps as HTMLProps,
-  PropGetter,
-} from '@nextui-org/system'
+import type { HTMLNextUIProps, PropGetter } from '@nextui-org/system'
+import type { AriaMenuProps } from '@react-types/menu'
 
+import { AriaMenuOptions, useMenu as useAriaMenu } from '@react-aria/menu'
 import { menu, MenuVariantProps, MenuSlots } from './theme'
+import { TreeState, useTreeState } from '@react-stately/tree'
 import { ReactRef, filterDOMProps, useDOMRef } from '@nextui-org/react-utils'
 import { ReactNode, useMemo } from 'react'
 import { clsx } from '@nextui-org/shared-utils'
 
-import type { SlotsToClasses } from '../utils'
-import { useMenu as useAriaMenu } from '@react-aria/menu'
-import { MenuContext, MenuProps, useContextProps } from 'react-aria-components'
-import type { AriaMenuProps } from '@react-types/menu'
+import { MenuItemProps } from './menu-item'
+import { SlotsToClasses } from '../utils'
 
-interface Props<T> extends MenuProps<T> {
+interface Props<T> {
   /**
    * Ref to the DOM node.
    */
-  ref?: ReactRef<HTMLDivElement | null>
+  ref?: ReactRef<HTMLElement | null>
+  /**
+   * The controlled state of the menu.
+   */
+  state?: TreeState<T>
+  /**
+   * The menu aria props.
+   */
+  menuProps?: AriaMenuOptions<T>
+
   /**
    * Whether to hide the check icon when the items are selected.
    * @default false
@@ -50,7 +57,7 @@ interface Props<T> extends MenuProps<T> {
    * Whether the menu should close when the menu item is selected.
    * @default true
    */
-  closeOnSelect?: boolean
+  closeOnSelect?: MenuItemProps['closeOnSelect']
   /**
    * Classname or List of classes to change the classNames of the element.
    * if `className` is passed, it will be added to the base slot.
@@ -64,14 +71,14 @@ interface Props<T> extends MenuProps<T> {
    * ```
    */
   classNames?: SlotsToClasses<MenuSlots>
-  // /**
-  //  * The menu items classNames.
-  //  */
-  // itemClasses?: MenuItemProps
+  /**
+   * The menu items classNames.
+   */
+  itemClasses?: MenuItemProps['classNames']
 }
 
 export type UseMenuProps<T = object> = Props<T> &
-  Omit<HTMLProps<'ul'>, keyof AriaMenuProps<T>> &
+  Omit<HTMLNextUIProps<'ul'>, keyof AriaMenuProps<T>> &
   AriaMenuProps<T> &
   MenuVariantProps
 
@@ -83,12 +90,15 @@ export function useMenu<T extends object>(props: UseMenuProps<T>) {
     disableAnimation,
     onAction,
     closeOnSelect,
+    itemClasses,
     className,
+    state: propState,
     topContent,
     bottomContent,
     hideEmptyContent = false,
     hideSelectedIcon = false,
     emptyContent = 'No items.',
+    menuProps: userMenuProps,
     onClose,
     classNames,
     ...otherProps
@@ -97,14 +107,16 @@ export function useMenu<T extends object>(props: UseMenuProps<T>) {
   const Component = as || 'ul'
 
   const domRef = useDOMRef(ref)
-
   const shouldFilterDOMProps = typeof Component === 'string'
 
+  const innerState = useTreeState({ ...otherProps, children })
+
+  const state = propState || innerState
+
+  const { menuProps } = useAriaMenu(otherProps, state, domRef)
+
   const slots = useMemo(() => menu({ className }), [className])
-
   const baseStyles = clsx(classNames?.base, className)
-
-  const res=  useContextProps(props, domRef, MenuContext)
 
   const getBaseProps: PropGetter = (props = {}) => {
     return {
@@ -122,6 +134,9 @@ export function useMenu<T extends object>(props: UseMenuProps<T>) {
     return {
       'data-slot': 'list',
       className: slots.list({ class: classNames?.list }),
+      ...userMenuProps,
+      ...menuProps,
+
       ...props,
     }
   }
@@ -136,6 +151,7 @@ export function useMenu<T extends object>(props: UseMenuProps<T>) {
 
   return {
     Component,
+    state,
     disableAnimation,
     onAction,
     onClose,

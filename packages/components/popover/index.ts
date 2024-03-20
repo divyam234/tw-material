@@ -12,6 +12,8 @@ export type {FreeSoloPopoverProps} from "./free-solo-popover";
 // export hooks
 export {usePopover} from "./use-popover";
 
+export {useFloatingPopover} from "../floating-popover/use-popover";
+
 // export context
 export {PopoverProvider, usePopoverContext} from "./popover-context";
 

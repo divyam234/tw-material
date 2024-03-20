@@ -1,4 +1,4 @@
-import {Button} from 'react-aria-components';
+import Button from './button'
 
 export type { ButtonProps } from './button'
 

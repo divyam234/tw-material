@@ -1,14 +1,14 @@
 {
-  "name": "tailwindcss-m3",
+  "name": "tw-material3",
   "version": "0.1.2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/divyam234/tailwindcss-m3-plugin.git"
+    "url": "git+https://github.com/divyam234/tw-material3.git"
   },
   "bugs": {
-    "url": "https://github.com/divyam234/tailwindcss-m3-plugin/issues"
+    "url": "https://github.com/divyam234/tw-material3/issues"
   },
-  "homepage": "https://github.com/divyam234/tailwindcss-m3-plugin#readme",
+  "homepage": "https://github.com/divyam234/tw-material3#readme",
   "scripts": {
     "build": "tsup",
     "format": "prettier --write src",

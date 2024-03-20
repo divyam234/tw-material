@@ -6,7 +6,7 @@ import { HTMLNextUIProps as HTMLProps, mapPropsVariants, PropGetter } from '@nex
 import { useFocusRing } from '@react-aria/focus'
 import { Node } from '@react-types/shared'
 import { filterDOMProps } from '@nextui-org/react-utils'
-import { TreeState } from '@react-stately/tree'
+import type{ TreeState } from '@react-stately/tree'
 import { clsx, dataAttr, removeEvents } from '@nextui-org/shared-utils'
 import { useMenuItem as useAriaMenuItem } from '@react-aria/menu'
 import { chain, mergeProps } from '@react-aria/utils'

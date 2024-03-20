@@ -1,4 +1,5 @@
 import {
+  forwardRef,
   type HTMLNextUIProps as HTMLProps,
   type PropGetter,
 } from '@nextui-org/system'
@@ -19,8 +20,8 @@ interface Props extends HTMLProps<'div'> {
 
 export type BoxProps = Props & PressProps
 
-export function Box(props: BoxProps) {
-  const { ref, as, children, onPress, className, ...otherProps } = props
+const  Box= forwardRef<'div',BoxProps>((props, ref) =>{
+  const {as, children, onPress, className, ...otherProps } = props
 
   const Component = as || 'div'
 
@@ -63,4 +64,6 @@ export function Box(props: BoxProps) {
       {children}
     </Component>
   )
-}
+})
+
+export default Box

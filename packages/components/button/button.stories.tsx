@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
 import { button } from './theme'
-import { ArrowUpRightFromSquare,Settings } from 'lucide-react'
+import { ArrowUpRightFromSquare} from 'lucide-react'
 import { Button, ButtonProps } from '.'
 
 export default {

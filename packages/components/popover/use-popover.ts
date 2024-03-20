@@ -145,7 +145,7 @@ export function usePopover(originalProps: UsePopoverProps) {
       }
     },
   })
-
+  
   const state = stateProp || innerState
 
   const {

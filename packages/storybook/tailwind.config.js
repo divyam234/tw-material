@@ -5,8 +5,8 @@ module.exports = {
   content: ['../components/**/*.{js,jsx,ts,tsx}'],
   plugins: [
     material3({
-      sourceColor: "#8c9eff",
-      customColors: [],
+      sourceColor: "#b8ff8c",
+      customColors: []
     }),
   ],
 }

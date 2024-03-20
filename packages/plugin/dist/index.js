@@ -2021,7 +2021,10 @@ var colors = (m3Theme) => {
     }
   };
 };
-function createTheme({ sourceColor, customColors }) {
+function createTheme({
+  sourceColor,
+  customColors
+}) {
   const theme = generateTheme(
     materialColorUtilities.argbFromHex(sourceColor),
     customColors.map((c) => ({
@@ -2034,12 +2037,20 @@ function createTheme({ sourceColor, customColors }) {
   theme.customColors.forEach((c) => {
     theme.schemes.light[c.color.name] = materialColorUtilities.hexFromArgb(c.light.color);
     theme.schemes.light[`on-${c.color.name}`] = materialColorUtilities.hexFromArgb(c.light.onColor);
-    theme.schemes.light[`${c.color.name}-container`] = materialColorUtilities.hexFromArgb(c.light.colorContainer);
-    theme.schemes.light[`on-${c.color.name}-container`] = materialColorUtilities.hexFromArgb(c.light.onColorContainer);
+    theme.schemes.light[`${c.color.name}-container`] = materialColorUtilities.hexFromArgb(
+      c.light.colorContainer
+    );
+    theme.schemes.light[`on-${c.color.name}-container`] = materialColorUtilities.hexFromArgb(
+      c.light.onColorContainer
+    );
     theme.schemes.dark[c.color.name] = materialColorUtilities.hexFromArgb(c.dark.color);
     theme.schemes.dark[`on-${c.color.name}`] = materialColorUtilities.hexFromArgb(c.dark.onColor);
-    theme.schemes.dark[`${c.color.name}-container`] = materialColorUtilities.hexFromArgb(c.dark.colorContainer);
-    theme.schemes.dark[`on-${c.color.name}-container`] = materialColorUtilities.hexFromArgb(c.dark.onColorContainer);
+    theme.schemes.dark[`${c.color.name}-container`] = materialColorUtilities.hexFromArgb(
+      c.dark.colorContainer
+    );
+    theme.schemes.dark[`on-${c.color.name}-container`] = materialColorUtilities.hexFromArgb(
+      c.dark.onColorContainer
+    );
     palettes[c.color.name] = materialColorUtilities.CorePalette.of(c.value).a1;
   });
   return {
@@ -2057,6 +2068,7 @@ var opacity = {
   focus: "0.12",
   pressed: "0.12",
   dragged: "0.16",
+  disabled: "0.38",
   1: "0.05",
   2: "0.08",
   3: "0.11",

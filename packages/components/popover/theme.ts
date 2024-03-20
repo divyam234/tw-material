@@ -17,7 +17,7 @@ const popover = tv({
       'before:w-2.5',
       'before:h-2.5',
       'before:rounded-sm',
-      'before:bg-surface-container',
+      'before:bg-surface-container-low',
       'before:shadow-small',
       // visibility
       'data-[arrow=true]:before:block',
@@ -69,8 +69,7 @@ const popover = tv({
       'subpixel-antialiased',
       'outline-none',
       'box-border',
-      'bg-surface-container',
-      'dark:bg-surface-container-low',
+      'bg-surface-container-low',
       'text-on-secondary-container',
     ],
     trigger: ['z-10'],

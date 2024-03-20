@@ -1,9 +1,6 @@
 {
   "name": "tw-material3-react",
-  "version": "2.0.26",
-  "description": "Buttons allow users to perform actions and choose with a single tap.",
-  "author": "Junior Garcia <jrgarciadev@gmail.com>",
-  "homepage": "https://nextui.org",
+  "version": "1.0.0",
   "license": "MIT",
   "sideEffects": false,
   "module": "dist/index.mjs",
@@ -50,6 +47,12 @@
         "types": "./dist/box/index.d.mts",
         "default": "./dist/box/index.mjs"
       }
+    },
+    "./breadcrumbs": {
+      "import": {
+        "types": "./dist/breadcrumbs/index.d.mts",
+        "default": "./dist/breadcrumbs/index.mjs"
+      }
     }
   },
   "files": [
@@ -89,6 +92,7 @@
     "@nextui-org/use-disclosure": "^2.0.6",
     "@nextui-org/use-is-mobile": "^2.0.6",
     "@nextui-org/use-safe-layout-effect": "^2.0.4",
+    "@react-aria/breadcrumbs": "^3.5.11",
     "@react-aria/button": "^3.8.4",
     "@react-aria/dialog": "^3.5.12",
     "@react-aria/focus": "^3.14.3",
@@ -101,15 +105,17 @@
     "@react-stately/menu": "^3.6.1",
     "@react-stately/overlays": "^3.6.5",
     "@react-stately/tree": "^3.7.6",
+    "@react-stately/utils": "^3.9.1",
     "@react-types/button": "^3.9.0",
     "@react-types/overlays": "^3.8.5",
-    "react-aria-components": "^1.1.1",
     "react-remove-scroll": "^2.5.7",
     "tailwind-merge": "^2.2.1",
     "tailwind-variants": "^0.2.0"
   },
   "devDependencies": {
+    "@floating-ui/react-dom": "^2.0.8",
     "@nextui-org/shared-icons": "^2.0.6",
+    "@react-types/breadcrumbs": "^3.7.3",
     "@react-types/menu": "^3.9.7",
     "@react-types/shared": "^3.22.1",
     "lucide-react": "^0.344.0",
