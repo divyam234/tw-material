@@ -63,18 +63,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nextui-org/nextui.git",
-    "directory": "packages/components/button"
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/components"
   },
   "bugs": {
-    "url": "https://github.com/nextui-org/nextui/issues"
+    "url": "https://github.com/divyam234/tw-material3/issues"
   },
   "scripts": {
     "build": "tsup",
     "dev": "pnpm build:fast --watch",
     "clean": "rimraf dist .turbo",
     "typecheck": "tsc --noEmit",
-    "build:fast": "tsup src"
+    "build:fast": "tsup src",
+    "prepublishOnly": "pnpm run build",
+    "publish": "pnpm publish --access public"
   },
   "peerDependencies": {
     "framer-motion": ">=4.0.0",
@@ -109,7 +111,6 @@
     "@react-types/button": "^3.9.0",
     "@react-types/overlays": "^3.8.5",
     "react-remove-scroll": "^2.5.7",
-    "tailwind-merge": "^2.2.1",
     "tailwind-variants": "^0.2.0"
   },
   "devDependencies": {
