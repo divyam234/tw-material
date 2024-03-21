@@ -6,7 +6,7 @@ import {AriaMenuOptions, useMenu as useAriaMenu} from "@react-aria/menu";
 import {TreeState, useTreeState} from "@react-stately/tree";
 import {ReactRef, filterDOMProps, useDOMRef} from "@tw-material/react-utils";
 import {ReactNode, useMemo} from "react";
-import {clsx} from "@tw-material/shared-utils";
+import {clsx} from "clsx";
 import {menu, MenuVariantProps, MenuSlots} from "@tw-material/theme";
 
 import {MenuItemProps} from "./menu-item";

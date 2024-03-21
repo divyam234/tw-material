@@ -4,7 +4,7 @@ import {useMenuSection} from "@react-aria/menu";
 import {useMemo, Key} from "react";
 import {forwardRef} from "@tw-material/system";
 import {mergeProps} from "@react-aria/utils";
-import {clsx} from "@tw-material/shared-utils";
+import {clsx} from "clsx";
 import {menuSection} from "@tw-material/theme";
 
 import MenuItem, {MenuItemProps} from "./menu-item";

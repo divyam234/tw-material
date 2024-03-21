@@ -1,12 +1,9 @@
 {
-  "name": "tw-material3-storybook",
-  "version": "2.0.0",
-  "description": "The NextUI react components storybook ",
+  "name": "@tw-material/storybook",
+  "version": "1.0.1",
   "keywords": [
     "storybook"
   ],
-  "author": "Junior Garcia <jrgarciadev@gmail.com>",
-  "homepage": "https://nextui.org",
   "license": "MIT",
   "main": "src/index.ts",
   "sideEffects": true,
@@ -18,11 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nextui-org/nextui.git",
-    "directory": "packages/components/storybook"
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/storybook"
   },
   "bugs": {
-    "url": "https://github.com/nextui-org/nextui/issues"
+    "url": "https://github.com/divyam234/tw-material3/issues"
   },
   "scripts": {
     "dev": "pnpm storybook dev -p 6006",
@@ -45,10 +42,10 @@
     "@storybook/react": "^8.0.2",
     "@storybook/react-vite": "^8.0.2",
     "@storybook/theming": "^8.0.2",
-    "autoprefixer": "^10.4.18",
-    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
     "storybook": "^8.0.2",
-    "storybook-dark-mode": "^3.0.3",
+    "storybook-dark-mode": "^4.0.1",
     "tailwindcss": "^3.4.1",
     "@tw-material/theme": "workspace:*",
     "vite": "^5.1.4"

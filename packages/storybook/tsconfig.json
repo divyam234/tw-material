@@ -1,0 +1,8 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "baseUrl": ".",
+    },
+    "include": [".storybook","tailwind.config.ts"],
+  }
+  

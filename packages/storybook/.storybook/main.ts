@@ -1,6 +1,8 @@
 import { dirname, join } from 'path'
 module.exports = {
-  stories: ['../../components/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: [
+    "../../components/**/stories/**/*.stories.@(js|jsx|ts|tsx)"
+  ],
   staticDirs: ['../public'],
   addons: [
     getAbsolutePath('@storybook/addon-a11y'),
