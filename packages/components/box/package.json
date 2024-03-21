@@ -1,0 +1,48 @@
+{
+  "name": "@tw-material/box",
+  "version": "1.0.0",
+  "keywords": [
+    "box"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/components/box"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "@tw-material/system": ">=1",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@tw-material/react-utils": "workspace:^",
+    "@tw-material/shared-utils": "workspace:^",
+    "@react-aria/interactions": "^3.21.1"
+  },
+  "devDependencies": {
+    "@tw-material/system": "workspace:^",
+    "clean-package": "2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

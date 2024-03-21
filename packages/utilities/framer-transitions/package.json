@@ -1,0 +1,48 @@
+{
+  "name": "@tw-material/framer-transitions",
+  "version": "1.0.0",
+  "description": "A set of framer motion transitions for react",
+  "keywords": [
+    "framer-transitions"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/utilities/framer-transitions"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "framer-motion": ">=4.0.0"
+  },
+  "dependencies": {
+    "@tw-material/system": "workspace:*",
+    "@tw-material/shared-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "clean-package": "2.2.0",
+    "framer-motion": "^11.0.18"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

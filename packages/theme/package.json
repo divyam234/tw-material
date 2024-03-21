@@ -1,0 +1,44 @@
+{
+  "name": "@tw-material/theme",
+  "version": "1.0.0",
+  "description": "The default theme for tw material components",
+  "homepage": "https://github.com/divyam234/tw-material3",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/core/theme"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "pnpm build:fast --watch",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "tailwindcss": "*"
+  },
+  "dependencies": {
+    "tailwind-variants": "^0.2.1",
+    "@material/material-color-utilities": "^0.2.7",
+    "tw-colors": "^3.3.1"
+  },
+  "devDependencies": {
+    "clean-package": "^2.2.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "clean-package": "../../clean-package.config.json"
+}

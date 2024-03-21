@@ -1,0 +1,48 @@
+{
+  "name": "@tw-material/react",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {
+    "@tw-material/system": "workspace:*",
+    "@tw-material/theme": "workspace:*",
+    "@tw-material/button": "workspace:*",
+    "@tw-material/popover": "workspace:*",
+    "@tw-material/dropdown": "workspace:*",
+    "@tw-material/modal": "workspace:*",
+    "@tw-material/menu": "workspace:*",
+    "@tw-material/ripple": "workspace:*",
+    "@tw-material/breadcrumbs": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "framer-motion": ">=4.0.0"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0"
+  },
+  "clean-package": "../../clean-package.config.json"
+}

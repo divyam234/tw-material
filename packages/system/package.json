@@ -1,0 +1,44 @@
+{
+  "name": "@tw-material/system",
+  "version": "1.0.0",
+  "keywords": [
+    "system"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/system"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "@tw-material/theme": ">=1",
+    "tailwind-variants": ">=0"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "tailwind-variants": "^0.2.1",
+    "@tw-material/theme": "workspace:*",
+    "@tw-material/react-utils": "workspace:^",
+    "clean-package": "2.2.0"
+  },
+  "clean-package": "../../clean-package.config.json"
+}

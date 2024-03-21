@@ -1,0 +1,61 @@
+{
+  "name": "@tw-material/dropdown",
+  "version": "1.0.0",
+  "keywords": [
+    "breadcrumbs"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/core/theme"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "@tw-material/system": ">=1",
+    "framer-motion": ">=4.0.0",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@tw-material/theme": ">=1"
+  },
+  "dependencies": {
+    "@tw-material/react-utils": "workspace:^",
+    "@tw-material/shared-utils": "workspace:^",
+    "@react-aria/button": "^3.9.3",
+    "@react-aria/focus": "^3.16.2",
+    "@react-aria/interactions": "^3.21.1",
+    "@react-aria/utils": "^3.23.2",
+    "@react-types/button": "^3.9.2",
+    "@react-types/shared": "^3.22.1",
+    "@nextui-org/shared-icons": "^2.0.6",
+    "@tw-material/menu":"workspace:^",
+    "@tw-material/popover":"workspace:^",
+    "clsx": "^2.1.0"
+  },
+  "devDependencies": {
+    "@tw-material/theme": "workspace:^",
+    "@tw-material/system": "workspace:^",
+    "clean-package": "2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@tw-material/button":"workspace:^"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

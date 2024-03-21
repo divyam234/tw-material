@@ -1,4 +1,4 @@
-const { material3} = require('tw-material3-plugin')
+const { material3} = require('@tw-material/theme')
 
 // /** @type {import('tailwindcss').Config} */
 module.exports = {

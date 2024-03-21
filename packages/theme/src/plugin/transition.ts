@@ -1,0 +1,31 @@
+export const transitionDuration = {
+  "short-1": "50ms",
+  "short-2": "100ms",
+  "short-3": "150ms",
+  "short-4": "200ms",
+  "medium-1": "250ms",
+  "medium-2": "300ms",
+  "medium-3": "350ms",
+  "medium-4": "400ms",
+  "long-1": "450ms",
+  "long-2": "500ms",
+  "long-3": "550ms",
+  "long-4": "600ms",
+  "extra-long-1": "700ms",
+  "extra-long-2": "800ms",
+  "extra-long-3": "900ms",
+  "extra-long-4": "1000ms",
+};
+
+export const transitionTimingFunction = {
+  linear: "cubic-bezier(0, 0, 1, 1)",
+  standard: "cubic-bezier(0.2, 0, 0, 1)",
+  "standard-accelerate": "cubic-bezier(0.3, 0, 1, 1)",
+  "standard-decelerate": "cubic-bezier(0, 0, 0, 1)",
+  emphasized: "cubic-bezier(0.2, 0, 0, 1)",
+  "emphasized-decelerate": "cubic-bezier(0.05, 0.7, 0.1, 1)",
+  "emphasized-accelerate": "cubic-bezier(0.3, 0, 0.8, 0.15)",
+  legacy: "cubic-bezier(0.4, 0, 0.2, 1)",
+  "legacy-decelerate": "cubic-bezier(0.0, 0, 0.2, 1)",
+  "legacy-accelerate": "cubic-bezier(0.4, 0, 1.0, 1)",
+};

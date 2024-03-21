@@ -1,0 +1,6 @@
+dist
+node_modules
+build
+pnpm-lock.yaml
+!.storybook
+!tsup.config.ts

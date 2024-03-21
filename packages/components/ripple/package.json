@@ -1,0 +1,51 @@
+{
+  "name": "@tw-material/ripple",
+  "version": "1.0.0",
+  "keywords": [
+    "ripple"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/components/popover"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "framer-motion": ">=4.0.0",
+    "@tw-material/theme": ">=1",
+    "@tw-material/system": ">=1"
+  },
+  "dependencies": {
+    "@tw-material/shared-utils": "workspace:^",
+    "@tw-material/react-utils": "workspace:^"
+  },
+  "devDependencies": {
+    "@tw-material/theme": "workspace:*",
+    "@tw-material/system": "workspace:*",
+    "clean-package": "2.2.0",
+    "framer-motion": "^11.0.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
