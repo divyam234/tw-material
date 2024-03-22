@@ -14,7 +14,7 @@ interface Props extends HTMLProps<"div"> {
 
 export type BoxProps = Props & PressProps;
 
-const Box = forwardRef<"div", BoxProps>((props, ref) => {
+export const Box = forwardRef<"div", BoxProps>((props, ref) => {
   const {as, children, onPress, className, ...otherProps} = props;
 
   const Component = as || "div";
@@ -52,5 +52,3 @@ const Box = forwardRef<"div", BoxProps>((props, ref) => {
     </Component>
   );
 });
-
-export default Box;
