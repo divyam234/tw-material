@@ -5,4 +5,5 @@ export default defineConfig({
   target: "es2019",
   format: ["esm"],
   treeshake: true,
+  dts: true,
 });

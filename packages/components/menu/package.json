@@ -44,6 +44,9 @@
     "@react-aria/utils": "^3.23.2",
     "@react-types/button": "^3.9.2",
     "@react-types/shared": "^3.22.1",
+    "@react-aria/menu": "^3.13.1",
+    "@react-stately/tree":"^3.7.6",
+    "@nextui-org/use-is-mobile": "^2.0.6",
     "@tw-material/aria-utils": "workspace:^",
     "@tw-material/framer-transitions": "workspace:^",
     "@nextui-org/use-safe-layout-effect": "^2.0.4",
@@ -51,6 +54,7 @@
     "@react-aria/overlays": "^3.21.1",
     "@react-stately/overlays": "^3.6.5",
     "@react-types/overlays": "^3.8.5",
+    "@react-types/menu": "^3.9.7",
     "react-remove-scroll": "^2.5.6",
     "@tw-material/button":"workspace:^",
     "clsx": "^2.1.0"

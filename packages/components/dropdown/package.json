@@ -45,6 +45,10 @@
     "@react-types/button": "^3.9.2",
     "@react-types/shared": "^3.22.1",
     "@nextui-org/shared-icons": "^2.0.6",
+    "@react-aria/menu": "^3.13.1",
+    "@react-stately/tree":"^3.7.6",
+    "@react-stately/menu":"^3.6.1",
+    "@react-types/menu":"^3.9.7",
     "@tw-material/menu":"workspace:^",
     "@tw-material/popover":"workspace:^",
     "clsx": "^2.1.0"

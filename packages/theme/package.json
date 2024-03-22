@@ -21,9 +21,7 @@
     "url": "https://github.com/divyam234/tw-material3/issues"
   },
   "scripts": {
-    "build": "tsup src --dts",
-    "build:fast": "tsup src",
-    "dev": "pnpm build:fast --watch",
+    "build": "tsup src",
     "typecheck": "tsc --noEmit",
     "prepack": "clean-package",
     "postpack": "clean-package restore"

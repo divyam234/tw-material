@@ -6,4 +6,5 @@ export default defineConfig({
   format: ["esm"],
   entry: ["src/index.ts"],
   treeshake: true,
+  dts: true,
 });

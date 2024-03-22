@@ -2,6 +2,10 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@tw-material/aria-utils": ["../../node_modules/@tw-material/aria-utils"],
+      "@react-types/shared": ["../../node_modules/@react-types/shared"]
+    }
   },
   "include": ["src/index.ts"],
 }
