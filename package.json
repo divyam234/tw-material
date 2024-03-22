@@ -1,6 +1,6 @@
 {
-  "name": "tw-material3",
-  "version": "0.1.2",
+  "name": "tw-material",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/divyam234/tw-material3.git"
@@ -9,9 +9,9 @@
     "url": "https://github.com/divyam234/tw-material3/issues"
   },
   "scripts": {
+    "build": "turbo build  --filter=!@tw-material/storybook",
     "version": "changeset version",
-    "release": "changeset publish",
-    "init":"changeset init"
+    "release": "changeset publish"
   },
   "homepage": "https://github.com/divyam234/tw-material3#readme",
   "devDependencies": {
@@ -46,7 +46,8 @@
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
     "@changesets/get-release-plan": "^4.0.0",
-    "@changesets/types": "^6.0.0"
+    "@changesets/types": "^6.0.0",
+    "turbo": "1.13.0"
   },
   "engines": {
     "node": ">=18.x",
