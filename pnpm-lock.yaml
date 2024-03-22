@@ -617,6 +617,9 @@ importers:
 
   packages/react:
     dependencies:
+      '@tw-material/box':
+        specifier: workspace:*
+        version: link:../components/box
       '@tw-material/breadcrumbs':
         specifier: workspace:*
         version: link:../components/breadcrumbs

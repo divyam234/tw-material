@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "src/index.ts",
   "sideEffects": false,
@@ -34,7 +34,8 @@
     "@tw-material/modal": "workspace:*",
     "@tw-material/menu": "workspace:*",
     "@tw-material/ripple": "workspace:*",
-    "@tw-material/breadcrumbs": "workspace:*"
+    "@tw-material/breadcrumbs": "workspace:*",
+    "@tw-material/box": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18",
