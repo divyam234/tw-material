@@ -1,9 +1,11 @@
+import type {PressProps} from "@react-aria/interactions";
+
 import {useDOMRef, filterDOMProps, ReactRef} from "@tw-material/react-utils";
 import {dataAttr} from "@tw-material/shared-utils";
 import {forwardRef, HTMLTwM3Props as HTMLProps, type PropGetter} from "@tw-material/system";
 import {useCallback} from "react";
 import {mergeProps} from "@react-aria/utils";
-import {useHover, usePress, type PressProps} from "@react-aria/interactions";
+import {useHover, usePress} from "@react-aria/interactions";
 
 interface Props extends HTMLProps<"div"> {
   /**
