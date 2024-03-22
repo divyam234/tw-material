@@ -1,13 +1,16 @@
 {
-  "remove": ["devDependencies","main"],
+  "remove": ["devDependencies"],
   "replace": {
+    "main": "dist/index.js",
     "module": "dist/index.mjs",
-    "types": "dist/index.d.mts",
+    "types": "dist/index.d.ts",
     "exports": {
       ".": {
-        "types": "./dist/index.d.mts",
-        "import": "./dist/index.mjs"
-      }
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.js"
+      },
+      "./package.json": "./package.json"
     }
   }
 }

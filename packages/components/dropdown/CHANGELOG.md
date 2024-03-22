@@ -1,4 +1,4 @@
-# @tw-material/box
+# @tw-material/dropdown
 
 ## 1.1.0
 
@@ -11,15 +11,5 @@
 - Updated dependencies []:
   - @tw-material/shared-utils@1.1.0
   - @tw-material/react-utils@1.1.0
-
-## 1.0.2
-
-### Patch Changes
-
-- update
-
-## 1.0.1
-
-### Patch Changes
-
-- fix exports
+  - @tw-material/popover@1.1.0
+  - @tw-material/menu@1.1.0

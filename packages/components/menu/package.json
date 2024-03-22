@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/menu",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "keywords": [
     "popover"
   ],
@@ -45,7 +45,7 @@
     "@react-types/button": "^3.9.2",
     "@react-types/shared": "^3.22.1",
     "@react-aria/menu": "^3.13.1",
-    "@react-stately/tree":"^3.7.6",
+    "@react-stately/tree": "^3.7.6",
     "@nextui-org/use-is-mobile": "^2.0.6",
     "@tw-material/aria-utils": "workspace:^",
     "@tw-material/framer-transitions": "workspace:^",
@@ -56,7 +56,7 @@
     "@react-types/overlays": "^3.8.5",
     "@react-types/menu": "^3.9.7",
     "react-remove-scroll": "^2.5.6",
-    "@tw-material/button":"workspace:^",
+    "@tw-material/button": "workspace:^",
     "clsx": "^2.1.0"
   },
   "devDependencies": {
@@ -66,7 +66,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "framer-motion": "^11.0.18",
-    "@tw-material/button":"workspace:^",
+    "@tw-material/button": "workspace:^",
     "@nextui-org/shared-icons": "^2.0.6"
   },
   "clean-package": "../../../clean-package.config.json"

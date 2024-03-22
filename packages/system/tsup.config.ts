@@ -3,7 +3,7 @@ import {defineConfig} from "tsup";
 export default defineConfig({
   clean: true,
   target: "es2019",
-  format: ["esm"],
+  format: ["esm", "cjs"],
   treeshake: true,
   dts: true,
 });

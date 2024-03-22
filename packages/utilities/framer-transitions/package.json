@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/framer-transitions",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A set of framer motion transitions for react",
   "keywords": [
     "framer-transitions"
