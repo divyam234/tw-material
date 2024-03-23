@@ -1,26 +1,20 @@
-import {tv as tvBase, type TV} from "tailwind-variants";
+import {tv as tvBase, type TV, ClassValue} from "tailwind-variants";
+import {extendTailwindMerge} from "tailwind-merge";
+import clsx from "clsx";
+
+import {opacity} from "../plugin/opacity";
+import {borderRadius} from "../plugin/border";
 
 const COMMON_UNITS = ["small", "medium", "large"];
 
-const opacityScaleKeys = [
-  "disabled",
-  "hover",
-  "focus",
-  "pressed",
-  "dragged",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-];
+const opacityKeys = Object.keys(opacity);
 
 export const twMergeConfig = {
-  "bg-opacity": [{"bg-opacity": opacityScaleKeys}],
-  "text-opacity": [{"text-opacity": opacityScaleKeys}],
+  "bg-opacity": [{"bg-opacity": opacityKeys}],
+  "text-opacity": [{"text-opacity": opacityKeys}],
   "border-radius": [
     {
-      radius: [...COMMON_UNITS, "full", "none", "extra-small", "extra-large"],
+      radius: Object.keys(borderRadius),
     },
   ],
   shadow: [{shadow: ["1", "2", "3", "4", "5"]}],
@@ -45,3 +39,13 @@ export const tv: TV = (options, config) =>
       },
     },
   });
+
+const extendedTwMerge = extendTailwindMerge({
+  extend: {
+    classGroups: twMergeConfig,
+  },
+});
+
+export function cn(...inputs: ClassValue[]) {
+  return extendedTwMerge(clsx(inputs));
+}
