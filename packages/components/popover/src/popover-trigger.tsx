@@ -26,7 +26,7 @@ const PopoverTrigger = forwardRef<"button", PopoverTriggerProps>((props, _) => {
   }, [children]);
 
   const {onPress, ...rest} = useMemo(() => {
-    return getTriggerProps(mergeProps(child.props, otherProps), child.ref);
+    return getTriggerProps(mergeProps(otherProps, child.props), child.ref);
   }, [getTriggerProps, child.props, otherProps, child.ref]);
 
   const [, triggerChildren] = pickChildren(children, Button);

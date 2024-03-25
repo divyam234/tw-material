@@ -8,3 +8,4 @@ export * from "@tw-material/menu";
 export * from "@tw-material/ripple";
 export * from "@tw-material/breadcrumbs";
 export * from "@tw-material/box";
+export * from "@tw-material/avatar";
