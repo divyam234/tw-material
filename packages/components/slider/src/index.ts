@@ -1,4 +1,5 @@
 import Slider from "./slider";
+import SliderThumb from "./slider-thumb";
 
 // export types
 export type {SliderProps} from "./slider";
@@ -8,4 +9,4 @@ export type {SliderValue, SliderStepMark, SliderRenderThumbProps} from "./use-sl
 export {useSlider} from "./use-slider";
 
 // export component
-export {Slider};
+export {Slider, SliderThumb};

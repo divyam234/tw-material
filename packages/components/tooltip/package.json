@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/tooltip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React Component for rendering dynamically positioned Tooltips",
   "keywords": [
     "tooltip"

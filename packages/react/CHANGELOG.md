@@ -1,5 +1,13 @@
 # @tw-material/react
 
+## 1.1.5
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/tooltip@1.0.2
+  - @tw-material/slider@1.0.2
+
 ## 1.1.4
 
 ### Patch Changes

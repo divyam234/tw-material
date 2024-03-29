@@ -1,5 +1,11 @@
 # @tw-material/tooltip
 
+## 1.0.2
+
+### Patch Changes
+
+- export SLiderthumb
+
 ## 1.0.1
 
 ### Patch Changes

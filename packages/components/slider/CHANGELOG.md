@@ -1,5 +1,13 @@
 # @tw-material/slider
 
+## 1.0.2
+
+### Patch Changes
+
+- export SLiderthumb
+- Updated dependencies
+  - @tw-material/tooltip@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes
