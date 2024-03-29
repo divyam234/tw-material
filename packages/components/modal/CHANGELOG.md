@@ -1,5 +1,11 @@
 # @tw-material/modal
 
+## 1.1.1
+
+### Patch Changes
+
+- 171c6ab: added slider and tooltip
+
 ## 1.1.0
 
 ### Minor Changes

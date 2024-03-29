@@ -1,9 +1,5 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    { "repo": "divyam234/tw-material" }
-  ],
   "commit": false,
   "fixed": [],
   "linked": [],

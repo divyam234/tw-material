@@ -1,5 +1,21 @@
 # @tw-material/react
 
+## 1.1.3
+
+### Patch Changes
+
+- Updated dependencies [171c6ab]
+  - @tw-material/popover@1.1.3
+  - @tw-material/ripple@1.1.1
+  - @tw-material/modal@1.1.1
+  - @tw-material/menu@1.1.3
+  - @tw-material/theme@1.1.3
+  - @tw-material/dropdown@1.1.3
+  - @tw-material/button@1.1.3
+  - @tw-material/avatar@1.0.0
+  - @tw-material/breadcrumbs@1.1.0
+  - @tw-material/system@1.1.0
+
 ## 1.1.2
 
 ### Patch Changes

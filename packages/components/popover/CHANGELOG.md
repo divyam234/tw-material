@@ -1,5 +1,12 @@
 # @tw-material/popover
 
+## 1.1.3
+
+### Patch Changes
+
+- 171c6ab: added slider and tooltip
+  - @tw-material/button@1.1.3
+
 ## 1.1.2
 
 ### Patch Changes
