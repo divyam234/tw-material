@@ -1,5 +1,11 @@
 # @tw-material/react
 
+## 1.1.4
+
+### Patch Changes
+
+- update
+
 ## 1.1.3
 
 ### Patch Changes

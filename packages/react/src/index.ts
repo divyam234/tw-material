@@ -9,3 +9,5 @@ export * from "@tw-material/ripple";
 export * from "@tw-material/breadcrumbs";
 export * from "@tw-material/box";
 export * from "@tw-material/avatar";
+export * from "@tw-material/tooltip";
+export * from "@tw-material/slider";
