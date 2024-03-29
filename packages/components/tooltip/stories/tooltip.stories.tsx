@@ -1,0 +1,358 @@
+import React from "react";
+import {Meta} from "@storybook/react";
+import {popover} from "@tw-material/theme";
+import {Button} from "@tw-material/button";
+
+import {Tooltip, TooltipProps} from "../src";
+
+export default {
+  title: "Components/Tooltip",
+  component: Tooltip,
+  argTypes: {
+    size: {
+      control: {
+        type: "select",
+      },
+      options: ["sm", "md", "lg"],
+    },
+    color: {
+      control: {
+        type: "select",
+      },
+      options: ["default", "foreground", "primary", "secondary", "success", "warning", "danger"],
+    },
+    radius: {
+      control: {
+        type: "select",
+      },
+      options: ["none", "sm", "md", "lg", "full"],
+    },
+    showArrow: {
+      control: {
+        type: "boolean",
+      },
+    },
+    placement: {
+      control: {
+        type: "select",
+      },
+      options: [
+        "top",
+        "bottom",
+        "right",
+        "left",
+        "top-start",
+        "top-end",
+        "bottom-start",
+        "bottom-end",
+        "left-start",
+        "left-end",
+        "right-start",
+        "right-end",
+      ],
+    },
+    delay: {
+      control: {
+        type: "number",
+      },
+    },
+    offset: {
+      control: {
+        type: "number",
+      },
+    },
+    defaultOpen: {
+      control: {
+        type: "boolean",
+      },
+    },
+    isDisabled: {
+      control: {
+        type: "boolean",
+      },
+    },
+    disableAnimation: {
+      control: {
+        type: "boolean",
+      },
+    },
+    children: {
+      control: {
+        disable: true,
+      },
+    },
+  },
+  decorators: [
+    (Story) => (
+      <div className="flex items-center justify-center w-screen h-screen">
+        <Story />
+      </div>
+    ),
+  ],
+} as Meta<typeof Tooltip>;
+
+const defaultProps = {
+  ...popover.defaultVariants,
+  placement: "top",
+  delay: 0,
+  offset: 7,
+  defaultOpen: false,
+  isDisabled: false,
+  disableAnimation: false,
+  content: "I am a tooltip",
+  children: <Button>Hover me</Button>,
+};
+
+const DelayTemplate = (args: TooltipProps) => (
+  <div className="flex gap-2">
+    <Tooltip {...args} content="Tooltip 1" delay={1000}>
+      <Button variant="text">Delay Open (1000ms)</Button>
+    </Tooltip>
+    <Tooltip {...args} closeDelay={2000} content="Tooltip 2">
+      <Button variant="text">Delay Close (2000ms)</Button>
+    </Tooltip>
+  </div>
+);
+
+const OpenChangeTemplate = (args: TooltipProps) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <div className="flex flex-col gap-2">
+      <Tooltip {...args} onOpenChange={(open) => setIsOpen(open)}>
+        <Button>Hover me</Button>
+      </Tooltip>
+      <p className="text-sm">isOpen: {isOpen ? "true" : "false"}</p>
+    </div>
+  );
+};
+
+const OffsetTemplate = (args: TooltipProps) => (
+  <div className="flex gap-2">
+    <Tooltip {...args} content="Tooltip 1">
+      <Button variant="text">Default offset (7)</Button>
+    </Tooltip>
+    <Tooltip {...args} content="Tooltip 2" offset={15}>
+      <Button variant="text">15 offset</Button>
+    </Tooltip>
+    <Tooltip {...args} content="Tooltip 3" offset={-7}>
+      <Button variant="text">-7 offset</Button>
+    </Tooltip>
+  </div>
+);
+
+const MultipleTemplate = (args: TooltipProps) => (
+  <div className="flex gap-2">
+    <Tooltip {...args} content="Tooltip 1" delay={1000}>
+      <Button>Hover me (delay 1000ms)</Button>
+    </Tooltip>
+    <Tooltip {...args} content="Tooltip 2">
+      <Button>Then hover me</Button>
+    </Tooltip>
+  </div>
+);
+
+const PlacementsTemplate = (args: TooltipProps) => {
+  return (
+    <div className="inline-grid grid-cols-3 gap-4">
+      <Tooltip {...args} content="Top Start" placement="top-start">
+        <Button variant="text">Top Start</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Top">
+        <Button variant="text">Top</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Top End" placement="top-end">
+        <Button variant="text">Top End</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Bottom Start" placement="bottom-start">
+        <Button variant="text">Bottom Start</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Bottom" placement="bottom">
+        <Button variant="text">Bottom</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Bottom End" placement="bottom-end">
+        <Button variant="text">Bottom End</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Right Start" placement="right-start">
+        <Button variant="text">Right Start</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Right" placement="right">
+        <Button variant="text">Right</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Right End" placement="right-end">
+        <Button variant="text">Right End</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Left Start" placement="left-start">
+        <Button variant="text">Left Start</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Left" placement="left">
+        <Button variant="text">Left</Button>
+      </Tooltip>
+
+      <Tooltip {...args} content="Left End" placement="left-end">
+        <Button variant="text">Left End</Button>
+      </Tooltip>
+    </div>
+  );
+};
+
+const ControlledTemplate = (args: TooltipProps) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    // eslint-disable-next-line no-console
+    console.log("handleOpen");
+    setIsOpen((prev) => !prev);
+  };
+
+  return (
+    <div className="flex flex-col items-center gap-2">
+      <Tooltip {...args} content="Tooltip 1" isOpen={isOpen}>
+        <Button onPress={handleOpen}>{isOpen ? "Close" : "Open"}</Button>
+      </Tooltip>
+    </div>
+  );
+};
+
+export const Default = {
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const DisableAnimation = {
+  args: {
+    ...defaultProps,
+    disableAnimation: true,
+  },
+};
+
+export const WithArrow = {
+  args: {
+    ...defaultProps,
+    showArrow: true,
+  },
+};
+
+export const OpenChange = {
+  render: OpenChangeTemplate,
+
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const Placements = {
+  render: PlacementsTemplate,
+
+  args: {
+    ...defaultProps,
+    color: "primary",
+  },
+};
+
+export const WithOffset = {
+  render: OffsetTemplate,
+
+  args: {
+    ...defaultProps,
+    color: "secondary",
+  },
+};
+
+export const withDelay = {
+  render: DelayTemplate,
+
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const CustomContent = {
+  args: {
+    ...defaultProps,
+    shouldCloseOnInteractOutside: false,
+    content: (
+      <div className="px-1 py-2">
+        <div className="text-sm font-bold">Custom Content</div>
+        <div className="text-xs">This is a custom tooltip content</div>
+      </div>
+    ),
+  },
+};
+
+export const CustomMotion = {
+  args: {
+    ...defaultProps,
+    motionProps: {
+      variants: {
+        exit: {
+          opacity: 0,
+          transition: {
+            opacity: {duration: 0.1, easings: "easeInOut"},
+          },
+        },
+        enter: {
+          opacity: 1,
+          transition: {
+            opacity: {easings: "easeOut", duration: 0.15},
+          },
+        },
+      },
+    },
+  },
+};
+
+export const Multiple = {
+  render: MultipleTemplate,
+
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const Controlled = {
+  render: ControlledTemplate,
+
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const DefaultOpen = {
+  args: {
+    ...defaultProps,
+    defaultOpen: true,
+  },
+};
+
+export const AlwaysOpen = {
+  args: {
+    ...defaultProps,
+    isOpen: true,
+    showArrow: true,
+    content: (
+      <div className="px-1 py-2">
+        <div className="text-sm font-bold">Custom Content</div>
+        <div className="text-xs">This is a custom tooltip content</div>
+      </div>
+    ),
+  },
+};
+
+export const Disabled = {
+  args: {
+    ...defaultProps,
+    isDisabled: true,
+  },
+};

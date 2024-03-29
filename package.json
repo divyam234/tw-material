@@ -11,7 +11,10 @@
   "scripts": {
     "build": "turbo build  --filter=!@tw-material/storybook",
     "version": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "sb": "pnpm --filter @tw-material/storybook dev",
+    "build:sb": "pnpm --filter @tw-material/storybook build",
+    "start:sb": "pnpm --filter @tw-material/storybook start"
   },
   "homepage": "https://github.com/divyam234/tw-material3#readme",
   "devDependencies": {

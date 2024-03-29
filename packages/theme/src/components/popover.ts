@@ -1,6 +1,6 @@
 import type {VariantProps} from "tailwind-variants";
-import {dataFocusVisibleClasses, tv} from "../utils";
 
+import {dataFocusVisibleClasses, tv} from "../utils";
 const popover = tv({
   slots: {
     base: [
