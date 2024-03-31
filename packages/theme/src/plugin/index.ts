@@ -42,6 +42,9 @@ export const material3 = ({sourceColor, customColors, defaultTheme}: Options) =>
           boxShadow: boxShadow,
           boxShadowColor: boxShadowColor,
           fontSize: typography,
+          screens: {
+            xs: "475px",
+          },
           transitionDuration: transitionDuration,
           transitionTimingFunction: transitionTimingFunction,
           zIndex: zIndex,

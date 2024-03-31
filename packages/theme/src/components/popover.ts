@@ -17,7 +17,7 @@ const popover = tv({
       "before:h-2.5",
       "before:rounded-sm",
       "before:bg-surface-container-low",
-      "before:shadow-small",
+      "before:shadow-1",
       // visibility
       "data-[arrow=true]:before:block",
       // top
@@ -90,13 +90,13 @@ const popover = tv({
     },
     shadow: {
       sm: {
-        content: "shadow-small",
+        content: "shadow-1",
       },
       md: {
-        content: "shadow-medium",
+        content: "shadow-3",
       },
       lg: {
-        content: "shadow-large",
+        content: "shadow-4",
       },
     },
     backdrop: {
@@ -123,7 +123,7 @@ const popover = tv({
   defaultVariants: {
     radius: "lg",
     size: "md",
-    shadow: "md",
+    shadow: "sm",
     backdrop: "transparent",
     disableAnimation: false,
     triggerScaleOnOpen: true,

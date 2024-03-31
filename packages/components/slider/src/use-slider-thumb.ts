@@ -140,6 +140,7 @@ export function useSliderThumb(props: UseSliderThumbProps) {
     getThumbProps,
     getTooltipProps,
     getInputProps,
+    isDragging,
   };
 }
 

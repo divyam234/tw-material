@@ -1,0 +1,57 @@
+{
+  "name": "@tw-material/use-aria-multiselect",
+  "version": "1.0.0",
+  "description": "Provides the behavior and accessibility implementation for a multi-select component.",
+  "keywords": [
+    "use-aria-multiselect"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material.git",
+    "directory": "packages/components/popover"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {
+    "@react-aria/i18n": "^3.10.2",
+    "@react-aria/interactions": "^3.21.1",
+    "@react-aria/label": "^3.7.6",
+    "@react-aria/listbox": "^3.11.5",
+    "@react-aria/menu": "^3.13.1",
+    "@react-aria/selection": "^3.17.5",
+    "@react-aria/utils": "^3.23.2",
+    "@react-stately/list": "^3.10.3",
+    "@react-stately/menu": "^3.6.1",
+    "@react-types/button": "^3.9.2",
+    "@react-types/overlays": "^3.8.5",
+    "@react-types/select": "^3.9.2",
+    "@react-types/shared": "^3.22.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

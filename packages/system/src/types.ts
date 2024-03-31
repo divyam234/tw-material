@@ -75,7 +75,9 @@ export type HTMLTwM3Props<T extends As = "div", OmitKeys extends keyof any = nev
   as?: As;
 };
 
+type ReactRef<T> = React.RefObject<T> | React.MutableRefObject<T> | React.Ref<T>;
+
 export type PropGetter<P = Record<string, unknown>, R = DOMAttributes> = (
   props?: Merge<DOMAttributes, P>,
   ref?: React.Ref<any>,
-) => R & React.RefAttributes<any>;
+) => R & {ref?: ReactRef<any>};

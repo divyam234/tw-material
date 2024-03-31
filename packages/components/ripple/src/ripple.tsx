@@ -1,7 +1,6 @@
 import type {HTMLTwM3Props} from "@tw-material/system";
 
-import {FC} from "react";
-import {AnimatePresence, HTMLMotionProps, m, LazyMotion, domAnimation} from "framer-motion";
+import {AnimatePresence, HTMLMotionProps, LazyMotion, domAnimation, m} from "framer-motion";
 
 import {RippleType} from "./use-ripple";
 
@@ -17,7 +16,7 @@ const clamp = (value: number, min: number, max: number) => {
   return Math.min(Math.max(value, min), max);
 };
 
-const Ripple: FC<RippleProps> = (props) => {
+const Ripple = (props: RippleProps) => {
   const {ripples = [], motionProps, color = "currentColor", style, onClear} = props;
 
   return (
@@ -60,6 +59,6 @@ const Ripple: FC<RippleProps> = (props) => {
   );
 };
 
-Ripple.displayName = "NextUI.Ripple";
+Ripple.displayName = "Ripple";
 
 export default Ripple;

@@ -60,8 +60,8 @@ const slider = tv({
       "before:w-11",
       "before:h-11",
       "before:rounded-full",
-      "after:shadow-small",
-      "after:shadow-small",
+      "after:shadow-1",
+      "after:shadow-1",
       "after:bg-background",
       "data-[focused=true]:z-10",
       dataFocusVisibleClasses,
@@ -187,7 +187,7 @@ const slider = tv({
       size: ["sm", "md"],
       showOutline: false,
       class: {
-        thumb: "shadow-small",
+        thumb: "shadow-1",
       },
     },
     // size && !isVertical

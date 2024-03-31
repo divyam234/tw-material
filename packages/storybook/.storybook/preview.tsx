@@ -11,10 +11,9 @@ const decorators: Preview["decorators"] = [
       locale && new Intl.Locale(locale)?.textInfo?.direction === "rtl" ? "rtl" : undefined;
 
     return (
-        <div  className="bg-background w-full h-full " lang={locale} dir={direction}>
-          <Story />
-        </div>
-      
+      <div className="bg-background w-full h-full" lang={locale} dir={direction}>
+        <Story />
+      </div>
     );
   },
 ];

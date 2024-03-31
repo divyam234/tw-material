@@ -21,8 +21,8 @@ const MenuItem = forwardRef<"li", MenuItemProps>((props, _) => {
     isSelected,
     isDisabled,
     selectedIcon,
-    startContent,
-    endContent,
+    startIcon,
+    endIcon,
     disableAnimation,
     hideSelectedIcon,
     getItemProps,
@@ -48,7 +48,9 @@ const MenuItem = forwardRef<"li", MenuItemProps>((props, _) => {
 
   return (
     <Component {...getItemProps()}>
-      {startContent}
+      {startIcon && (
+        <span className={slots.startIcon({class: classNames?.startIcon})}>{startIcon}</span>
+      )}
       {description ? (
         <div className={slots.wrapper({class: classNames?.wrapper})}>
           <span {...getLabelProps()}>{rendered}</span>
@@ -61,7 +63,9 @@ const MenuItem = forwardRef<"li", MenuItemProps>((props, _) => {
       {isSelectable && !hideSelectedIcon && (
         <span {...getSelectedIconProps()}>{selectedContent}</span>
       )}
-      {endContent}
+      {endIcon && !isSelected && (
+        <span className={slots.endIcon({class: classNames?.endIcon})}>{endIcon}</span>
+      )}
     </Component>
   );
 });

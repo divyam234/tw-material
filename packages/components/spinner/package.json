@@ -1,0 +1,52 @@
+{
+  "name": "@tw-material/spinner",
+  "version": "1.0.0",
+  "description": "Loaders express an unspecified wait time or display the length of a process.",
+  "keywords": [
+    "loading",
+    "spinner",
+    "progress"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/components/button"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@tw-material/theme": ">=1"
+  },
+  "dependencies": {
+    "@tw-material/system": "workspace:*",
+    "@tw-material/shared-utils": "workspace:*",
+    "@tw-material/react-utils": "workspace:*",
+    "clsx": "^2.1.0"
+  },
+  "devDependencies": {
+    "@tw-material/theme": "workspace:*",
+    "clean-package": "2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

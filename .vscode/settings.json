@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "tailwindCSS.classAttributes": ["className", "class", "classNames"]
+  // "tailwindCSS.experimental.classRegex": [
+  //   ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  // ]
+}

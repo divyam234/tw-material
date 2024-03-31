@@ -1,10 +1,14 @@
 import type {VariantProps} from "tailwind-variants";
+
 import {dataFocusVisibleClasses, tv} from "../utils";
 
 const menu = tv({
   slots: {
-    base: "w-full relative flex flex-col gap-1 p-1 bg-surface-container-low text-on-surface",
-    list: "w-full flex flex-col gap-0.5 outline-none",
+    base: [
+      "w-full min-w-[112px] max-w-[280px] relative",
+      "flex flex-col gap-1 bg-surface-container rounded-extra-small",
+    ],
+    list: "w-full flex flex-col gap-0.5 outline-none p-1.5",
     emptyContent: [
       "h-10",
       "px-2",
@@ -29,7 +33,7 @@ const menuItem = tv({
       "px-2",
       "py-1.5",
       "w-full",
-      "h-full",
+      "min-h-10",
       "box-border",
       "rounded-small",
       "subpixel-antialiased",
@@ -38,21 +42,26 @@ const menuItem = tv({
       "tap-highlight-transparent",
       "data-[hover=true]:bg-on-surface/hover",
       "data-[hover=true]:text-on-surface",
-      "data-[selectable=true]:focus:bg-default",
-      "data-[selectable=true]:focus:text-default-foreground",
+      "data-[selected=true]:bg-secondary-container",
       ...dataFocusVisibleClasses,
-      "data-[focus-visible=true]:dark:ring-offset-background-content1",
     ],
     wrapper: "w-full flex flex-col items-start justify-center",
-    title: "flex-1 truncate",
-    description: ["w-full", "text-sm", "text-outline", "group-hover:text-current"],
-    selectedIcon: ["text-inherit", "w-3", "h-3", "flex-shrink-0"],
+    title: "flex-1 truncate text-label-large text-on-surface",
+    description: ["w-full", "text-small", "text-outline", "group-data-[hover=true]:text-current"],
+    selectedIcon: ["text-on-surface-variant", "size-4", "flex-shrink-0"],
+    startIcon: [
+      "text-on-surface-variant",
+      "[&>svg]:size-6",
+      "pointer-events-none",
+      "flex-shrink-0",
+    ],
+    endIcon: ["text-on-surface-variant", "[&>svg]:size-6", "pointer-events-none", "flex-shrink-0"],
     shortcut: [
       "px-1",
       "py-0.5",
       "rounded",
       "font-sans",
-      "text-outline",
+      "text-on-surface-variant",
       "text-tiny",
       "border-small",
       "border-default-300",
@@ -69,8 +78,8 @@ const menuItem = tv({
           "after:-bottom-1",
           "after:left-0",
           "after:right-0",
-          "after:h-divider",
-          "after:bg-divider",
+          "after:h-[1px]",
+          "after:bg-outline-variant",
         ],
       },
       false: {},

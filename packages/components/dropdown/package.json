@@ -38,7 +38,6 @@
   "dependencies": {
     "@tw-material/react-utils": "workspace:^",
     "@tw-material/shared-utils": "workspace:^",
-    "@react-aria/button": "^3.9.3",
     "@react-aria/focus": "^3.16.2",
     "@react-aria/interactions": "^3.21.1",
     "@react-aria/utils": "^3.23.2",

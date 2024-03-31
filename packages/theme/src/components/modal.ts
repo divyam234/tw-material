@@ -1,4 +1,5 @@
 import type {VariantProps} from "tailwind-variants";
+
 import {dataFocusVisibleClasses, tv} from "../utils";
 
 const modal = tv({
@@ -121,13 +122,13 @@ const modal = tv({
     },
     shadow: {
       sm: {
-        base: "shadow-small",
+        base: "shadow-1",
       },
       md: {
-        base: "shadow-medium",
+        base: "shadow-3",
       },
       lg: {
-        base: "shadow-large",
+        base: "shadow-4",
       },
     },
     backdrop: {

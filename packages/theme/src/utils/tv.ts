@@ -22,7 +22,8 @@ export const twMergeConfig = {
     {
       text: ["label", "display", "headline", "body", "title"]
         .map((key) => COMMON_UNITS.map((unit) => `${key}-${unit}`))
-        .flat(),
+        .flat()
+        .concat([...COMMON_UNITS, "tiny"]),
     },
   ],
 };

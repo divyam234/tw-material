@@ -4,7 +4,7 @@ import type {HTMLMotionProps} from "framer-motion";
 import {DOMAttributes, ReactNode, useMemo, useRef} from "react";
 import {DismissButton} from "@react-aria/overlays";
 import {TRANSITION_VARIANTS} from "@tw-material/framer-transitions";
-import {motion} from "framer-motion";
+import {m, domAnimation, LazyMotion} from "framer-motion";
 import {useDialog} from "@react-aria/dialog";
 import {mergeProps} from "@react-aria/utils";
 import {RemoveScroll} from "react-remove-scroll";
@@ -66,37 +66,45 @@ const PopoverContent = forwardRef<"div", PopoverContentProps>((props, _) => {
     }
 
     return (
-      <motion.div
-        animate="enter"
-        exit="exit"
-        initial="exit"
-        variants={TRANSITION_VARIANTS.fade}
-        {...(getBackdropProps() as HTMLMotionProps<"div">)}
-      />
+      <LazyMotion features={domAnimation}>
+        <m.div
+          animate="enter"
+          exit="exit"
+          initial="exit"
+          variants={TRANSITION_VARIANTS.fade}
+          {...(getBackdropProps() as HTMLMotionProps<"div">)}
+        />
+      </LazyMotion>
     );
   }, [backdrop, disableAnimation, getBackdropProps]);
+
+  const contents = disableAnimation ? (
+    <RemoveScroll forwardProps enabled={shouldBlockScroll && isOpen} removeScrollBar={false}>
+      {content}
+    </RemoveScroll>
+  ) : (
+    <LazyMotion features={domAnimation}>
+      <RemoveScroll forwardProps enabled={shouldBlockScroll && isOpen} removeScrollBar={false}>
+        <m.div
+          animate="enter"
+          exit="exit"
+          initial="initial"
+          style={{
+            ...getTransformOrigins(placement === "center" ? "top" : placement),
+          }}
+          variants={TRANSITION_VARIANTS.scaleSpringOpacity}
+          {...motionProps}
+        >
+          {content}
+        </m.div>
+      </RemoveScroll>
+    </LazyMotion>
+  );
 
   return (
     <div {...getPopoverProps()}>
       {backdropContent}
-      <RemoveScroll forwardProps enabled={shouldBlockScroll && isOpen} removeScrollBar={false}>
-        {disableAnimation ? (
-          content
-        ) : (
-          <motion.div
-            animate="enter"
-            exit="exit"
-            initial="initial"
-            style={{
-              ...getTransformOrigins(placement === "center" ? "top" : placement),
-            }}
-            variants={TRANSITION_VARIANTS.scaleSpringOpacity}
-            {...motionProps}
-          >
-            {content}
-          </motion.div>
-        )}
-      </RemoveScroll>
+      {contents}
     </div>
   );
 });
