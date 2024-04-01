@@ -1,5 +1,11 @@
 # @tw-material/button
 
+## 1.1.6
+
+### Patch Changes
+
+- added loading spinner
+
 ## 1.1.5
 
 ### Patch Changes

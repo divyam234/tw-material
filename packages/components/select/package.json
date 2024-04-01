@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/select",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A select displays a collapsible list of options and allows a user to select one of them.",
   "keywords": [
     "select"

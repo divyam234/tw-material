@@ -273,6 +273,9 @@ importers:
       '@tw-material/shared-utils':
         specifier: workspace:^
         version: link:../../utilities/shared-utils
+      '@tw-material/spinner':
+        specifier: workspace:^
+        version: link:../spinner
       '@tw-material/theme':
         specifier: workspace:^
         version: link:../../theme

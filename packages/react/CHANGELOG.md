@@ -1,5 +1,19 @@
 # @tw-material/react
 
+## 1.1.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/button@1.1.6
+  - @tw-material/breadcrumbs@1.1.0
+  - @tw-material/dropdown@1.1.7
+  - @tw-material/menu@1.1.7
+  - @tw-material/modal@1.1.3
+  - @tw-material/popover@1.1.6
+  - @tw-material/select@1.0.4
+  - @tw-material/tooltip@1.0.4
+
 ## 1.1.9
 
 ### Patch Changes

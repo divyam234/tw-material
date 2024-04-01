@@ -1,6 +1,7 @@
 import type {ReactNode} from "react";
 import type {RippleProps} from "@tw-material/ripple";
 import type {SlotsToClasses} from "@tw-material/theme";
+import type {SpinnerProps} from "@tw-material/spinner";
 
 import {
   mapPropsVariants,
@@ -38,6 +39,20 @@ interface Props extends HTMLProps<"button"> {
    * The button end content.
    */
   endIcon?: ReactNode;
+  /**
+   * Spinner to display when loading.
+   */
+  spinner?: ReactNode;
+  /**
+   * The spinner placement.
+   * @default "start"
+   */
+  spinnerPlacement?: "start" | "end";
+  /**
+   * Whether the button should display a loading spinner.
+   * @default false
+   */
+  isLoading?: boolean;
 
   /**
    * The native button click event handler.
@@ -70,6 +85,9 @@ export function useButton(originalProps: UseButtonProps) {
     className,
     classNames,
     disableRipple = false,
+    isLoading = false,
+    spinnerPlacement = "start",
+    spinner,
     onPress,
     onClick,
     ...otherProps
@@ -131,6 +149,7 @@ export function useButton(originalProps: UseButtonProps) {
       "data-pressed": dataAttr(isPressed),
       "data-focus-visible": dataAttr(isFocusVisible),
       "data-hover": dataAttr(isHovered),
+      "data-loading": dataAttr(isLoading),
       "data-start-icon": dataAttr(startIconProp !== undefined),
       "data-end-icon": dataAttr(endIconProp !== undefined),
       className: slots.base({class: clsx(classNames?.base, className)}),
@@ -181,7 +200,20 @@ export function useButton(originalProps: UseButtonProps) {
       : null;
 
   const startIcon = getIconClone(startIconProp);
+
   const endIcon = getIconClone(endIconProp);
+
+  const size = originalProps.size ?? "md";
+
+  const spinnerSize = useMemo(() => {
+    const buttonSpinnerSizeMap: Record<string, SpinnerProps["size"]> = {
+      sm: "sm",
+      md: "sm",
+      lg: "md",
+    };
+
+    return buttonSpinnerSizeMap[size];
+  }, [size]);
 
   const getRippleProps = useCallback<() => RippleProps>(
     () => ({ripples, onClear: onClearRipple}),
@@ -195,6 +227,10 @@ export function useButton(originalProps: UseButtonProps) {
     slots,
     startIcon,
     endIcon,
+    isLoading,
+    spinner,
+    spinnerPlacement,
+    spinnerSize,
     isIconOnly: originalProps.isIconOnly,
     disableRipple,
     getButtonProps,

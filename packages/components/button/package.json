@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/button",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Buttons allow users to perform actions and choose with a single tap.",
   "keywords": [
     "button"
@@ -45,6 +45,7 @@
     "@tw-material/react-utils": "workspace:^",
     "@tw-material/ripple": "workspace:^",
     "@tw-material/shared-utils": "workspace:^",
+    "@tw-material/spinner": "workspace:^",
     "@tw-material/theme": "workspace:^",
     "clsx": "^2.1.0"
   },

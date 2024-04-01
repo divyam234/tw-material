@@ -1,5 +1,6 @@
 import {Ripple} from "@tw-material/ripple";
 import {forwardRef} from "@tw-material/system";
+import {Spinner} from "@tw-material/spinner";
 
 import {UseButtonProps, useButton} from "./use-button";
 
@@ -12,7 +13,20 @@ const Button = forwardRef<"button", ButtonProps>((props, ref) => {
     children,
     startIcon,
     endIcon,
+    spinnerSize,
+    spinner = (
+      <Spinner
+        classNames={{
+          circle1: "border-b-current",
+          circle2: "border-b-current",
+        }}
+        size={spinnerSize}
+      />
+    ),
+    spinnerPlacement,
     disableRipple,
+    isLoading,
+    isIconOnly,
     getButtonProps,
     getRippleProps,
     getStartButtonProps,
@@ -21,9 +35,13 @@ const Button = forwardRef<"button", ButtonProps>((props, ref) => {
 
   return (
     <Component ref={domRef} {...getButtonProps()}>
-      {startIcon && <span {...getStartButtonProps()}>{startIcon}</span>}
-      {children}
-      {endIcon && <span {...getEndButtonProps()}>{endIcon}</span>}
+      {startIcon && !isLoading && <span {...getStartButtonProps()}>{startIcon}</span>}
+      {isLoading && spinnerPlacement === "start" && (
+        <span {...getStartButtonProps()}>{spinner}</span>
+      )}
+      {isLoading && isIconOnly ? null : children}
+      {endIcon && !isLoading && <span {...getEndButtonProps()}>{endIcon}</span>}
+      {isLoading && spinnerPlacement === "end" && <span {...getEndButtonProps()}>{spinner}</span>}
       {!disableRipple && <Ripple {...getRippleProps()} />}
     </Component>
   );
