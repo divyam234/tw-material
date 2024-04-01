@@ -1,5 +1,13 @@
 # @tw-material/react
 
+## 1.1.11
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/dropdown@1.1.8
+  - @tw-material/breadcrumbs@1.1.0
+
 ## 1.1.10
 
 ### Patch Changes

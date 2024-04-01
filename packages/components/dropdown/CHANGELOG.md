@@ -1,5 +1,11 @@
 # @tw-material/dropdown
 
+## 1.1.8
+
+### Patch Changes
+
+- dropdown props error
+
 ## 1.1.7
 
 ### Patch Changes
