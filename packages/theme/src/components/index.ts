@@ -10,3 +10,4 @@ export * from "./listbox";
 export * from "./divider";
 export * from "./select";
 export * from "./spinner";
+export * from "./input";

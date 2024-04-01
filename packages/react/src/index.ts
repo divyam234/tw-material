@@ -11,3 +11,8 @@ export * from "@tw-material/box";
 export * from "@tw-material/avatar";
 export * from "@tw-material/tooltip";
 export * from "@tw-material/slider";
+export * from "@tw-material/input";
+export * from "@tw-material/listbox";
+export * from "@tw-material/divider";
+export * from "@tw-material/spinner";
+export * from "@tw-material/select";

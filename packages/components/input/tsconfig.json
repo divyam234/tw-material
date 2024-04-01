@@ -2,6 +2,9 @@
   "extends": "../../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@react-types/shared": ["../../../node_modules/@react-types/shared"]
+    }
   },
   "include": ["src", "index.ts"]
 }

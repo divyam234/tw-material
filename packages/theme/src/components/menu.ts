@@ -4,10 +4,7 @@ import {dataFocusVisibleClasses, tv} from "../utils";
 
 const menu = tv({
   slots: {
-    base: [
-      "w-full min-w-[112px] max-w-[280px] relative",
-      "flex flex-col gap-1 bg-surface-container rounded-extra-small",
-    ],
+    base: ["w-full  relative", "flex flex-col gap-1 bg-surface-container rounded-extra-small"],
     list: "w-full flex flex-col gap-0.5 outline-none p-1.5",
     emptyContent: [
       "h-10",
@@ -43,7 +40,7 @@ const menuItem = tv({
       "data-[hover=true]:bg-on-surface/hover",
       "data-[hover=true]:text-on-surface",
       "data-[selected=true]:bg-secondary-container",
-      ...dataFocusVisibleClasses,
+      // ...dataFocusVisibleClasses,
     ],
     wrapper: "w-full flex flex-col items-start justify-center",
     title: "flex-1 truncate text-label-large text-on-surface",

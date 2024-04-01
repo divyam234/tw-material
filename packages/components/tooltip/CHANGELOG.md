@@ -1,5 +1,13 @@
 # @tw-material/tooltip
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/theme@1.1.4
+  - @tw-material/ripple@1.1.1
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @tw-material/menu
 
+## 1.1.4
+
+### Patch Changes
+
+- @tw-material/button@1.1.4
+
 ## 1.1.3
 
 ### Patch Changes

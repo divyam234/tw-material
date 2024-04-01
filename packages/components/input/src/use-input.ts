@@ -1,19 +1,20 @@
-import type {InputVariantProps, SlotsToClasses, InputSlots} from "@nextui-org/theme";
+import type {InputVariantProps, SlotsToClasses, InputSlots} from "@tw-material/theme";
 
-import {HTMLNextUIProps, mapPropsVariants, PropGetter} from "@nextui-org/system";
+import {HTMLTwM3Props as HTMLProps, mapPropsVariants, PropGetter} from "@tw-material/system";
 import {AriaTextFieldProps} from "@react-types/textfield";
 import {useFocusRing} from "@react-aria/focus";
-import {input} from "@nextui-org/theme";
-import {useDOMRef, filterDOMProps} from "@nextui-org/react-utils";
+import {input} from "@tw-material/theme";
+import {useDOMRef, filterDOMProps} from "@tw-material/react-utils";
 import {useFocusWithin, useHover, usePress} from "@react-aria/interactions";
-import {clsx, dataAttr, isEmpty, safeAriaLabel} from "@nextui-org/shared-utils";
+import {dataAttr, isEmpty, safeAriaLabel} from "@tw-material/shared-utils";
 import {useControlledState} from "@react-stately/utils";
 import {useMemo, Ref, useCallback, useState} from "react";
 import {chain, mergeProps} from "@react-aria/utils";
 import {useTextField} from "@react-aria/textfield";
+import clsx from "clsx";
 
 export interface Props<T extends HTMLInputElement | HTMLTextAreaElement = HTMLInputElement>
-  extends Omit<HTMLNextUIProps<"input">, keyof InputVariantProps> {
+  extends Omit<HTMLProps<"input">, keyof InputVariantProps> {
   /**
    * Ref to the DOM node.
    */
@@ -113,9 +114,9 @@ export function useInput<T extends HTMLInputElement | HTMLTextAreaElement = HTML
     [onValueChange],
   );
 
-  const [inputValue, setInputValue] = useControlledState<string | undefined>(
+  const [inputValue, setInputValue] = useControlledState(
     props.value,
-    props.defaultValue,
+    props.defaultValue!,
     handleValueChange,
   );
 

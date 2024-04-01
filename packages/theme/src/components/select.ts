@@ -13,7 +13,7 @@ const select = tv({
       "origin-top-left",
       "subpixel-antialiased",
       "text-small",
-      "text-foreground-500",
+      "text-on-surface-variant",
       "pointer-events-none",
     ],
     mainWrapper: "w-full flex flex-col",
@@ -23,41 +23,38 @@ const select = tv({
       "inline-flex h-full w-[calc(100%_-_theme(spacing.6))] min-h-4 items-center gap-1.5 box-border",
     selectorIcon: "absolute right-3 size-4",
     spinner: "absolute right-3",
-    value: ["text-foreground-500", "font-normal", "w-full", "text-left"],
+    value: ["text-on-surface", "font-normal", "w-full", "text-left"],
     listboxWrapper: "scroll-py-6 max-h-64 w-full",
     listbox: "",
-    popoverContent: "w-full p-1 overflow-hidden",
+    popoverContent: [
+      "w-full",
+      "p-0 shadow-none",
+      "overflow-y-auto",
+      "bg-transparent border-0",
+      "text-inherit rounded-none",
+    ],
     helperWrapper: "p-1 flex relative flex-col gap-1.5",
-    description: "text-tiny text-foreground-400",
-    errorMessage: "text-tiny text-danger",
+    description: "text-tiny  text-on-surface-400",
+    errorMessage: "text-tiny text-error",
   },
   variants: {
     variant: {
       flat: {
         trigger: [
-          "bg-default-100",
-          "data-[hover=true]:bg-default-200",
-          "group-data-[focus=true]:bg-default-100",
+          "bg-surface-container-highest",
+          "data-[hover=true]:bg-on-surface/hover",
+          "group-data-[focus=true]:bg-surface-container-highest",
         ],
-      },
-      faded: {
-        trigger: [
-          "bg-default-100",
-          "border-medium",
-          "border-default-200",
-          "data-[hover=true]:border-default-400",
-        ],
-        value: "group-data-[has-value=true]:text-default-foreground",
       },
       bordered: {
         trigger: [
-          "border-medium",
-          "border-default-200",
-          "data-[hover=true]:border-default-400",
-          "data-[open=true]:border-default-foreground",
-          "data-[focus=true]:border-default-foreground",
-          "data-[focus=true]:border-default-foreground",
+          "border-2",
+          "border-outline-variant",
+          "data-[hover=true]:border-outline",
+          "data-[open=true]:border-on-surface",
+          "data-[focus=true]:border-on-surface",
         ],
+        label: "text-on-surface-variant",
       },
       underlined: {
         trigger: [
@@ -66,15 +63,16 @@ const select = tv({
           "!gap-0",
           "relative",
           "box-border",
+          "bg-surface-container-highest",
           "border-b-medium",
           "shadow-[0_1px_0px_0_rgba(0,0,0,0.05)]",
-          "border-default-200",
+          "border-on-surface-variant",
           "!rounded-none",
-          "hover:border-default-300",
+          "hover:border-on-surface",
           "after:content-['']",
           "after:w-0",
           "after:origin-center",
-          "after:bg-default-foreground",
+          "after:bg-primary",
           "after:absolute",
           "after:left-1/2",
           "after:-translate-x-1/2",
@@ -83,16 +81,8 @@ const select = tv({
           "data-[open=true]:after:w-full",
           "data-[focus=true]:after:w-full",
         ],
-        label: "group-data-[filled=true]:text-foreground",
+        label: "text-on-surface-variant",
       },
-    },
-    color: {
-      default: {},
-      primary: {},
-      secondary: {},
-      success: {},
-      warning: {},
-      danger: {},
     },
     size: {
       sm: {
@@ -132,7 +122,7 @@ const select = tv({
       },
       "outside-left": {
         base: "flex-row items-center flex-nowrap items-start",
-        label: "relative pr-2 text-foreground",
+        label: "relative pr-2 text-on-surface",
       },
       inside: {
         label: "text-tiny cursor-pointer",
@@ -152,14 +142,14 @@ const select = tv({
     },
     isInvalid: {
       true: {
-        label: "!text-danger",
-        value: "!text-danger",
-        selectorIcon: "text-danger",
+        label: "!text-error",
+        value: "!text-error",
+        selectorIcon: "text-error",
       },
     },
     isRequired: {
       true: {
-        label: "after:content-['*'] after:text-danger after:ml-0.5",
+        label: "after:content-['*'] after:text-error after:ml-0.5",
       },
     },
     isMultiline: {
@@ -200,7 +190,6 @@ const select = tv({
   },
   defaultVariants: {
     variant: "flat",
-    color: "default",
     size: "md",
     labelPlacement: "inside",
     fullWidth: true,
@@ -210,232 +199,18 @@ const select = tv({
     disableSelectorIconRotation: false,
   },
   compoundVariants: [
-    // flat & color
-    {
-      variant: "flat",
-      color: "default",
-      class: {
-        value: "group-data-[has-value=true]:text-default-foreground",
-      },
-    },
-    {
-      variant: "flat",
-      color: "primary",
-      class: {
-        trigger: [
-          "bg-primary-50",
-          "text-primary",
-          "data-[hover=true]:bg-primary-100",
-          "group-data-[focus=true]:bg-primary-50",
-        ],
-        value: "text-primary",
-        label: "text-primary",
-      },
-    },
-    {
-      variant: "flat",
-      color: "secondary",
-      class: {
-        trigger: [
-          "bg-secondary-50",
-          "text-secondary",
-          "data-[hover=true]:bg-secondary-100",
-          "group-data-[focus=true]:bg-secondary-50",
-        ],
-        value: "text-secondary",
-        label: "text-secondary",
-      },
-    },
-    {
-      variant: "flat",
-      color: "success",
-      class: {
-        trigger: [
-          "bg-success-50",
-          "text-success-600",
-          "dark:text-success",
-          "data-[hover=true]:bg-success-100",
-          "group-data-[focus=true]:bg-success-50",
-        ],
-        value: "text-success-600 dark:text-success",
-        label: "text-success-600 dark:text-success",
-      },
-    },
-    {
-      variant: "flat",
-      color: "warning",
-      class: {
-        trigger: [
-          "bg-warning-50",
-          "text-warning-600",
-          "dark:text-warning",
-          "data-[hover=true]:bg-warning-100",
-          "group-data-[focus=true]:bg-warning-50",
-        ],
-        value: "text-warning-600 dark:text-warning",
-        label: "text-warning-600 dark:text-warning",
-      },
-    },
-    {
-      variant: "flat",
-      color: "danger",
-      class: {
-        trigger: [
-          "bg-danger-50",
-          "text-danger",
-          "dark:text-danger-500",
-          "data-[hover=true]:bg-danger-100",
-          "group-data-[focus=true]:bg-danger-50",
-        ],
-        value: "text-danger dark:text-danger-500",
-        label: "text-danger dark:text-danger-500",
-      },
-    },
-    // faded & color
-    {
-      variant: "faded",
-      color: "primary",
-      class: {
-        trigger: "data-[hover=true]:border-primary",
-        label: "text-primary",
-      },
-    },
-    {
-      variant: "faded",
-      color: "secondary",
-      class: {
-        trigger: "data-[hover=true]:border-secondary",
-        label: "text-secondary",
-      },
-    },
-    {
-      variant: "faded",
-      color: "success",
-      class: {
-        trigger: "data-[hover=true]:border-success",
-        label: "text-success",
-      },
-    },
-    {
-      variant: "faded",
-      color: "warning",
-      class: {
-        trigger: "data-[hover=true]:border-warning",
-        label: "text-warning",
-      },
-    },
-    {
-      variant: "faded",
-      color: "danger",
-      class: {
-        trigger: "data-[hover=true]:border-danger",
-        label: "text-danger",
-      },
-    },
-    // underlined & color
-    // underlined & color
-    {
-      variant: "underlined",
-      color: "default",
-      class: {
-        value: "group-data-[has-value=true]:text-foreground",
-      },
-    },
-    {
-      variant: "underlined",
-      color: "primary",
-      class: {
-        trigger: "after:bg-primary",
-        label: "text-primary",
-      },
-    },
-    {
-      variant: "underlined",
-      color: "secondary",
-      class: {
-        trigger: "after:bg-secondary",
-        label: "text-secondary",
-      },
-    },
-    {
-      variant: "underlined",
-      color: "success",
-      class: {
-        trigger: "after:bg-success",
-        label: "text-success",
-      },
-    },
-    {
-      variant: "underlined",
-      color: "warning",
-      class: {
-        trigger: "after:bg-warning",
-        label: "text-warning",
-      },
-    },
-    {
-      variant: "underlined",
-      color: "danger",
-      class: {
-        trigger: "after:bg-danger",
-        label: "text-danger",
-      },
-    },
-    // bordered & color
-    {
-      variant: "bordered",
-      color: "primary",
-      class: {
-        trigger: ["data-[open=true]:border-primary", "data-[focus=true]:border-primary"],
-        label: "text-primary",
-      },
-    },
-    {
-      variant: "bordered",
-      color: "secondary",
-      class: {
-        trigger: ["data-[open=true]:border-secondary", "data-[focus=true]:border-secondary"],
-        label: "text-secondary",
-      },
-    },
-    {
-      variant: "bordered",
-      color: "success",
-      class: {
-        trigger: ["data-[open=true]:border-success", "data-[focus=true]:border-success"],
-        label: "text-success",
-      },
-    },
-    {
-      variant: "bordered",
-      color: "warning",
-      class: {
-        trigger: ["data-[open=true]:border-warning", "data-[focus=true]:border-warning"],
-        label: "text-warning",
-      },
-    },
-    {
-      variant: "bordered",
-      color: "danger",
-      class: {
-        trigger: ["data-[open=true]:border-danger", "data-[focus=true]:border-danger"],
-        label: "text-danger",
-      },
-    },
     // labelPlacement=outside & default
     {
       labelPlacement: "inside",
-      color: "default",
       class: {
-        label: "group-data-[filled=true]:text-default-600",
+        label: "group-data-[filled=true]:text-on-surface",
       },
     },
     // labelPlacement=outside & default
     {
       labelPlacement: "outside",
-      color: "default",
       class: {
-        label: "group-data-[filled=true]:text-foreground",
+        label: "group-data-[filled=true]:text-on-surface",
       },
     },
     // radius-full & size
@@ -463,7 +238,7 @@ const select = tv({
     // !disableAnimation & variant
     {
       disableAnimation: false,
-      variant: ["faded", "bordered"],
+      variant: "bordered",
       class: {
         trigger: "transition-colors motion-reduce:transition-none",
       },
@@ -477,7 +252,7 @@ const select = tv({
     },
     // flat & faded
     {
-      variant: ["flat", "faded"],
+      variant: "flat",
       class: {
         trigger: [
           // focus ring
@@ -491,9 +266,9 @@ const select = tv({
       variant: "flat",
       class: {
         trigger: [
-          "bg-danger-50",
-          "data-[hover=true]:bg-danger-100",
-          "group-data-[focus=true]:bg-danger-50",
+          "bg-error-container",
+          "data-[hover=true]:bg-error/hover",
+          "group-data-[focus=true]:bg-error-container/80",
         ],
       },
     },
@@ -501,14 +276,14 @@ const select = tv({
       isInvalid: true,
       variant: "bordered",
       class: {
-        trigger: "!border-danger group-data-[focus=true]:border-danger",
+        trigger: "!border-error group-data-[focus=true]:!border-error",
       },
     },
     {
       isInvalid: true,
       variant: "underlined",
       class: {
-        trigger: "after:bg-danger",
+        trigger: "after:bg-error",
       },
     },
     // size & labelPlacement
@@ -599,7 +374,7 @@ const select = tv({
     // inside & size & [faded, bordered]
     {
       labelPlacement: "inside",
-      variant: ["faded", "bordered"],
+      variant: "bordered",
       isMultiline: false,
       size: "sm",
       class: {
@@ -610,7 +385,7 @@ const select = tv({
     },
     {
       labelPlacement: "inside",
-      variant: ["faded", "bordered"],
+      variant: "bordered",
       isMultiline: false,
       size: "md",
       class: {
@@ -621,7 +396,7 @@ const select = tv({
     },
     {
       labelPlacement: "inside",
-      variant: ["faded", "bordered"],
+      variant: "bordered",
       isMultiline: false,
       size: "lg",
       class: {

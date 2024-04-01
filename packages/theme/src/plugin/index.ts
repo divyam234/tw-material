@@ -42,6 +42,11 @@ export const material3 = ({sourceColor, customColors, defaultTheme}: Options) =>
           boxShadow: boxShadow,
           boxShadowColor: boxShadowColor,
           fontSize: typography,
+          borderWidth: {
+            small: "1px",
+            medium: "2px",
+            large: "3px",
+          },
           screens: {
             xs: "475px",
           },

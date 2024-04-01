@@ -1,5 +1,11 @@
 # @tw-material/modal
 
+## 1.1.2
+
+### Patch Changes
+
+- added new components
+
 ## 1.1.1
 
 ### Patch Changes

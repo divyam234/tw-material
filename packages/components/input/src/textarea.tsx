@@ -1,5 +1,5 @@
-import {dataAttr} from "@nextui-org/shared-utils";
-import {forwardRef} from "@nextui-org/system";
+import {dataAttr} from "@tw-material/shared-utils";
+import {forwardRef} from "@tw-material/system";
 import {mergeProps} from "@react-aria/utils";
 import {useMemo, useState} from "react";
 import TextareaAutosize from "react-textarea-autosize";
@@ -145,7 +145,7 @@ const Textarea = forwardRef<"textarea", TextAreaProps>(
         {hasHelper ? (
           <div {...getHelperWrapperProps()}>
             {errorMessage ? (
-              <div {...getErrorMessageProps()}>{errorMessage}</div>
+              <div {...getErrorMessageProps()}>{errorMessage as any}</div>
             ) : description ? (
               <div {...getDescriptionProps()}>{description}</div>
             ) : null}

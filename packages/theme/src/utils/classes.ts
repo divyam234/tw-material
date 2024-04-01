@@ -11,6 +11,15 @@ export const dataFocusVisibleClasses = [
   "data-[focus-visible=true]:shadow-1",
 ];
 
+export const groupDataFocusVisibleClasses = [
+  "outline-none",
+  "group-data-[focus-visible=true]:z-10",
+  "group-data-[focus-visible=true]:ring-2",
+  "group-data-[focus-visible=true]:ring-focus",
+  "group-data-[focus-visible=true]:ring-offset-2",
+  "group-data-[focus-visible=true]:ring-offset-background",
+];
+
 export const ringClasses = [
   "outline-none",
   "ring-2",
@@ -28,3 +37,9 @@ export const translateCenterClasses = [
 ];
 
 export const absoluteFullClasses = ["absolute", "inset-0"];
+
+export const scrollbarClasses = [
+  "[&::-webkit-scrollbar]:w-2",
+  "[&::-webkit-scrollbar-thumb]:bg-secondary",
+  "[&::-webkit-scrollbar-thumb]:rounded-md]",
+];

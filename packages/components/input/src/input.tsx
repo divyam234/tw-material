@@ -1,6 +1,6 @@
 import {CloseFilledIcon} from "@nextui-org/shared-icons";
 import {useMemo} from "react";
-import {forwardRef} from "@nextui-org/system";
+import {forwardRef} from "@tw-material/system";
 
 import {UseInputProps, useInput} from "./use-input";
 
@@ -47,7 +47,7 @@ const Input = forwardRef<"input", InputProps>((props, ref) => {
     return (
       <div {...getHelperWrapperProps()}>
         {errorMessage ? (
-          <div {...getErrorMessageProps()}>{errorMessage}</div>
+          <div {...getErrorMessageProps()}>{errorMessage as any}</div>
         ) : description ? (
           <div {...getDescriptionProps()}>{description}</div>
         ) : null}

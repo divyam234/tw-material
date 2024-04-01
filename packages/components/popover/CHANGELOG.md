@@ -1,5 +1,12 @@
 # @tw-material/popover
 
+## 1.1.4
+
+### Patch Changes
+
+- added new components
+  - @tw-material/button@1.1.4
+
 ## 1.1.3
 
 ### Patch Changes
