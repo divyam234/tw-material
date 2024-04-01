@@ -130,7 +130,7 @@ const slider = tv({
     },
     isDisabled: {
       false: {
-        thumb: ["cursor-grab", "data-[dragging=true]:cursor-grabbing"],
+        thumb: ["cursor-pointer"],
       },
       true: {
         base: "opacity-disabled",

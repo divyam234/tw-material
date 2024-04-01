@@ -1,5 +1,14 @@
 # @tw-material/slider
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/theme@1.1.5
+  - @tw-material/ripple@1.1.1
+  - @tw-material/tooltip@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

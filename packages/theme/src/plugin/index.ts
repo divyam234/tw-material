@@ -8,6 +8,7 @@ import {boxShadow, boxShadowColor} from "./shadow";
 import {transitionDuration, transitionTimingFunction} from "./transition";
 import {typography} from "./typography";
 import {zIndex} from "./z-index";
+import {borderWidth} from "./border-width";
 
 interface CustomColor {
   value: string;
@@ -42,11 +43,7 @@ export const material3 = ({sourceColor, customColors, defaultTheme}: Options) =>
           boxShadow: boxShadow,
           boxShadowColor: boxShadowColor,
           fontSize: typography,
-          borderWidth: {
-            small: "1px",
-            medium: "2px",
-            large: "3px",
-          },
+          borderWidth: borderWidth,
           screens: {
             xs: "475px",
           },

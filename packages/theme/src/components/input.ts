@@ -81,7 +81,7 @@ const input = tv({
       },
       bordered: {
         inputWrapper: [
-          "border-2",
+          "border-medium",
           "border-outline-variant",
           "data-[hover=true]:border-outline",
           "group-data-[focus=true]:border-primary",

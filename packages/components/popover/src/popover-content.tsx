@@ -84,20 +84,20 @@ const PopoverContent = forwardRef<"div", PopoverContentProps>((props, _) => {
     </RemoveScroll>
   ) : (
     <LazyMotion features={domAnimation}>
-      <m.div
-        animate="enter"
-        exit="exit"
-        initial="initial"
-        style={{
-          ...getTransformOrigins(placement === "center" ? "top" : placement),
-        }}
-        variants={TRANSITION_VARIANTS.scaleSpringOpacity}
-        {...motionProps}
-      >
-        <RemoveScroll forwardProps enabled={shouldBlockScroll && isOpen} removeScrollBar={false}>
+      <RemoveScroll forwardProps enabled={shouldBlockScroll && isOpen} removeScrollBar={false}>
+        <m.div
+          animate="enter"
+          exit="exit"
+          initial="initial"
+          style={{
+            ...getTransformOrigins(placement === "center" ? "top" : placement),
+          }}
+          variants={TRANSITION_VARIANTS.scaleSpringOpacity}
+          {...motionProps}
+        >
           {content}
-        </RemoveScroll>
-      </m.div>
+        </m.div>
+      </RemoveScroll>
     </LazyMotion>
   );
 

@@ -48,7 +48,7 @@ const select = tv({
       },
       bordered: {
         trigger: [
-          "border-2",
+          "border-medium",
           "border-outline-variant",
           "data-[hover=true]:border-outline",
           "data-[open=true]:border-on-surface",
