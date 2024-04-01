@@ -1,5 +1,16 @@
 # @tw-material/react
 
+## 1.1.9
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/listbox@1.0.1
+  - @tw-material/menu@1.1.6
+  - @tw-material/select@1.0.3
+  - @tw-material/dropdown@1.1.6
+  - @tw-material/breadcrumbs@1.1.0
+
 ## 1.1.8
 
 ### Patch Changes

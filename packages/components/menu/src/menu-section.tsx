@@ -85,13 +85,13 @@ const MenuSection = forwardRef<"li", MenuSectionProps>(
           data-has-title={!!item.rendered}
           data-slot="group"
         >
-          {[...item.childNodes].map((node) => {
+          {[...state.collection.getChildren?.(item.key)!].map((node) => {
             const {key: nodeKey, props: nodeProps} = node;
 
             let menuItem = (
               <MenuItem
                 key={nodeKey}
-                classNames={itemClasses}
+                classNames={mergeProps(itemClasses, nodeProps?.classNames)}
                 closeOnSelect={closeOnSelect}
                 disableAnimation={disableAnimation}
                 hideSelectedIcon={hideSelectedIcon}

@@ -1,5 +1,6 @@
 import {forwardRef} from "@tw-material/system";
 import {ForwardedRef, ReactElement, Ref} from "react";
+import {mergeProps} from "@react-aria/utils";
 
 import {UseMenuProps, useMenu} from "./use-menu";
 import MenuSection from "./menu-section";
@@ -47,7 +48,13 @@ function Menu<T extends object>(props: Props<T>, ref: ForwardedRef<HTMLUListElem
         if (item.type === "section") {
           return <MenuSection key={item.key} {...itemProps} itemClasses={itemClasses} />;
         }
-        let menuItem = <MenuItem key={item.key} {...itemProps} classNames={itemClasses} />;
+        let menuItem = (
+          <MenuItem
+            key={item.key}
+            {...itemProps}
+            classNames={mergeProps(itemClasses, item.props?.classNames)}
+          />
+        );
 
         if (item.wrapper) {
           menuItem = item.wrapper(menuItem);

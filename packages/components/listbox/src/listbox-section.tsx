@@ -79,13 +79,13 @@ const ListboxSection = forwardRef<"li", ListboxSectionProps>(
           data-has-title={!!item.rendered}
           data-slot="group"
         >
-          {[...item.childNodes].map((node) => {
+          {[...state.collection.getChildren?.(item.key)!].map((node) => {
             const {key: nodeKey, props: nodeProps} = node;
 
             let listboxItem = (
               <ListboxItem
                 key={nodeKey}
-                classNames={itemClasses}
+                classNames={mergeProps(itemClasses, nodeProps?.classNames)}
                 disableAnimation={disableAnimation}
                 hideSelectedIcon={hideSelectedIcon}
                 item={node}

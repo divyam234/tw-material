@@ -1,5 +1,11 @@
 # @tw-material/menu
 
+## 1.1.6
+
+### Patch Changes
+
+- fix menu list
+
 ## 1.1.5
 
 ### Patch Changes
