@@ -1,5 +1,12 @@
 # @tw-material/react
 
+## 1.1.7
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/input@1.0.2
+
 ## 1.1.6
 
 ### Patch Changes

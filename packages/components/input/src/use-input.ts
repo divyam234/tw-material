@@ -153,6 +153,7 @@ export function useInput<T extends HTMLInputElement | HTMLTextAreaElement = HTML
       ),
       inputElementType: isMultiline ? "textarea" : "input",
       onChange: setInputValue,
+      autoCapitalize: originalProps.autoCapitalize as any,
     },
     domRef,
   );
