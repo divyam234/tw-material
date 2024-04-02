@@ -1,5 +1,13 @@
 # @tw-material/select
 
+## 1.0.5
+
+### Patch Changes
+
+- @tw-material/listbox@1.0.1
+- @tw-material/popover@1.1.7
+- @tw-material/spinner@1.0.0
+
 ## 1.0.4
 
 ### Patch Changes

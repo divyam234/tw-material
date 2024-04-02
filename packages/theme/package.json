@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/theme",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "The default theme for tw material components",
   "homepage": "https://github.com/divyam234/tw-material3",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "url": "https://github.com/divyam234/tw-material3/issues"
   },
   "scripts": {
-    "build": "tsup src",
+    "build": "tsup",
     "typecheck": "tsc --noEmit",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
@@ -40,5 +40,5 @@
     "clean-package": "^2.2.0",
     "tailwindcss": "^3.4.1"
   },
-  "clean-package": "../../clean-package.config.json"
+  "clean-package": "./clean-package.config.json"
 }

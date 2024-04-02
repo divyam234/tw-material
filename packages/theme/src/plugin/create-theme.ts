@@ -11,7 +11,7 @@ import {
   Blend,
 } from "@material/material-color-utilities";
 
-import {Options} from ".";
+import {Options} from "./types";
 
 const tones = [0, 10, 20, 25, 30, 35, 40, 50, 60, 70, 80, 90, 95, 98, 99, 100];
 

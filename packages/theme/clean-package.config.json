@@ -1,0 +1,21 @@
+{
+  "remove": ["devDependencies"],
+  "replace": {
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.js"
+      },
+      "./config": {
+        "types": "./dist/plugin/theme-config.d.ts",
+        "import": "./dist/plugin/theme-config.mjs",
+        "require": "./dist/plugin/theme-config.js"
+      },
+      "./package.json": "./package.json"
+    }
+  }
+}

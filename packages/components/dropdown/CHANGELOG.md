@@ -1,5 +1,12 @@
 # @tw-material/dropdown
 
+## 1.1.9
+
+### Patch Changes
+
+- @tw-material/menu@1.1.8
+- @tw-material/popover@1.1.7
+
 ## 1.1.8
 
 ### Patch Changes
