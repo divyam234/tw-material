@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/aria-utils",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A package for managing @react-aria nextui utils.",
   "keywords": [
     "aria-utils"
