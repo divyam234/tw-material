@@ -1,5 +1,11 @@
 # @tw-material/button
 
+## 1.1.9
+
+### Patch Changes
+
+- update
+
 ## 1.1.8
 
 ### Patch Changes

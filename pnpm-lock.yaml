@@ -246,9 +246,6 @@ importers:
 
   packages/components/button:
     dependencies:
-      '@nextui-org/use-aria-button':
-        specifier: ^2.0.6
-        version: 2.0.6(react@18.2.0)
       '@react-aria/focus':
         specifier: ^3.16.2
         version: 3.16.2(react@18.2.0)
@@ -279,6 +276,9 @@ importers:
       '@tw-material/theme':
         specifier: workspace:^
         version: link:../../theme
+      '@tw-material/use-button':
+        specifier: workspace:^
+        version: link:../../hooks/use-button
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -612,9 +612,6 @@ importers:
       '@nextui-org/shared-icons':
         specifier: ^2.0.6
         version: 2.0.6(react@18.2.0)
-      '@nextui-org/use-aria-button':
-        specifier: ^2.0.6
-        version: 2.0.6(react@18.2.0)
       '@nextui-org/use-aria-modal-overlay':
         specifier: ^2.0.6
         version: 2.0.6(react-dom@18.2.0)(react@18.2.0)
@@ -663,6 +660,9 @@ importers:
       '@tw-material/shared-utils':
         specifier: workspace:^
         version: link:../../utilities/shared-utils
+      '@tw-material/use-button':
+        specifier: workspace:^
+        version: link:../../hooks/use-button
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -697,9 +697,6 @@ importers:
 
   packages/components/popover:
     dependencies:
-      '@nextui-org/use-aria-button':
-        specifier: ^2.0.6
-        version: 2.0.6(react@18.2.0)
       '@nextui-org/use-safe-layout-effect':
         specifier: ^2.0.4
         version: 2.0.4(react@18.2.0)
@@ -745,6 +742,9 @@ importers:
       '@tw-material/shared-utils':
         specifier: workspace:^
         version: link:../../utilities/shared-utils
+      '@tw-material/use-button':
+        specifier: workspace:^
+        version: link:../../hooks/use-button
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -801,9 +801,6 @@ importers:
 
   packages/components/select:
     dependencies:
-      '@nextui-org/use-aria-button':
-        specifier: ^2.0.6
-        version: 2.0.6(react@18.2.0)
       '@nextui-org/use-is-mobile':
         specifier: ^2.0.6
         version: 2.0.6(react@18.2.0)
@@ -849,9 +846,12 @@ importers:
       '@tw-material/spinner':
         specifier: workspace:*
         version: link:../spinner
-      '@tw-material/use-aria-multiselect':
+      '@tw-material/use-button':
         specifier: workspace:*
-        version: link:../../hooks/use-aria-multiselect
+        version: link:../../hooks/use-button
+      '@tw-material/use-multiselect':
+        specifier: workspace:*
+        version: link:../../hooks/use-multiselect
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -898,9 +898,6 @@ importers:
 
   packages/components/slider:
     dependencies:
-      '@nextui-org/use-aria-press':
-        specifier: ^2.0.1
-        version: 2.0.1(react@18.2.0)
       '@react-aria/focus':
         specifier: ^3.16.2
         version: 3.16.2(react@18.2.0)
@@ -943,6 +940,9 @@ importers:
       '@tw-material/tooltip':
         specifier: workspace:*
         version: link:../tooltip
+      '@tw-material/use-press':
+        specifier: workspace:*
+        version: link:../../hooks/use-press
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -1058,7 +1058,54 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
 
-  packages/hooks/use-aria-multiselect:
+  packages/hooks/use-button:
+    dependencies:
+      '@react-aria/focus':
+        specifier: ^3.16.2
+        version: 3.16.2(react@18.2.0)
+      '@react-aria/interactions':
+        specifier: ^3.21.1
+        version: 3.21.1(react@18.2.0)
+      '@react-aria/utils':
+        specifier: ^3.23.2
+        version: 3.23.2(react@18.2.0)
+      '@react-types/button':
+        specifier: ^3.9.2
+        version: 3.9.2(react@18.2.0)
+      '@react-types/shared':
+        specifier: ^3.22.1
+        version: 3.22.1(react@18.2.0)
+      '@tw-material/use-press':
+        specifier: workspace:*
+        version: link:../use-press
+    devDependencies:
+      clean-package:
+        specifier: 2.2.0
+        version: 2.2.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+
+  packages/hooks/use-long-press:
+    dependencies:
+      '@react-aria/utils':
+        specifier: ^3.23.2
+        version: 3.23.2(react@18.2.0)
+      '@react-types/shared':
+        specifier: ^3.22.1
+        version: 3.22.1(react@18.2.0)
+      '@tw-material/use-press':
+        specifier: workspace:*
+        version: link:../use-press
+    devDependencies:
+      clean-package:
+        specifier: 2.2.0
+        version: 2.2.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+
+  packages/hooks/use-multiselect:
     dependencies:
       '@react-aria/i18n':
         specifier: ^3.10.2
@@ -1109,6 +1156,28 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+
+  packages/hooks/use-press:
+    dependencies:
+      '@react-aria/interactions':
+        specifier: ^3.21.1
+        version: 3.21.1(react@18.2.0)
+      '@react-aria/ssr':
+        specifier: ^3.9.2
+        version: 3.9.2(react@18.2.0)
+      '@react-aria/utils':
+        specifier: ^3.23.2
+        version: 3.23.2(react@18.2.0)
+      '@react-types/shared':
+        specifier: ^3.22.1
+        version: 3.22.1(react@18.2.0)
+    devDependencies:
+      clean-package:
+        specifier: 2.2.0
+        version: 2.2.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
 
   packages/react:
     dependencies:
@@ -3518,20 +3587,6 @@ packages:
     resolution: {integrity: sha512-5oXfnWDAtLWjDRExuC6oTuFS+lW43h+LCJrDO+8vUia2m4AAIM6SdWFneSqxMyiPkaY5n5yW5yvTL5js5JcTAQ==}
     dev: true
 
-  /@nextui-org/use-aria-button@2.0.6(react@18.2.0):
-    resolution: {integrity: sha512-38DZ3FK/oPZ3sppfM5EtgJ4DITOajNwSKkAMePBmuSZl+bsW7peP8g5JNd9uPOEz3edCOppT60AQSICsYiH3cg==}
-    peerDependencies:
-      react: ^18.2.0
-    dependencies:
-      '@nextui-org/use-aria-press': 2.0.1(react@18.2.0)
-      '@react-aria/focus': 3.16.2(react@18.2.0)
-      '@react-aria/interactions': 3.21.1(react@18.2.0)
-      '@react-aria/utils': 3.23.2(react@18.2.0)
-      '@react-types/button': 3.9.2(react@18.2.0)
-      '@react-types/shared': 3.22.1(react@18.2.0)
-      react: 18.2.0
-    dev: false
-
   /@nextui-org/use-aria-modal-overlay@2.0.6(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-JfhXvH2RObWpHeLmxdIBDPF2SDzV4SqBvEh01yRvg/EuZ3HDRfCnTDh+5HD0ziUVdk/kWuy/hZLX59sMX7QHWA==}
     peerDependencies:
@@ -3544,18 +3599,6 @@ packages:
       '@react-types/shared': 3.22.1(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
-  /@nextui-org/use-aria-press@2.0.1(react@18.2.0):
-    resolution: {integrity: sha512-T3MjHH5TU9qnkf872GmhcfQK16ITMmMW9zir6xsSsz0w6ay9Y0XTSPrI2zRL6ociFyfJjP840XCLtSx6VBfEBQ==}
-    peerDependencies:
-      react: ^18.2.0
-    dependencies:
-      '@react-aria/interactions': 3.21.1(react@18.2.0)
-      '@react-aria/ssr': 3.9.2(react@18.2.0)
-      '@react-aria/utils': 3.23.2(react@18.2.0)
-      '@react-types/shared': 3.22.1(react@18.2.0)
-      react: 18.2.0
     dev: false
 
   /@nextui-org/use-callback-ref@2.0.4(react@18.2.0):
@@ -3847,7 +3890,7 @@ packages:
       '@react-aria/ssr': 3.9.2(react@18.2.0)
       '@react-aria/utils': 3.23.2(react@18.2.0)
       '@react-types/shared': 3.22.1(react@18.2.0)
-      '@swc/helpers': 0.5.7
+      '@swc/helpers': 0.5.8
       react: 18.2.0
     dev: false
 

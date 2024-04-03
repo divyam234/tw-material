@@ -1,0 +1,45 @@
+{
+  "name": "@tw-material/use-press",
+  "version": "1.0.0",
+  "description": "Handles press interactions across mouse, touch, keyboard, and screen readers.",
+  "keywords": [
+    "use-press"
+  ],
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material.git",
+    "directory": "packages/components/popover"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {
+    "@react-aria/utils": "^3.23.2",
+    "@react-aria/ssr": "^3.9.2",
+    "@react-types/shared": "^3.22.1",
+    "@react-aria/interactions": "^3.21.1"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

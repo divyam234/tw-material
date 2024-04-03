@@ -16,12 +16,8 @@ import {useFocusRing} from "@react-aria/focus";
 import {dataAttr} from "@tw-material/shared-utils";
 import {mergeProps} from "@react-aria/utils";
 import {useHover} from "@react-aria/interactions";
-import {
-  MultiSelectProps,
-  useMultiSelect,
-  useMultiSelectState,
-} from "@tw-material/use-aria-multiselect";
-import {useAriaButton} from "@nextui-org/use-aria-button";
+import {MultiSelectProps, useMultiSelect, useMultiSelectState} from "@tw-material/use-multiselect";
+import {useAriaButton} from "@tw-material/use-button";
 import {SpinnerProps} from "@tw-material/spinner";
 import {CollectionChildren} from "@react-types/shared";
 import clsx from "clsx";

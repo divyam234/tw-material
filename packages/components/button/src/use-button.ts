@@ -18,7 +18,7 @@ import {isValidElement, cloneElement, useMemo} from "react";
 import {useHover} from "@react-aria/interactions";
 import {useRipple} from "@tw-material/ripple";
 import {ButtonSlots, ButtonVariantProps, button} from "@tw-material/theme";
-import {useAriaButton, type AriaButtonProps} from "@nextui-org/use-aria-button";
+import {useAriaButton, type AriaButtonProps} from "@tw-material/use-button";
 import {ReactRef} from "@tw-material/react-utils";
 
 interface Props extends HTMLProps<"button"> {

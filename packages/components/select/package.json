@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/select",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A select displays a collapsible list of options and allows a user to select one of them.",
   "keywords": [
     "select"
@@ -43,9 +43,9 @@
     "@tw-material/listbox": "workspace:*",
     "@tw-material/popover": "workspace:*",
     "@tw-material/spinner": "workspace:*",
-    "@tw-material/use-aria-multiselect": "workspace:*",
+    "@tw-material/use-multiselect": "workspace:*",
     "@nextui-org/use-is-mobile": "^2.0.6",
-    "@nextui-org/use-aria-button": "^2.0.6",
+    "@tw-material/use-button": "workspace:*",
     "@react-aria/utils": "^3.23.2",
     "@react-aria/listbox": "^3.11.5",
     "@react-stately/list": "^3.10.3",

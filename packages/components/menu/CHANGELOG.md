@@ -1,5 +1,12 @@
 # @tw-material/menu
 
+## 1.1.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/button@1.1.9
+
 ## 1.1.9
 
 ### Patch Changes

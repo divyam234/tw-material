@@ -1,5 +1,13 @@
 # @tw-material/popover
 
+## 1.1.9
+
+### Patch Changes
+
+- update
+- Updated dependencies
+  - @tw-material/button@1.1.9
+
 ## 1.1.8
 
 ### Patch Changes

@@ -6,7 +6,7 @@ import {AriaModalOverlayProps} from "@react-aria/overlays";
 import {useAriaModalOverlay} from "@nextui-org/use-aria-modal-overlay";
 import {useCallback, useId, useRef, useState, useMemo, ReactNode} from "react";
 import {HTMLTwM3Props as HTMLProps, mapPropsVariants, PropGetter} from "@tw-material/system";
-import {useAriaButton} from "@nextui-org/use-aria-button";
+import {useAriaButton} from "@tw-material/use-button";
 import {useFocusRing} from "@react-aria/focus";
 import {dataAttr} from "@tw-material/shared-utils";
 import {clsx} from "clsx";

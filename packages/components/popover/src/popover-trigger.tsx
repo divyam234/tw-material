@@ -1,5 +1,5 @@
 import React, {Children, cloneElement, useMemo} from "react";
-import {useAriaButton} from "@nextui-org/use-aria-button";
+import {useAriaButton} from "@tw-material/use-button";
 import {mergeProps} from "@react-aria/utils";
 import {forwardRef} from "@tw-material/system";
 import {pickChildren} from "@tw-material/react-utils";

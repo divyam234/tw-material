@@ -1,0 +1,47 @@
+{
+  "name": "@tw-material/use-button",
+  "version": "1.0.0",
+  "description": "Internal hook to handle button a11y and events, this is based on react-aria button hook but without the onClick warning",
+  "keywords": [
+    "use-button"
+  ],
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material.git",
+    "directory": "packages/components/popover"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@tw-material/use-press": "workspace:*",
+    "@react-aria/utils": "^3.23.2",
+    "@react-aria/focus": "^3.16.2",
+    "@react-aria/interactions": "^3.21.1",
+    "@react-types/button": "^3.9.2",
+    "@react-types/shared": "^3.22.1"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.2.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

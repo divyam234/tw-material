@@ -1,5 +1,13 @@
 # @tw-material/select
 
+## 1.0.7
+
+### Patch Changes
+
+- update
+- Updated dependencies
+  - @tw-material/popover@1.1.9
+
 ## 1.0.6
 
 ### Patch Changes

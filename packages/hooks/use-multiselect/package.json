@@ -1,9 +1,9 @@
 {
-  "name": "@tw-material/use-aria-multiselect",
+  "name": "@tw-material/use-multiselect",
   "version": "1.0.0",
   "description": "Provides the behavior and accessibility implementation for a multi-select component.",
   "keywords": [
-    "use-aria-multiselect"
+    "use-multiselect"
   ],
   "license": "MIT",
   "main": "src/index.ts",

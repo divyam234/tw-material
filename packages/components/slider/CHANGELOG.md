@@ -1,5 +1,12 @@
 # @tw-material/slider
 
+## 1.0.7
+
+### Patch Changes
+
+- update
+  - @tw-material/tooltip@1.0.6
+
 ## 1.0.6
 
 ### Patch Changes
