@@ -1,9 +1,9 @@
 {
-  "name": "@tw-material/use-press",
+  "name": "@tw-material/scroll-shadow",
   "version": "1.0.0",
-  "description": "Handles press interactions across mouse, touch, keyboard, and screen readers.",
+  "description": "A component that applies top and bottom shadows when content overflows on scroll.",
   "keywords": [
-    "use-press"
+    "scroll-shadow"
   ],
   "main": "src/index.ts",
   "sideEffects": false,
@@ -28,18 +28,24 @@
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
-  "dependencies": {
-    "@react-aria/utils": "^3.23.2",
-    "@react-aria/ssr": "^3.9.2",
-    "@react-types/shared": "^3.22.1",
-    "@react-aria/interactions": "^3.21.1"
-  },
   "peerDependencies": {
-    "react": ">=18"
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@tw-material/theme": ">=1",
+    "@tw-material/system": ">=1"
+  },
+  "dependencies": {
+    "@tw-material/shared-utils": "workspace:*",
+    "@tw-material/react-utils": "workspace:*",
+    "@nextui-org/use-data-scroll-overflow": "^2.1.3"
   },
   "devDependencies": {
+    "@tw-material/theme": "workspace:*",
+    "@tw-material/system": "workspace:*",
     "clean-package": "2.2.0",
-    "react": "^18.2.0"
+    "react-lorem-component": "0.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "clean-package": "../../../clean-package.config.json"
 }

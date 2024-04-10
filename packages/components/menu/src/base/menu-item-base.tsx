@@ -41,11 +41,11 @@ interface Props<T extends object = {}> extends Omit<ItemProps<"li", T>, "childre
   /**
    * The menu item start content.
    */
-  startIcon?: ReactNode;
+  startContent?: ReactNode;
   /**
    * The menu item end content.
    */
-  endIcon?: ReactNode;
+  endContent?: ReactNode;
   /**
    * Whether the menu press events are disabled.
    * @default false

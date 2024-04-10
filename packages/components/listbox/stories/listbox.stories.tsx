@@ -237,7 +237,7 @@ const MultipleSelectionTemplate = ({...args}: ListboxProps) => {
   );
 };
 
-const WithstartIconTemplate = ({disableAnimation, ...args}: ListboxProps) => {
+const WithstartContentTemplate = ({disableAnimation, ...args}: ListboxProps) => {
   return (
     <Listbox
       aria-label="Actions"
@@ -245,23 +245,23 @@ const WithstartIconTemplate = ({disableAnimation, ...args}: ListboxProps) => {
       onAction={(key: Key) => alert(key)}
       {...args}
     >
-      <ListboxItem key="new" startIcon={<AddNoteBulkIcon />}>
+      <ListboxItem key="new" startContent={<AddNoteBulkIcon />}>
         New file
       </ListboxItem>
-      <ListboxItem key="copy" startIcon={<CopyDocumentBulkIcon />}>
+      <ListboxItem key="copy" startContent={<CopyDocumentBulkIcon />}>
         Copy link
       </ListboxItem>
-      <ListboxItem key="edit" startIcon={<EditDocumentBulkIcon />}>
+      <ListboxItem key="edit" startContent={<EditDocumentBulkIcon />}>
         Edit file
       </ListboxItem>
-      <ListboxItem key="delete" className="text-danger" startIcon={<DeleteDocumentBulkIcon />}>
+      <ListboxItem key="delete" className="text-danger" startContent={<DeleteDocumentBulkIcon />}>
         Delete file
       </ListboxItem>
     </Listbox>
   );
 };
 
-const WithendIconTemplate = ({disableAnimation, ...args}) => {
+const WithendContentTemplate = ({disableAnimation, ...args}) => {
   return (
     <Listbox
       aria-label="Actions"
@@ -269,16 +269,16 @@ const WithendIconTemplate = ({disableAnimation, ...args}) => {
       onAction={(key: Key) => alert(key)}
       {...args}
     >
-      <ListboxItem key="new" endIcon={<AddNoteBulkIcon />}>
+      <ListboxItem key="new" endContent={<AddNoteBulkIcon />}>
         New file
       </ListboxItem>
-      <ListboxItem key="copy" endIcon={<CopyDocumentBulkIcon />}>
+      <ListboxItem key="copy" endContent={<CopyDocumentBulkIcon />}>
         Copy link
       </ListboxItem>
-      <ListboxItem key="edit" endIcon={<EditDocumentBulkIcon />}>
+      <ListboxItem key="edit" endContent={<EditDocumentBulkIcon />}>
         Edit file
       </ListboxItem>
-      <ListboxItem key="delete" className="text-danger" endIcon={<DeleteDocumentBulkIcon />}>
+      <ListboxItem key="delete" className="text-danger" endContent={<DeleteDocumentBulkIcon />}>
         Delete file
       </ListboxItem>
     </Listbox>
@@ -293,16 +293,20 @@ const WithDescriptionTemplate = ({disableAnimation, ...args}) => {
       onAction={(key: Key) => alert(key)}
       {...args}
     >
-      <ListboxItem key="new" description="Create a new file" startIcon={<AddNoteBulkIcon />}>
+      <ListboxItem key="new" description="Create a new file" startContent={<AddNoteBulkIcon />}>
         New file
       </ListboxItem>
-      <ListboxItem key="copy" description="Copy the file link" startIcon={<CopyDocumentBulkIcon />}>
+      <ListboxItem
+        key="copy"
+        description="Copy the file link"
+        startContent={<CopyDocumentBulkIcon />}
+      >
         Copy link
       </ListboxItem>
       <ListboxItem
         key="edit"
         description="Allows you to edit the file"
-        startIcon={<EditDocumentBulkIcon />}
+        startContent={<EditDocumentBulkIcon />}
       >
         Edit file
       </ListboxItem>
@@ -310,7 +314,7 @@ const WithDescriptionTemplate = ({disableAnimation, ...args}) => {
         key="delete"
         className="text-danger"
         description="Permanently delete the file"
-        startIcon={<DeleteDocumentBulkIcon />}
+        startContent={<DeleteDocumentBulkIcon />}
       >
         Delete file
       </ListboxItem>
@@ -327,20 +331,20 @@ const WithSectionsTemplate = ({disableAnimation, ...args}) => {
       {...args}
     >
       <ListboxSection title="Actions">
-        <ListboxItem key="new" description="Create a new file" startIcon={<AddNoteBulkIcon />}>
+        <ListboxItem key="new" description="Create a new file" startContent={<AddNoteBulkIcon />}>
           New file
         </ListboxItem>
         <ListboxItem
           key="copy"
           description="Copy the file link"
-          startIcon={<CopyDocumentBulkIcon />}
+          startContent={<CopyDocumentBulkIcon />}
         >
           Copy link
         </ListboxItem>
         <ListboxItem
           key="edit"
           description="Allows you to edit the file"
-          startIcon={<EditDocumentBulkIcon />}
+          startContent={<EditDocumentBulkIcon />}
         >
           Edit file
         </ListboxItem>
@@ -350,7 +354,7 @@ const WithSectionsTemplate = ({disableAnimation, ...args}) => {
           key="delete"
           className="text-danger"
           description="Permanently delete the file"
-          startIcon={<DeleteDocumentBulkIcon />}
+          startContent={<DeleteDocumentBulkIcon />}
         >
           Delete file
         </ListboxItem>
@@ -386,8 +390,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
     >
       <ListboxItem
         key="issues"
-        endIcon={<ItemCounter number={13} />}
-        startIcon={
+        endContent={<ItemCounter number={13} />}
+        startContent={
           <IconWrapper className="bg-success/10 text-success">
             <BugIcon className="text-lg " />
           </IconWrapper>
@@ -397,8 +401,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
       </ListboxItem>
       <ListboxItem
         key="pull_requests"
-        endIcon={<ItemCounter number={6} />}
-        startIcon={
+        endContent={<ItemCounter number={6} />}
+        startContent={
           <IconWrapper className="bg-primary/10 text-primary">
             <PullRequestIcon className="text-lg " />
           </IconWrapper>
@@ -408,8 +412,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
       </ListboxItem>
       <ListboxItem
         key="discussions"
-        endIcon={<ItemCounter number={293} />}
-        startIcon={
+        endContent={<ItemCounter number={293} />}
+        startContent={
           <IconWrapper className="bg-secondary/10 text-secondary">
             <ChatIcon className="text-lg " />
           </IconWrapper>
@@ -419,8 +423,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
       </ListboxItem>
       <ListboxItem
         key="actions"
-        endIcon={<ItemCounter number={2} />}
-        startIcon={
+        endContent={<ItemCounter number={2} />}
+        startContent={
           <IconWrapper className="bg-warning/10 text-warning">
             <PlayCircleIcon className="text-lg " />
           </IconWrapper>
@@ -430,8 +434,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
       </ListboxItem>
       <ListboxItem
         key="projects"
-        endIcon={<ItemCounter number={4} />}
-        startIcon={
+        endContent={<ItemCounter number={4} />}
+        startContent={
           <IconWrapper className="bg-default/50 text-foreground">
             <LayoutIcon className="text-lg " />
           </IconWrapper>
@@ -442,8 +446,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
       <ListboxItem
         key="releases"
         className="group h-auto py-3"
-        endIcon={<ItemCounter number={399} />}
-        startIcon={
+        endContent={<ItemCounter number={399} />}
+        startContent={
           <IconWrapper className="bg-primary/10 text-primary">
             <TagIcon className="text-lg" />
           </IconWrapper>
@@ -463,8 +467,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
       </ListboxItem>
       <ListboxItem
         key="contributors"
-        endIcon={<ItemCounter number={79} />}
-        startIcon={
+        endContent={<ItemCounter number={79} />}
+        startContent={
           <IconWrapper className="bg-warning/10 text-warning">
             <UsersIcon />
           </IconWrapper>
@@ -474,8 +478,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
       </ListboxItem>
       <ListboxItem
         key="watchers"
-        endIcon={<ItemCounter number={82} />}
-        startIcon={
+        endContent={<ItemCounter number={82} />}
+        startContent={
           <IconWrapper className="bg-default/50 text-foreground">
             <WatchersIcon />
           </IconWrapper>
@@ -485,8 +489,8 @@ const CustomWithClassNamesTemplate = ({disableAnimation, ...args}) => {
       </ListboxItem>
       <ListboxItem
         key="license"
-        endIcon={<span className="text-small text-default-400">MIT</span>}
-        startIcon={
+        endContent={<span className="text-small text-default-400">MIT</span>}
+        startContent={
           <IconWrapper className="bg-danger/10 text-danger dark:text-danger-500">
             <BookIcon />
           </IconWrapper>
@@ -536,8 +540,8 @@ export const MultipleSelection = {
   },
 };
 
-export const WithstartIcon = {
-  render: WithstartIconTemplate,
+export const WithstartContent = {
+  render: WithstartContentTemplate,
 
   args: {
     ...defaultProps,
@@ -546,8 +550,8 @@ export const WithstartIcon = {
   },
 };
 
-export const WithendIcon = {
-  render: WithendIconTemplate,
+export const WithendContent = {
+  render: WithendContentTemplate,
 
   args: {
     ...defaultProps,

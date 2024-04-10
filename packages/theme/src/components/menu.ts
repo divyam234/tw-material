@@ -1,14 +1,10 @@
 import type {VariantProps} from "tailwind-variants";
 
-import {dataFocusVisibleClasses, tv} from "../utils";
+import {tv} from "../utils";
 
 const menu = tv({
   slots: {
-    base: [
-      "w-full  relative",
-      "flex flex-col gap-1 bg-surface-container rounded-extra-small",
-      "shadow-1",
-    ],
+    base: ["w-full relative", "flex flex-col gap-1 bg-surface-container rounded-extra-small"],
     list: "w-full flex flex-col gap-0.5 outline-none p-1.5",
     emptyContent: [
       "h-10",
@@ -50,13 +46,18 @@ const menuItem = tv({
     title: "flex-1 truncate text-label-large text-on-surface",
     description: ["w-full", "text-small", "text-outline", "group-data-[hover=true]:text-current"],
     selectedIcon: ["text-on-surface-variant", "size-4", "flex-shrink-0"],
-    startIcon: [
+    startContent: [
       "text-on-surface-variant",
       "[&>svg]:size-6",
       "pointer-events-none",
       "flex-shrink-0",
     ],
-    endIcon: ["text-on-surface-variant", "[&>svg]:size-6", "pointer-events-none", "flex-shrink-0"],
+    endContent: [
+      "text-on-surface-variant",
+      "[&>svg]:size-6",
+      "pointer-events-none",
+      "flex-shrink-0",
+    ],
     shortcut: [
       "px-1",
       "py-0.5",

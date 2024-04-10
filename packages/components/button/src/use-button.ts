@@ -18,7 +18,7 @@ import {isValidElement, cloneElement, useMemo} from "react";
 import {useHover} from "@react-aria/interactions";
 import {useRipple} from "@tw-material/ripple";
 import {ButtonSlots, ButtonVariantProps, button} from "@tw-material/theme";
-import {useAriaButton, type AriaButtonProps} from "@tw-material/use-button";
+import {useAriaButton, type AriaButtonProps} from "@nextui-org/use-aria-button";
 import {ReactRef} from "@tw-material/react-utils";
 
 interface Props extends HTMLProps<"button"> {
@@ -34,11 +34,11 @@ interface Props extends HTMLProps<"button"> {
   /**
    * The button start content.
    */
-  startIcon?: ReactNode;
+  startContent?: ReactNode;
   /**
    * The button end content.
    */
-  endIcon?: ReactNode;
+  endContent?: ReactNode;
   /**
    * Spinner to display when loading.
    */
@@ -79,8 +79,8 @@ export function useButton(originalProps: UseButtonProps) {
     ref,
     as,
     children,
-    startIcon: startIconProp,
-    endIcon: endIconProp,
+    startContent: startContentProp,
+    endContent: endContentProp,
     autoFocus,
     className,
     classNames,
@@ -150,8 +150,8 @@ export function useButton(originalProps: UseButtonProps) {
       "data-focus-visible": dataAttr(isFocusVisible),
       "data-hover": dataAttr(isHovered),
       "data-loading": dataAttr(isLoading),
-      "data-start-icon": dataAttr(startIconProp !== undefined),
-      "data-end-icon": dataAttr(endIconProp !== undefined),
+      "data-start-content": dataAttr(startContentProp !== undefined),
+      "data-end-content": dataAttr(endContentProp !== undefined),
       className: slots.base({class: clsx(classNames?.base, className)}),
       ...mergeProps(
         ariaButtonProps,
@@ -179,13 +179,13 @@ export function useButton(originalProps: UseButtonProps) {
 
   const getStartButtonProps: PropGetter = () => {
     return {
-      className: slots.startIcon({class: classNames?.startIcon}),
+      className: slots.startContent({class: classNames?.startContent}),
     };
   };
 
   const getEndButtonProps: PropGetter = () => {
     return {
-      className: slots.endIcon({class: classNames?.endIcon}),
+      className: slots.endContent({class: classNames?.endContent}),
     };
   };
 
@@ -199,9 +199,9 @@ export function useButton(originalProps: UseButtonProps) {
         })
       : null;
 
-  const startIcon = getIconClone(startIconProp);
+  const startContent = getIconClone(startContentProp);
 
-  const endIcon = getIconClone(endIconProp);
+  const endContent = getIconClone(endContentProp);
 
   const size = originalProps.size ?? "md";
 
@@ -225,8 +225,8 @@ export function useButton(originalProps: UseButtonProps) {
     children,
     domRef,
     slots,
-    startIcon,
-    endIcon,
+    startContent,
+    endContent,
     isLoading,
     spinner,
     spinnerPlacement,

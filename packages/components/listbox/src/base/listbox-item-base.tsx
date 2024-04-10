@@ -37,11 +37,11 @@ interface Props<T extends object = {}> extends Omit<ItemProps<"li", T>, "childre
   /**
    * The listbox item start content.
    */
-  startIcon?: ReactNode;
+  startContent?: ReactNode;
   /**
    * The listbox item end content.
    */
-  endIcon?: ReactNode;
+  endContent?: ReactNode;
   /**
    * Whether the listbox press events are disabled.
    * @default false

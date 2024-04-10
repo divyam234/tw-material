@@ -2,6 +2,7 @@ import type {SelectSlots, SelectVariantProps, SlotsToClasses} from "@tw-material
 import type {HiddenSelectProps} from "./hidden-select";
 import type {ListboxProps} from "@tw-material/listbox";
 import type {PopoverProps} from "@tw-material/popover";
+import type {ScrollShadowProps} from "@tw-material/scroll-shadow";
 
 import {
   DOMAttributes,
@@ -17,7 +18,7 @@ import {dataAttr} from "@tw-material/shared-utils";
 import {mergeProps} from "@react-aria/utils";
 import {useHover} from "@react-aria/interactions";
 import {MultiSelectProps, useMultiSelect, useMultiSelectState} from "@tw-material/use-multiselect";
-import {useAriaButton} from "@tw-material/use-button";
+import {useAriaButton} from "@nextui-org/use-aria-button";
 import {SpinnerProps} from "@tw-material/spinner";
 import {CollectionChildren} from "@react-types/shared";
 import clsx from "clsx";
@@ -94,6 +95,13 @@ interface Props<T> extends Omit<HTMLProps<"select">, keyof SelectVariantProps> {
    */
   listboxProps?: Partial<ListboxProps>;
   /**
+   * Props to be passed to the scroll shadow component. This component
+   * adds a shadow to the top and bottom of the listbox when it is scrollable.
+   *
+   * @default { hideScrollBar: true, offset: 15 }
+   */
+  scrollShadowProps?: Partial<ScrollShadowProps>;
+  /**
    * Props to be passed to the spinner component.
    *
    * @default { size: "sm"}
@@ -146,6 +154,7 @@ export function useSelect<T extends object>(originalProps: UseSelectProps<T>) {
     spinnerRef,
     scrollRef: scrollRefProp,
     popoverProps = {},
+    scrollShadowProps = {},
     listboxProps = {},
     spinnerProps = {},
     validationState,
@@ -160,6 +169,7 @@ export function useSelect<T extends object>(originalProps: UseSelectProps<T>) {
 
   const slotsProps: {
     popoverProps: UseSelectProps<T>["popoverProps"];
+    scrollShadowProps: UseSelectProps<T>["scrollShadowProps"];
     listboxProps: UseSelectProps<T>["listboxProps"];
   } = {
     popoverProps: mergeProps(
@@ -170,6 +180,15 @@ export function useSelect<T extends object>(originalProps: UseSelectProps<T>) {
         disableAnimation,
       },
       popoverProps,
+    ),
+    scrollShadowProps: mergeProps(
+      {
+        ref: scrollShadowRef,
+        isEnabled: originalProps.showScrollIndicators ?? true,
+        hideScrollBar: true,
+        offset: 15,
+      },
+      scrollShadowProps,
     ),
     listboxProps: mergeProps(
       {
@@ -410,9 +429,9 @@ export function useSelect<T extends object>(originalProps: UseSelectProps<T>) {
       className: slots.listboxWrapper({
         class: clsx(classNames?.listboxWrapper, props?.className),
       }),
-      ...props,
+      ...mergeProps(slotsProps.scrollShadowProps, props),
     }),
-    [slots.listboxWrapper, classNames?.listboxWrapper],
+    [slots.listboxWrapper, classNames?.listboxWrapper, slotsProps.scrollShadowProps],
   );
 
   const getListboxProps = (props: any = {}) => {

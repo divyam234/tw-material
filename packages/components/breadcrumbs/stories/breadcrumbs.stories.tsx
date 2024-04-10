@@ -310,7 +310,7 @@ const WithDropdownItemTemplate = (args: BreadcrumbsProps & {page: number}) => {
           <DropdownTrigger>
             <Button
               className={clsx("h-6 pr-2", args.size && sizeMap[args.size])}
-              endIcon={<ChevronDownIcon className="text-default-500" />}
+              endContent={<ChevronDownIcon className="text-default-500" />}
               radius="full"
               size="sm"
             >

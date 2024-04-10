@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/listbox",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A listbox displays a list of options and allows a user to select one or more of them.",
   "keywords": [
     "listbox"

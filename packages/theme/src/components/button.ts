@@ -22,8 +22,8 @@ const button = tv({
       "tap-highlight-transparent",
       ...dataFocusVisibleClasses,
     ],
-    startIcon: "",
-    endIcon: "",
+    startContent: "",
+    endContent: "",
   },
   variants: {
     variant: {
@@ -45,19 +45,19 @@ const button = tv({
     },
     size: {
       sm: {
-        base: "pr-6 pl-6 data-[start-icon=true]:pl-4 data-[end-icon=true]:pr-4 px-3 min-w-16 h-8 text-label-medium gap-2 rounded-full",
-        startIcon: "size-4 [&>svg]:size-4",
-        endIcon: "size-4 [&>svg]:size-4",
+        base: "pr-6 pl-6 data-[start-content=true]:pl-4 data-[end-content=true]:pr-4 px-3 min-w-16 h-8 text-label-medium gap-2 rounded-full",
+        startContent: "size-4 [&>svg]:size-4 pointer-events-none",
+        endContent: "size-4 [&>svg]:size-4 pointer-events-none",
       },
       md: {
-        base: "pr-6 pl-6 data-[start-icon=true]:pl-4 data-[end-icon=true]:pr-4 min-w-20 h-10 text-label-large gap-2 rounded-full",
-        startIcon: "size-[18px] [&>svg]:size-[18px]",
-        endIcon: "size-[18px]  [&>svg]:size-[18px]",
+        base: "pr-6 pl-6 data-[start-content=true]:pl-4 data-[end-content=true]:pr-4 min-w-20 h-10 text-label-large gap-2 rounded-full",
+        startContent: "size-[18px] [&>svg]:size-[18px] pointer-events-none",
+        endContent: "size-[18px]  [&>svg]:size-[18px] pointer-events-none",
       },
       lg: {
-        base: "pr-6 pl-6 data-[start-icon=true]:pl-4 data-[end-icon=true]:pr-4 px-8 min-w-24 h-12 text-label-large gap-2 rounded-full",
-        startIcon: "size-5  [&>svg]:size-5",
-        endIcon: "size-5  [&>svg]:size-5",
+        base: "pr-6 pl-6 data-[start-content=true]:pl-4 data-[end-content=true]:pr-4 px-8 min-w-24 h-12 text-label-large gap-2 rounded-full",
+        startContent: "size-5  [&>svg]:size-5 pointer-events-none",
+        endContent: "size-5  [&>svg]:size-5 pointer-events-none",
       },
     },
     radius: {

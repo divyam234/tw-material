@@ -11,3 +11,5 @@ export * from "./divider";
 export * from "./select";
 export * from "./spinner";
 export * from "./input";
+export * from "./scroll-shadow";
+export * from "./autocomplete";

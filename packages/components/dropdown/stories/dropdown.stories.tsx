@@ -296,20 +296,20 @@ const WithStartContentTemplate = ({
         <Button disableAnimation={disableAnimation}>Trigger</Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Actions" onAction={alert}>
-        <DropdownItem key="new" shortcut="⌘N" startIcon={<AddNoteBulkIcon />}>
+        <DropdownItem key="new" shortcut="⌘N" startContent={<AddNoteBulkIcon />}>
           New file
         </DropdownItem>
-        <DropdownItem key="copy" shortcut="⌘C" startIcon={<CopyDocumentBulkIcon />}>
+        <DropdownItem key="copy" shortcut="⌘C" startContent={<CopyDocumentBulkIcon />}>
           Copy link
         </DropdownItem>
-        <DropdownItem key="edit" shortcut="⌘⇧E" startIcon={<EditDocumentBulkIcon />}>
+        <DropdownItem key="edit" shortcut="⌘⇧E" startContent={<EditDocumentBulkIcon />}>
           Edit file
         </DropdownItem>
         <DropdownItem
           key="delete"
           className="text-danger"
           shortcut="⌘⇧D"
-          startIcon={<DeleteDocumentBulkIcon className={clsx(iconClasses, "!text-danger")} />}
+          startContent={<DeleteDocumentBulkIcon className={clsx(iconClasses, "!text-danger")} />}
         >
           Delete file
         </DropdownItem>
@@ -327,19 +327,19 @@ const WithEndContentTemplate = ({disableAnimation, ...args}) => {
         <Button disableAnimation={disableAnimation}>Trigger</Button>
       </DropdownTrigger>
       <DropdownMenu aria-label="Actions" onAction={alert}>
-        <DropdownItem key="new" endIcon={<AddNoteBulkIcon />}>
+        <DropdownItem key="new" endContent={<AddNoteBulkIcon />}>
           New file
         </DropdownItem>
-        <DropdownItem key="copy" endIcon={<CopyDocumentBulkIcon />}>
+        <DropdownItem key="copy" endContent={<CopyDocumentBulkIcon />}>
           Copy link
         </DropdownItem>
-        <DropdownItem key="edit" endIcon={<EditDocumentBulkIcon />}>
+        <DropdownItem key="edit" endContent={<EditDocumentBulkIcon />}>
           Edit file
         </DropdownItem>
         <DropdownItem
           key="delete"
           className="text-danger"
-          endIcon={<DeleteDocumentBulkIcon className={clsx(iconClasses, "!text-danger")} />}
+          endContent={<DeleteDocumentBulkIcon className={clsx(iconClasses, "!text-danger")} />}
         >
           Delete file
         </DropdownItem>
@@ -359,7 +359,7 @@ const WithDescriptionTemplate = ({disableAnimation, ...args}) => {
           key="new"
           description="Create a new file"
           shortcut="⌘N"
-          startIcon={<AddNoteBulkIcon />}
+          startContent={<AddNoteBulkIcon />}
         >
           New file
         </DropdownItem>
@@ -367,7 +367,7 @@ const WithDescriptionTemplate = ({disableAnimation, ...args}) => {
           key="copy"
           description="Copy the file link"
           shortcut="⌘C"
-          startIcon={<CopyDocumentBulkIcon />}
+          startContent={<CopyDocumentBulkIcon />}
         >
           Copy link
         </DropdownItem>
@@ -375,7 +375,7 @@ const WithDescriptionTemplate = ({disableAnimation, ...args}) => {
           key="edit"
           description="Allows you to edit the file"
           shortcut="⌘⇧E"
-          startIcon={<EditDocumentBulkIcon />}
+          startContent={<EditDocumentBulkIcon />}
         >
           Edit file
         </DropdownItem>
@@ -384,7 +384,7 @@ const WithDescriptionTemplate = ({disableAnimation, ...args}) => {
           className="text-danger"
           description="Permanently delete the file"
           shortcut="⌘⇧D"
-          startIcon={<DeleteDocumentBulkIcon />}
+          startContent={<DeleteDocumentBulkIcon />}
         >
           Delete file
         </DropdownItem>
@@ -407,7 +407,7 @@ const WithSectionsTemplate = ({disableAnimation, ...args}) => {
             key="new"
             description="Create a new file"
             shortcut="⌘N"
-            startIcon={<AddNoteBulkIcon />}
+            startContent={<AddNoteBulkIcon />}
           >
             New file
           </DropdownItem>
@@ -415,7 +415,7 @@ const WithSectionsTemplate = ({disableAnimation, ...args}) => {
             key="copy"
             description="Copy the file link"
             shortcut="⌘C"
-            startIcon={<CopyDocumentBulkIcon />}
+            startContent={<CopyDocumentBulkIcon />}
           >
             Copy link
           </DropdownItem>
@@ -423,7 +423,7 @@ const WithSectionsTemplate = ({disableAnimation, ...args}) => {
             key="edit"
             description="Allows you to edit the file"
             shortcut="⌘⇧E"
-            startIcon={<EditDocumentBulkIcon />}
+            startContent={<EditDocumentBulkIcon />}
           >
             Edit file
           </DropdownItem>
@@ -434,7 +434,7 @@ const WithSectionsTemplate = ({disableAnimation, ...args}) => {
             className="text-danger"
             description="Permanently delete the file"
             shortcut="⌘⇧D"
-            startIcon={<DeleteDocumentBulkIcon className={clsx(iconClasses, "!text-danger")} />}
+            startContent={<DeleteDocumentBulkIcon className={clsx(iconClasses, "!text-danger")} />}
           >
             Delete file
           </DropdownItem>

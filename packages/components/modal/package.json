@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/modal",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "keywords": [
     "modal"
   ],
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@nextui-org/shared-icons": "^2.0.6",
-    "@tw-material/use-button": "workspace:^",
+    "@nextui-org/use-aria-button": "^2.0.6",
     "@nextui-org/use-aria-modal-overlay": "^2.0.6",
     "@nextui-org/use-disclosure": "^2.0.6",
     "@nextui-org/use-safe-layout-effect": "^2.0.4",

@@ -1,5 +1,16 @@
 # @tw-material/select
 
+## 1.0.8
+
+### Patch Changes
+
+- update
+- Updated dependencies
+  - @tw-material/listbox@1.0.3
+  - @tw-material/popover@1.1.10
+  - @tw-material/scroll-shadow@1.0.0
+  - @tw-material/spinner@1.0.1
+
 ## 1.0.7
 
 ### Patch Changes

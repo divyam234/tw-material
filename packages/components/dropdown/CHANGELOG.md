@@ -1,5 +1,14 @@
 # @tw-material/dropdown
 
+## 1.1.12
+
+### Patch Changes
+
+- update
+- Updated dependencies
+  - @tw-material/popover@1.1.10
+  - @tw-material/menu@1.1.11
+
 ## 1.1.11
 
 ### Patch Changes

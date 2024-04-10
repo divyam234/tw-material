@@ -1,5 +1,11 @@
 # @tw-material/breadcrumbs
 
+## 1.1.2
+
+### Patch Changes
+
+- update
+
 ## 1.1.1
 
 ### Patch Changes

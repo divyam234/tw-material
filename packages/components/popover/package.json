@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/popover",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "keywords": [
     "popover"
   ],
@@ -36,7 +36,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@tw-material/use-button": "workspace:^",
+    "@nextui-org/use-aria-button": "^2.0.6",
     "@nextui-org/use-safe-layout-effect": "^2.0.4",
     "@react-aria/dialog": "^3.5.12",
     "@react-aria/focus": "^3.16.2",

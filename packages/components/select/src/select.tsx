@@ -5,6 +5,7 @@ import {forwardRef} from "@tw-material/system";
 import {cloneElement, ForwardedRef, ReactElement, Ref, useMemo} from "react";
 import {VisuallyHidden} from "@react-aria/visually-hidden";
 import {AnimatePresence} from "framer-motion";
+import {ScrollShadow} from "@tw-material/scroll-shadow";
 
 import {HiddenSelect} from "./hidden-select";
 import {UseSelectProps, useSelect} from "./use-select";
@@ -109,9 +110,9 @@ function Select<T extends object>(props: Props<T>, ref: ForwardedRef<HTMLSelectE
           state={state}
           triggerRef={triggerRef}
         >
-          <div {...getListboxWrapperProps()}>
+          <ScrollShadow {...getListboxWrapperProps()}>
             <Listbox {...getListboxProps()} />
-          </div>
+          </ScrollShadow>
         </FreeSoloPopover>
       ) : null,
     [state.isOpen, getPopoverProps, state, triggerRef, getListboxWrapperProps, getListboxProps],

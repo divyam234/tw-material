@@ -20,8 +20,8 @@ const ListboxItem = forwardRef<"li", ListboxItemProps>((props, _) => {
     isSelected,
     isDisabled,
     selectedIcon,
-    startIcon,
-    endIcon,
+    startContent,
+    endContent,
     hideSelectedIcon,
     disableAnimation,
     getItemProps,
@@ -47,8 +47,10 @@ const ListboxItem = forwardRef<"li", ListboxItemProps>((props, _) => {
 
   return (
     <Component {...getItemProps()}>
-      {startIcon && (
-        <span className={slots.startIcon({class: classNames?.startIcon})}>{startIcon}</span>
+      {startContent && (
+        <span className={slots.startContent({class: classNames?.startContent})}>
+          {startContent}
+        </span>
       )}
       {description ? (
         <div {...getWrapperProps()}>
@@ -61,8 +63,8 @@ const ListboxItem = forwardRef<"li", ListboxItemProps>((props, _) => {
       {isSelectable && !hideSelectedIcon && (
         <span {...getSelectedIconProps()}>{selectedContent}</span>
       )}
-      {endIcon && !isSelected && (
-        <span className={slots.endIcon({class: classNames?.endIcon})}>{endIcon}</span>
+      {endContent && !isSelected && (
+        <span className={slots.endContent({class: classNames?.endContent})}>{endContent}</span>
       )}
     </Component>
   );

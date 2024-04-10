@@ -27,9 +27,8 @@ const select = tv({
     listboxWrapper: "scroll-py-6 max-h-64 w-full",
     listbox: "",
     popoverContent: [
-      "w-full",
+      "w-full overflow-hidden",
       "p-0 shadow-none",
-      "overflow-y-auto",
       "bg-transparent border-0",
       "text-inherit rounded-none",
     ],

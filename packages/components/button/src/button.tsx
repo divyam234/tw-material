@@ -11,8 +11,8 @@ const Button = forwardRef<"button", ButtonProps>((props, ref) => {
     Component,
     domRef,
     children,
-    startIcon,
-    endIcon,
+    startContent,
+    endContent,
     spinnerSize,
     spinner = (
       <Spinner
@@ -35,12 +35,12 @@ const Button = forwardRef<"button", ButtonProps>((props, ref) => {
 
   return (
     <Component ref={domRef} {...getButtonProps()}>
-      {startIcon && !isLoading && <span {...getStartButtonProps()}>{startIcon}</span>}
+      {startContent && !isLoading && <span {...getStartButtonProps()}>{startContent}</span>}
       {isLoading && spinnerPlacement === "start" && (
         <span {...getStartButtonProps()}>{spinner}</span>
       )}
       {isLoading && isIconOnly ? null : children}
-      {endIcon && !isLoading && <span {...getEndButtonProps()}>{endIcon}</span>}
+      {endContent && !isLoading && <span {...getEndButtonProps()}>{endContent}</span>}
       {isLoading && spinnerPlacement === "end" && <span {...getEndButtonProps()}>{spinner}</span>}
       {!disableRipple && <Ripple {...getRippleProps()} />}
     </Component>
