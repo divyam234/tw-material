@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/react",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "license": "MIT",
   "main": "src/index.ts",
   "sideEffects": false,
@@ -43,7 +43,8 @@
     "@tw-material/listbox": "workspace:*",
     "@tw-material/divider": "workspace:*",
     "@tw-material/spinner": "workspace:*",
-    "@tw-material/select": "workspace:*"
+    "@tw-material/select": "workspace:*",
+    "@tw-material/autocomplete": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18",

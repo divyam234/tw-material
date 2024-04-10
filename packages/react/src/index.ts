@@ -16,3 +16,4 @@ export * from "@tw-material/listbox";
 export * from "@tw-material/divider";
 export * from "@tw-material/spinner";
 export * from "@tw-material/select";
+export * from "@tw-material/autocomplete";
