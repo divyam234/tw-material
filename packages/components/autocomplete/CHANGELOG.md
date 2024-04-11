@@ -1,5 +1,17 @@
 # @tw-material/autocomplete
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/popover@1.1.11
+  - @tw-material/button@1.1.11
+  - @tw-material/input@1.0.3
+  - @tw-material/listbox@1.0.3
+  - @tw-material/scroll-shadow@1.0.0
+  - @tw-material/spinner@1.0.1
+
 ## 1.0.1
 
 ### Patch Changes

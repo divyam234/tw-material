@@ -1,5 +1,11 @@
 # @tw-material/theme
 
+## 1.1.8
+
+### Patch Changes
+
+- update
+
 ## 1.1.7
 
 ### Patch Changes

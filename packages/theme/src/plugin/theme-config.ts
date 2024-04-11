@@ -1,13 +1,10 @@
-import {resolveTwcConfig} from "tw-colors";
+import type {Options} from "./types";
 
+import {resolveTwcConfig} from "./m3-colors";
 import {colors, createTheme} from "./create-theme";
-import {Options} from "./types";
 
 export const genThemeConfig = ({sourceColor, customColors, defaultTheme}: Options) => {
   const m3Theme = createTheme({sourceColor, customColors});
 
-  return resolveTwcConfig(colors(m3Theme), {
-    produceCssVariable: (colorName) => `--m3-${colorName}`,
-    defaultTheme,
-  });
+  return resolveTwcConfig(colors(m3Theme), "m3", defaultTheme);
 };

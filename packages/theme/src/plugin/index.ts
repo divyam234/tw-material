@@ -41,19 +41,19 @@ export const material3 = (options: Options) => {
     {
       theme: {
         extend: {
-          borderRadius: borderRadius,
-          borderColor: borderColor,
-          boxShadow: boxShadow,
-          boxShadowColor: boxShadowColor,
+          borderRadius,
+          borderColor,
+          boxShadow,
+          boxShadowColor,
           fontSize: typography,
-          borderWidth: borderWidth,
+          borderWidth,
           screens: {
             xs: "475px",
           },
-          transitionDuration: transitionDuration,
-          transitionTimingFunction: transitionTimingFunction,
-          zIndex: zIndex,
-          opacity: opacity,
+          transitionDuration,
+          transitionTimingFunction,
+          zIndex,
+          opacity,
           // @ts-ignore tailwind types are broken
           colors: resolved.colors,
         },

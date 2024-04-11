@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/autocomplete",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An autocomplete combines a text input with a listbox, allowing users to filter a list of options to items matching a query.",
   "keywords": [
     "autocomplete"

@@ -110,6 +110,6 @@ const FreeSoloPopover = forwardRef<"div", FreeSoloPopoverProps>((props, ref) => 
   );
 });
 
-FreeSoloPopover.displayName = "NextUI.FreeSoloPopover";
+FreeSoloPopover.displayName = "FreeSoloPopover";
 
 export default FreeSoloPopover;
