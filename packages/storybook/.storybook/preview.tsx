@@ -11,7 +11,7 @@ const decorators: Preview["decorators"] = [
       locale && new Intl.Locale(locale)?.textInfo?.direction === "rtl" ? "rtl" : undefined;
 
     return (
-      <div className="bg-background w-full h-full" lang={locale} dir={direction}>
+      <div className="bg-background size-full" lang={locale} dir={direction}>
         <Story />
       </div>
     );
@@ -39,7 +39,7 @@ const parameters: Preview["parameters"] = {
   darkMode: {
     current: "light",
     stylePreview: true,
-    darkClass: "light",
+    darkClass: "dark",
     lightClass: "light",
     classTarget: "html",
     dark: {
