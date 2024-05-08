@@ -1,6 +1,6 @@
 ### Tailwind Material You Components
 ```sh
-npm install @tw-material/react
+npm install @tw-material/react @tw-material/theme @tw-material/system framer-motion
 ```
 ```ts
 //tailwind.config.ts
