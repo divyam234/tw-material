@@ -8,7 +8,7 @@ import {
 } from "@nextui-org/shared-icons";
 import {clsx} from "clsx";
 import {dropdown, popover} from "@tw-material/theme";
-import {Button} from "@tw-material/Button";
+import {Button} from "@tw-material/button";
 
 import {
   Dropdown,
