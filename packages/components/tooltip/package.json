@@ -50,6 +50,7 @@
     "@tw-material/ripple": "workspace:^",
     "@tw-material/shared-utils": "workspace:^",
     "@tw-material/theme": "workspace:^",
+    "@tw-material/aria-utils":"workspace:^",
     "clsx": "^2.1.1"
   },
   "devDependencies": {
