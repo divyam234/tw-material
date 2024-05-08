@@ -19,9 +19,7 @@ const decorators: Preview["decorators"] = [
 ];
 
 const commonTheme = {
-  brandTitle: "NextUI",
-  brandUrl: "https://nextui.org",
-  brandTarget: "_self",
+  brandTitle: "TwMaterial You",
 };
 
 const parameters: Preview["parameters"] = {
@@ -52,13 +50,11 @@ const parameters: Preview["parameters"] = {
       background: "black",
       appContentBg: "black",
       appBorderRadius: 14,
-      brandImage: "/dark-logo.svg",
     },
     light: {
       ...themes.light,
       ...commonTheme,
       appBorderRadius: 14,
-      brandImage: "/light-logo.svg",
     },
   },
 };
