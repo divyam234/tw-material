@@ -30,6 +30,6 @@ const Modal = forwardRef<"div", ModalProps>((props, ref) => {
   );
 });
 
-Modal.displayName = "Modal";
+Modal.displayName = "TwMaterial.Modal";
 
 export default Modal;

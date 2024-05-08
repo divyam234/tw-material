@@ -10,6 +10,6 @@ const ScrollShadow = forwardRef<"div", ScrollShadowProps>((props, ref) => {
   return <Component {...getBaseProps()}>{children}</Component>;
 });
 
-ScrollShadow.displayName = "ScrollShadow";
+ScrollShadow.displayName = "TwMaterial.ScrollShadow";
 
 export default ScrollShadow;

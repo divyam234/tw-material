@@ -36,6 +36,6 @@ const Breadcrumbs = forwardRef<"li", BreadcrumbItemProps>((props, ref) => {
   );
 });
 
-Breadcrumbs.displayName = "Breadcrumbs";
+Breadcrumbs.displayName = "TwMaterial.Breadcrumbs";
 
 export default Breadcrumbs;

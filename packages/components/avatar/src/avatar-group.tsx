@@ -29,6 +29,6 @@ const AvatarGroup = forwardRef<"div", AvatarGroupProps>((props, ref) => {
   );
 });
 
-AvatarGroup.displayName = "AvatarGroup";
+AvatarGroup.displayName = "TwMaterial.AvatarGroup";
 
 export default AvatarGroup;

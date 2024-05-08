@@ -70,6 +70,6 @@ const Slider = forwardRef<"div", SliderProps>((props, ref) => {
   );
 });
 
-Slider.displayName = "Slider";
+Slider.displayName = "TwMaterial.Slider";
 
 export default Slider;

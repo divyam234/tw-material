@@ -147,4 +147,4 @@ export type SelectProps<T = object> = Props<T> & {ref?: Ref<HTMLElement>};
 // forwardRef doesn't support generic parameters, so cast the result to the correct type
 export default forwardRef(Select) as <T = object>(props: SelectProps<T>) => ReactElement;
 
-Select.displayName = "Select";
+Select.displayName = "TwMaterial.Select";

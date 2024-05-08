@@ -115,6 +115,6 @@ const ListboxSection = forwardRef<"li", ListboxSectionProps>(
   },
 );
 
-ListboxSection.displayName = "ListboxSection";
+ListboxSection.displayName = "TwMaterial.ListboxSection";
 
 export default ListboxSection;

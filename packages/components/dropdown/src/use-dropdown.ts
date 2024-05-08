@@ -1,4 +1,4 @@
-import type {DOMAttributes, DOMElement, HTMLTwM3Props, PropGetter} from "@tw-material/system";
+import type {HTMLTwM3Props, PropGetter} from "@tw-material/system";
 import type {PopoverProps} from "@tw-material/popover";
 import type {MenuTriggerType} from "@react-types/menu";
 import type {Ref} from "react";
@@ -102,7 +102,7 @@ export function useDropdown(props: UseDropdownProps) {
     }
   };
 
-  const getPopoverProps = (props = {} as DOMAttributes<DOMElement>) => ({
+  const getPopoverProps: PropGetter = (props = {}) => ({
     state,
     placement,
     ref: popoverRef,
@@ -127,13 +127,7 @@ export function useDropdown(props: UseDropdownProps) {
     const {onKeyDown, onPress, onPressStart, ...otherMenuTriggerProps} = menuTriggerProps;
 
     return {
-      ...mergeProps(
-        otherMenuTriggerProps,
-        {
-          isDisabled: props.isDisabled,
-        },
-        originalProps,
-      ),
+      ...mergeProps(otherMenuTriggerProps, {isDisabled}, originalProps),
       ref: mergeRefs(_ref, triggerRef),
     };
   };
@@ -145,8 +139,10 @@ export function useDropdown(props: UseDropdownProps) {
     return {
       ref: mergeRefs(_ref, menuRef),
       menuProps,
+      closeOnSelect,
       ...mergeProps(props, {
         onAction: () => onMenuAction(props?.closeOnSelect),
+        onClose: state.close,
       }),
     } as MenuProps;
   };
@@ -165,5 +161,4 @@ export function useDropdown(props: UseDropdownProps) {
     getMenuTriggerProps,
   };
 }
-
 export type UseDropdownReturn = ReturnType<typeof useDropdown>;

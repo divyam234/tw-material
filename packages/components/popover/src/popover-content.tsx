@@ -109,6 +109,6 @@ const PopoverContent = forwardRef<"div", PopoverContentProps>((props, _) => {
   );
 });
 
-PopoverContent.displayName = "PopoverContent";
+PopoverContent.displayName = "TwMaterial.PopoverContent";
 
 export default PopoverContent;

@@ -3,6 +3,7 @@ import type {HTMLTwM3Props} from "@tw-material/system";
 import {AnimatePresence, HTMLMotionProps, LazyMotion, domAnimation, m} from "framer-motion";
 
 import {RippleType} from "./use-ripple";
+import {FC} from "react";
 
 export interface RippleProps extends HTMLTwM3Props<"span"> {
   ripples: RippleType[];
@@ -16,7 +17,7 @@ const clamp = (value: number, min: number, max: number) => {
   return Math.min(Math.max(value, min), max);
 };
 
-const Ripple = (props: RippleProps) => {
+const Ripple: FC<RippleProps> = (props) => {
   const {ripples = [], motionProps, color = "currentColor", style, onClear} = props;
 
   return (
@@ -39,7 +40,9 @@ const Ripple = (props: RippleProps) => {
                     borderRadius: "100%",
                     transformOrigin: "center",
                     pointerEvents: "none",
-                    zIndex: 10,
+                    overflow: "hidden",
+                    inset: 0,
+                    zIndex: 0,
                     top: ripple.y,
                     left: ripple.x,
                     width: `${ripple.size}px`,
@@ -61,6 +64,6 @@ const Ripple = (props: RippleProps) => {
   );
 };
 
-Ripple.displayName = "Ripple";
+Ripple.displayName = "TwMaterial.Ripple";
 
 export default Ripple;

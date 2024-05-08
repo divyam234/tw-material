@@ -1,5 +1,20 @@
 # @tw-material/select
 
+## 1.0.10
+
+### Patch Changes
+
+- update packages
+- Updated dependencies
+  - @tw-material/scroll-shadow@1.0.1
+  - @tw-material/shared-utils@1.1.2
+  - @tw-material/use-multiselect@1.0.1
+  - @tw-material/react-utils@1.1.2
+  - @tw-material/aria-utils@1.1.2
+  - @tw-material/listbox@1.0.4
+  - @tw-material/popover@1.1.12
+  - @tw-material/spinner@1.0.2
+
 ## 1.0.9
 
 ### Patch Changes

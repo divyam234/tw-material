@@ -56,6 +56,6 @@ const Avatar = forwardRef<"span", AvatarProps>((props, ref) => {
   );
 });
 
-Avatar.displayName = "Avatar";
+Avatar.displayName = "TwMaterial.Avatar";
 
 export default Avatar;

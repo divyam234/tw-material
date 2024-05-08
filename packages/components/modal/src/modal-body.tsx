@@ -38,6 +38,6 @@ const ModalBody = forwardRef<"div", ModalBodyProps>((props, ref) => {
   );
 });
 
-ModalBody.displayName = "ModalBody";
+ModalBody.displayName = "TwMaterial.ModalBody";
 
 export default ModalBody;

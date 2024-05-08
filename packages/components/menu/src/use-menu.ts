@@ -2,7 +2,7 @@ import type {HTMLTwM3Props, PropGetter} from "@tw-material/system";
 import type {AriaMenuProps} from "@react-types/menu";
 import type {SlotsToClasses} from "@tw-material/theme";
 
-import {AriaMenuOptions, useMenu as useAriaMenu} from "@react-aria/menu";
+import {AriaMenuOptions, useAriaMenu} from "@nextui-org/use-aria-menu";
 import {TreeState, useTreeState} from "@react-stately/tree";
 import {ReactRef, filterDOMProps, useDOMRef} from "@tw-material/react-utils";
 import {ReactNode, useMemo} from "react";
@@ -82,90 +82,91 @@ export type UseMenuProps<T = object> = Props<T> &
   AriaMenuProps<T> &
   MenuVariantProps;
 
-export function useMenu<T extends object>(props: UseMenuProps<T>) {
-  const {
-    as,
-    ref,
-    children,
-    disableAnimation,
-    onAction,
-    closeOnSelect,
-    itemClasses,
-    className,
-    state: propState,
-    topContent,
-    bottomContent,
-    hideEmptyContent = false,
-    hideSelectedIcon = false,
-    emptyContent = "No items.",
-    menuProps: userMenuProps,
-    onClose,
-    classNames,
-    ...otherProps
-  } = props;
-
-  const Component = as || "ul";
-
-  const domRef = useDOMRef(ref);
-  const shouldFilterDOMProps = typeof Component === "string";
-
-  const innerState = useTreeState({...otherProps, children});
-
-  const state = propState || innerState;
-
-  const {menuProps} = useAriaMenu(otherProps, state, domRef);
-
-  const slots = useMemo(() => menu({className}), [className]);
-  const baseStyles = clsx(classNames?.base, className);
-
-  const getBaseProps: PropGetter = (props = {}) => {
-    return {
-      ref: domRef,
-      "data-slot": "base",
-      className: slots.base({class: baseStyles}),
-      ...filterDOMProps(otherProps, {
-        enabled: shouldFilterDOMProps,
-      }),
-      ...props,
+  export function useMenu<T extends object>(props: UseMenuProps<T>) {
+    const {
+      as,
+      ref,
+      children,
+      disableAnimation,
+      onAction,
+      closeOnSelect,
+      itemClasses,
+      className,
+      state: propState,
+      topContent,
+      bottomContent,
+      hideEmptyContent = false,
+      hideSelectedIcon = false,
+      emptyContent = "No items.",
+      menuProps: userMenuProps,
+      onClose,
+      classNames,
+      ...otherProps
+    } = props;
+  
+    const Component = as || "ul";
+  
+    const domRef = useDOMRef(ref);
+    const shouldFilterDOMProps = typeof Component === "string";
+  
+    const innerState = useTreeState({...otherProps, children});
+  
+    const state = propState || innerState;
+  
+    const {menuProps} = useAriaMenu(otherProps, state, domRef);
+  
+    const slots = useMemo(() => menu({className}), [className]);
+    const baseStyles = clsx(classNames?.base, className);
+  
+    const getBaseProps: PropGetter = (props = {}) => {
+      return {
+        ref: domRef,
+        "data-slot": "base",
+        className: slots.base({class: baseStyles}),
+        ...filterDOMProps(otherProps, {
+          enabled: shouldFilterDOMProps,
+        }),
+        ...props,
+      };
     };
-  };
-
-  const getListProps: PropGetter = (props = {}) => {
-    return {
-      "data-slot": "list",
-      className: slots.list({class: classNames?.list}),
-      ...userMenuProps,
-      ...menuProps,
-
-      ...props,
+  
+    const getListProps: PropGetter = (props = {}) => {
+      return {
+        "data-slot": "list",
+        className: slots.list({class: classNames?.list}),
+        ...userMenuProps,
+        ...menuProps,
+  
+        ...props,
+      };
     };
-  };
-
-  const getEmptyContentProps: PropGetter = (props = {}) => {
-    return {
-      children: emptyContent,
-      className: slots.emptyContent({class: classNames?.emptyContent}),
-      ...props,
+  
+    const getEmptyContentProps: PropGetter = (props = {}) => {
+      return {
+        children: emptyContent,
+        className: slots.emptyContent({class: classNames?.emptyContent}),
+        ...props,
+      };
     };
-  };
-
-  return {
-    Component,
-    state,
-    disableAnimation,
-    onAction,
-    onClose,
-    topContent,
-    bottomContent,
-    closeOnSelect,
-    className,
-    itemClasses,
-    getBaseProps,
-    getListProps,
-    hideEmptyContent,
-    hideSelectedIcon,
-    getEmptyContentProps,
-  };
-}
+  
+    return {
+      Component,
+      state,
+      disableAnimation,
+      onAction,
+      onClose,
+      topContent,
+      bottomContent,
+      closeOnSelect,
+      className,
+      itemClasses,
+      getBaseProps,
+      getListProps,
+      hideEmptyContent,
+      hideSelectedIcon,
+      getEmptyContentProps,
+    };
+  }
+  
 
 export type UseMenuReturn = ReturnType<typeof useMenu>;

@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/react-utils",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A set of utilities for react on client side",
   "keywords": [
     "react-utils"
@@ -36,9 +36,9 @@
     "@tw-material/shared-utils": "workspace:*"
   },
   "devDependencies": {
+    "@react-types/shared": "^3.23.0",
     "clean-package": "2.2.0",
-    "react": "^18.2.0",
-    "@react-types/shared": "^3.22.1"
+    "react": "^18.3.1"
   },
   "clean-package": "../../../clean-package.config.json"
 }

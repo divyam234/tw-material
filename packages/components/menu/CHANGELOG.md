@@ -1,5 +1,18 @@
 # @tw-material/menu
 
+## 1.1.13
+
+### Patch Changes
+
+- update packages
+- Updated dependencies
+  - @tw-material/framer-transitions@1.1.2
+  - @tw-material/shared-utils@1.1.2
+  - @tw-material/react-utils@1.1.2
+  - @tw-material/aria-utils@1.1.2
+  - @tw-material/divider@1.0.2
+  - @tw-material/button@1.1.12
+
 ## 1.1.12
 
 ### Patch Changes

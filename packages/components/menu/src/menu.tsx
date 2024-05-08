@@ -48,13 +48,7 @@ function Menu<T extends object>(props: Props<T>, ref: ForwardedRef<HTMLUListElem
         if (item.type === "section") {
           return <MenuSection key={item.key} {...itemProps} itemClasses={itemClasses} />;
         }
-        let menuItem = (
-          <MenuItem
-            key={item.key}
-            {...itemProps}
-            classNames={mergeProps(itemClasses, item.props?.classNames)}
-          />
-        );
+        let menuItem = <MenuItem key={item.key} {...itemProps} classNames={itemClasses} />;
 
         if (item.wrapper) {
           menuItem = item.wrapper(menuItem);
@@ -77,6 +71,7 @@ function Menu<T extends object>(props: Props<T>, ref: ForwardedRef<HTMLUListElem
 export type MenuProps<T = object> = Props<T> & {ref?: Ref<HTMLElement>};
 
 // forwardRef doesn't support generic parameters, so cast the result to the correct type
-export default forwardRef(Menu) as unknown as <T = object>(props: MenuProps<T>) => ReactElement;
+export default forwardRef(Menu) as <T = object>(props: MenuProps<T>) => ReactElement;
 
-Menu.displayName = "Menu";
+
+Menu.displayName = "TwMaterial.Menu";

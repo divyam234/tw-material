@@ -6,11 +6,10 @@ import {useFocusRing} from "@react-aria/focus";
 import {Node} from "@react-types/shared";
 import {filterDOMProps} from "@tw-material/react-utils";
 import {useMemo, useRef, useCallback} from "react";
-import {dataAttr, removeEvents} from "@tw-material/shared-utils";
+import {dataAttr, objectToDeps, removeEvents} from "@tw-material/shared-utils";
 import {clsx} from "clsx";
-import {useMenuItem as useAriaMenuItem} from "@react-aria/menu";
-import {chain, mergeProps} from "@react-aria/utils";
-import {useHover, usePress} from "@react-aria/interactions";
+import {useAriaMenuItem} from "@nextui-org/use-aria-menu";
+import {mergeProps} from "@react-aria/utils";
 import {useIsMobile} from "@nextui-org/use-is-mobile";
 import {menuItem} from "@tw-material/theme";
 
@@ -38,8 +37,12 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
     classNames,
     onAction,
     autoFocus,
-    onPress,
     onClick,
+    onPress,
+    onPressStart,
+    onPressUp,
+    onPressEnd,
+    onPressChange,
     hideSelectedIcon = false,
     isReadOnly = false,
     closeOnSelect,
@@ -61,21 +64,13 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
 
   const isMobile = useIsMobile();
 
-  const {pressProps, isPressed} = usePress({
-    ref: domRef,
-    isDisabled: isDisabled,
-    onPress,
-  });
-
-  const {isHovered, hoverProps} = useHover({
-    isDisabled,
-  });
-
   const {isFocusVisible, focusProps} = useFocusRing({
     autoFocus,
   });
 
   const {
+    isHovered,
+    isPressed,
     isFocused,
     isSelected,
     menuItemProps,
@@ -87,6 +82,12 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
       key,
       onClose,
       isDisabled,
+      onPress,
+      onClick,
+      onPressStart,
+      onPressUp,
+      onPressEnd,
+      onPressChange,
       "aria-label": props["aria-label"],
       closeOnSelect,
       isVirtualized,
@@ -105,7 +106,7 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
         isDisabled,
         disableAnimation,
       }),
-    [...Object.values(variantProps), isDisabled, disableAnimation],
+    [objectToDeps(variantProps), isDisabled, disableAnimation],
   );
 
   const baseStyles = clsx(classNames?.base, className);
@@ -117,12 +118,11 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
   const getItemProps: PropGetter = (props = {}) => ({
     ref: domRef,
     ...mergeProps(
-      itemProps,
-      isReadOnly ? {} : mergeProps(focusProps, pressProps),
-      hoverProps,
+      isReadOnly ? {} : focusProps,
       filterDOMProps(otherProps, {
         enabled: shouldFilterDOMProps,
       }),
+      itemProps,
       props,
     ),
     "data-focus": dataAttr(isFocused),
@@ -133,7 +133,6 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
     "data-pressed": dataAttr(isPressed),
     "data-focus-visible": dataAttr(isFocusVisible),
     className: slots.base({class: clsx(baseStyles, props.className)}),
-    onClick: chain(pressProps.onClick, onClick),
   });
 
   const getLabelProps: PropGetter = (props = {}) => ({
@@ -186,5 +185,4 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
     getSelectedIconProps,
   };
 }
-
 export type UseMenuReturn = ReturnType<typeof useMenuItem>;

@@ -70,7 +70,7 @@ function Listbox<T extends object>(props: Props<T>, ref: ForwardedRef<HTMLUListE
   );
 }
 
-Listbox.displayName = "Listbox";
+Listbox.displayName = "TwMaterial.Listbox";
 
 export type ListboxProps<T = object> = Props<T> & {ref?: Ref<HTMLElement>};
 

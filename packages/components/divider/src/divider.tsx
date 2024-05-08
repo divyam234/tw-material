@@ -10,6 +10,6 @@ const Divider = forwardRef<"div", DividerProps>((props, ref) => {
   return <Component ref={ref} {...getDividerProps()} />;
 });
 
-Divider.displayName = "Divider";
+Divider.displayName = "TwMaterial.Divider";
 
 export default Divider;

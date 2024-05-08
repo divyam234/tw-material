@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/aria-utils",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A package for managing @react-aria nextui utils.",
   "keywords": [
     "aria-utils"
@@ -34,18 +34,18 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@tw-material/system": "workspace:*",
-    "@tw-material/shared-utils": "workspace:*",
+    "@react-aria/utils": "^3.24.0",
+    "@react-stately/collections": "^3.10.6",
+    "@react-types/overlays": "^3.8.6",
+    "@react-types/shared": "^3.23.0",
     "@tw-material/react-utils": "workspace:*",
-    "@react-aria/utils": "^3.23.2",
-    "@react-stately/collections": "^3.10.5",
-    "@react-types/shared": "^3.22.1",
-    "@react-types/overlays": "^3.8.5"
+    "@tw-material/shared-utils": "workspace:*",
+    "@tw-material/system": "workspace:*"
   },
   "devDependencies": {
     "clean-package": "2.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "clean-package": "../../../clean-package.config.json"
 }

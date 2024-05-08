@@ -156,6 +156,6 @@ const Textarea = forwardRef<"textarea", TextAreaProps>(
   },
 );
 
-Textarea.displayName = "Textarea";
+Textarea.displayName = "TwMaterial.Textarea";
 
 export default Textarea;

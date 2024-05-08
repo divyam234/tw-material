@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/react",
-  "version": "1.1.17",
+  "version": "1.1.18",
   "license": "MIT",
   "main": "src/index.ts",
   "sideEffects": false,

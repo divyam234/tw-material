@@ -110,6 +110,6 @@ const FreeSoloPopover = forwardRef<"div", FreeSoloPopoverProps>((props, ref) => 
   );
 });
 
-FreeSoloPopover.displayName = "FreeSoloPopover";
+FreeSoloPopover.displayName = "TwMaterial.FreeSoloPopover";
 
 export default FreeSoloPopover;

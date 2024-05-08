@@ -18,6 +18,6 @@ const Spinner = forwardRef<"div", SpinnerProps>((props, ref) => {
   );
 });
 
-Spinner.displayName = "Spinner";
+Spinner.displayName = "TwMaterial.Spinner";
 
 export default Spinner;

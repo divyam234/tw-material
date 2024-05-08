@@ -67,4 +67,4 @@ export default forwardRef(Autocomplete) as <T = object>(
   props: AutocompleteProps<T>,
 ) => ReactElement;
 
-Autocomplete.displayName = "Autocomplete";
+Autocomplete.displayName = "TwMaterial.Autocomplete";

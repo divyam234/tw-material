@@ -48,11 +48,7 @@ const MenuItem = forwardRef<"li", MenuItemProps>((props, _) => {
 
   return (
     <Component {...getItemProps()}>
-      {startContent && (
-        <span className={slots.startContent({class: classNames?.startContent})}>
-          {startContent}
-        </span>
-      )}
+      {startContent}
       {description ? (
         <div className={slots.wrapper({class: classNames?.wrapper})}>
           <span {...getLabelProps()}>{rendered}</span>
@@ -65,13 +61,11 @@ const MenuItem = forwardRef<"li", MenuItemProps>((props, _) => {
       {isSelectable && !hideSelectedIcon && (
         <span {...getSelectedIconProps()}>{selectedContent}</span>
       )}
-      {endContent && !isSelected && (
-        <span className={slots.endContent({class: classNames?.endContent})}>{endContent}</span>
-      )}
+      {endContent}
     </Component>
   );
 });
 
-MenuItem.displayName = "MenuItem";
+MenuItem.displayName = "TwMaterial.MenuItem";
 
 export default MenuItem;

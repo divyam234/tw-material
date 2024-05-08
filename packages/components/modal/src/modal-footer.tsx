@@ -26,6 +26,6 @@ const ModalFooter = forwardRef<"footer", ModalFooterProps>((props, ref) => {
   );
 });
 
-ModalFooter.displayName = "ModalFooter";
+ModalFooter.displayName = "TwMaterial.ModalFooter";
 
 export default ModalFooter;

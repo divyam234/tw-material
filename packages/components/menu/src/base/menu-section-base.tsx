@@ -1,6 +1,7 @@
 import type {MenuSectionSlots, SlotsToClasses} from "@tw-material/theme";
 
 import {BaseSection, SectionProps} from "@tw-material/aria-utils";
+import {DividerProps} from "@tw-material/divider";
 
 import {MenuItemProps} from "../menu-item";
 
@@ -23,6 +24,10 @@ export interface MenuSectionBaseProps<T extends object = {}> extends SectionProp
    * @default false
    */
   hideSelectedIcon?: boolean;
+  /**
+   * The divider props
+   */
+  dividerProps?: DividerProps;
 }
 
 const MenuSectionBase = BaseSection as <T extends object>(

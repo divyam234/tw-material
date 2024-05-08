@@ -9,6 +9,7 @@ import {menuSection} from "@tw-material/theme";
 
 import MenuItem, {MenuItemProps} from "./menu-item";
 import {MenuSectionBaseProps} from "./base/menu-section-base";
+import { Divider } from "@tw-material/divider";
 
 export interface MenuSectionProps<T extends object = object> extends MenuSectionBaseProps {
   item: Node<T>;
@@ -43,7 +44,9 @@ const MenuSection = forwardRef<"li", MenuSectionProps>(
       closeOnSelect,
       className,
       classNames,
+      showDivider = false,
       hideSelectedIcon,
+      dividerProps = {},
       itemClasses,
       // removed title from props to avoid browsers showing a tooltip on hover
       // the title props is already inside the rendered prop
@@ -58,6 +61,7 @@ const MenuSection = forwardRef<"li", MenuSectionProps>(
     const slots = useMemo(() => menuSection(), []);
 
     const baseStyles = clsx(classNames?.base, className);
+    const dividerStyles = clsx(classNames?.divider, dividerProps?.className);
 
     const {itemProps, headingProps, groupProps} = useMenuSection({
       heading: item.rendered,
@@ -85,13 +89,13 @@ const MenuSection = forwardRef<"li", MenuSectionProps>(
           data-has-title={!!item.rendered}
           data-slot="group"
         >
-          {[...state.collection.getChildren?.(item.key)!].map((node) => {
+          {[...item.childNodes].map((node) => {
             const {key: nodeKey, props: nodeProps} = node;
 
             let menuItem = (
               <MenuItem
                 key={nodeKey}
-                classNames={mergeProps(itemClasses, nodeProps?.classNames)}
+                classNames={itemClasses}
                 closeOnSelect={closeOnSelect}
                 disableAnimation={disableAnimation}
                 hideSelectedIcon={hideSelectedIcon}
@@ -108,12 +112,20 @@ const MenuSection = forwardRef<"li", MenuSectionProps>(
 
             return menuItem;
           })}
+          {showDivider && (
+            <Divider
+              as="li"
+              className={slots.divider({
+                class: dividerStyles,
+              })}
+              {...dividerProps}
+            />
+          )}
         </ul>
       </Component>
     );
   },
 );
-
-MenuSection.displayName = "MenuSection";
+MenuSection.displayName = "TwMaterial.MenuSection";
 
 export default MenuSection;

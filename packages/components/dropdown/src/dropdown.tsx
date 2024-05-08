@@ -29,6 +29,6 @@ const Dropdown = (props: DropdownProps) => {
   );
 };
 
-Dropdown.displayName = "Dropdown";
+Dropdown.displayName = "TwMaterial.Dropdown";
 
 export default Dropdown;

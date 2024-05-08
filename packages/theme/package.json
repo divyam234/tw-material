@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/theme",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "The default theme for tw material components",
   "homepage": "https://github.com/divyam234/tw-material3",
   "license": "MIT",
@@ -31,14 +31,14 @@
   },
   "dependencies": {
     "@material/material-color-utilities": "^0.2.7",
-    "clsx": "^2.1.0",
-    "tailwind-merge": "^2.2.2",
-    "tailwind-variants": "^0.2.1",
-    "colorjs.io": "^0.5.0"
+    "clsx": "^2.1.1",
+    "colorjs.io": "^0.5.0",
+    "tailwind-merge": "^2.3.0",
+    "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
     "clean-package": "^2.2.0",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.3"
   },
   "clean-package": "./clean-package.config.json"
 }

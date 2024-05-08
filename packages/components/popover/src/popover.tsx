@@ -34,6 +34,6 @@ const Popover = forwardRef<"div", PopoverProps>((props, ref) => {
   );
 });
 
-Popover.displayName = "Popover";
+Popover.displayName = "TwMaterial.Popover";
 
 export default Popover;

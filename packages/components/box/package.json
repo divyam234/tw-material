@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/box",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "keywords": [
     "box"
   ],
@@ -34,16 +34,16 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@react-aria/interactions": "^3.21.2",
+    "@react-aria/utils": "^3.24.0",
     "@tw-material/react-utils": "workspace:^",
-    "@tw-material/shared-utils": "workspace:^",
-    "@react-aria/interactions": "^3.21.1",
-    "@react-aria/utils": "^3.23.2"
+    "@tw-material/shared-utils": "workspace:^"
   },
   "devDependencies": {
     "@tw-material/system": "workspace:^",
     "clean-package": "2.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "clean-package": "../../../clean-package.config.json"
 }

@@ -70,6 +70,6 @@ const ListboxItem = forwardRef<"li", ListboxItemProps>((props, _) => {
   );
 });
 
-ListboxItem.displayName = "ListboxItem";
+ListboxItem.displayName = "TwMaterial.ListboxItem";
 
 export default ListboxItem;

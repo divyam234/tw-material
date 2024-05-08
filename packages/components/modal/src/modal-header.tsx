@@ -38,6 +38,6 @@ const ModalHeader = forwardRef<"header", ModalHeaderProps>((props, ref) => {
   );
 });
 
-ModalHeader.displayName = "ModalHeader";
+ModalHeader.displayName = "TwMaterial.ModalHeader";
 
 export default ModalHeader;

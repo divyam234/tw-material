@@ -1,5 +1,17 @@
 # @tw-material/slider
 
+## 1.0.10
+
+### Patch Changes
+
+- update packages
+- Updated dependencies
+  - @tw-material/shared-utils@1.1.2
+  - @tw-material/react-utils@1.1.2
+  - @tw-material/tooltip@1.0.9
+  - @tw-material/ripple@1.1.4
+  - @tw-material/theme@1.1.9
+
 ## 1.0.9
 
 ### Patch Changes

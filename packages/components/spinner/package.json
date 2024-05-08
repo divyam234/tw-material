@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/spinner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Loaders express an unspecified wait time or display the length of a process.",
   "keywords": [
     "loading",
@@ -32,21 +32,21 @@
     "postpack": "clean-package restore"
   },
   "peerDependencies": {
+    "@tw-material/theme": ">=1",
     "react": ">=18",
-    "react-dom": ">=18",
-    "@tw-material/theme": ">=1"
+    "react-dom": ">=18"
   },
   "dependencies": {
-    "@tw-material/system": "workspace:*",
-    "@tw-material/shared-utils": "workspace:*",
     "@tw-material/react-utils": "workspace:*",
-    "clsx": "^2.1.0"
+    "@tw-material/shared-utils": "workspace:*",
+    "@tw-material/system": "workspace:*",
+    "clsx": "^2.1.1"
   },
   "devDependencies": {
     "@tw-material/theme": "workspace:*",
     "clean-package": "2.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "clean-package": "../../../clean-package.config.json"
 }

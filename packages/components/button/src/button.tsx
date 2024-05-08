@@ -47,6 +47,6 @@ const Button = forwardRef<"button", ButtonProps>((props, ref) => {
   );
 });
 
-Button.displayName = "Button";
+Button.displayName = "TwMaterial.Button";
 
 export default Button;

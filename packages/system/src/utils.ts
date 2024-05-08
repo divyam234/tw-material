@@ -94,3 +94,7 @@ export const mapPropsVariantsWithCommon = <
 
   return [props, variants] as const;
 };
+
+export const isTwMaterialEl = (component: React.ReactComponentElement<any>) => {
+  return !!component.type?.render?.displayName?.includes("NextUI");
+};

@@ -19,6 +19,7 @@ const Input = forwardRef<"input", InputProps>((props, ref) => {
     isOutsideLeft,
     shouldLabelBeOutside,
     errorMessage,
+    isInvalid,
     getBaseProps,
     getLabelProps,
     getInputProps,
@@ -46,7 +47,7 @@ const Input = forwardRef<"input", InputProps>((props, ref) => {
 
     return (
       <div {...getHelperWrapperProps()}>
-        {errorMessage ? (
+        {isInvalid && errorMessage ? (
           <div {...getErrorMessageProps()}>{errorMessage as any}</div>
         ) : description ? (
           <div {...getDescriptionProps()}>{description}</div>
@@ -55,6 +56,7 @@ const Input = forwardRef<"input", InputProps>((props, ref) => {
     );
   }, [
     hasHelper,
+    isInvalid,
     errorMessage,
     description,
     getHelperWrapperProps,
@@ -63,19 +65,11 @@ const Input = forwardRef<"input", InputProps>((props, ref) => {
   ]);
 
   const innerWrapper = useMemo(() => {
-    if (startContent || end) {
-      return (
-        <div {...getInnerWrapperProps()}>
-          {startContent}
-          <input {...getInputProps()} />
-          {end}
-        </div>
-      );
-    }
-
     return (
       <div {...getInnerWrapperProps()}>
+        {startContent}
         <input {...getInputProps()} />
+        {end}
       </div>
     );
   }, [startContent, end, getInputProps, getInnerWrapperProps]);
@@ -124,6 +118,6 @@ const Input = forwardRef<"input", InputProps>((props, ref) => {
   );
 });
 
-Input.displayName = "Input";
+Input.displayName = "TwMaterial.Input";
 
 export default Input;

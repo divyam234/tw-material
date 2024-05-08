@@ -27,4 +27,4 @@ export default forwardRef(DropdownMenu) as <T = object>(
   props: DropdownMenuProps<T>,
 ) => ReactElement;
 
-DropdownMenu.displayName = "DropdownMenu";
+DropdownMenu.displayName = "TwMaterial.DropdownMenu";
