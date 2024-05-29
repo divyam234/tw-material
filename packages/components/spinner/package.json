@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/spinner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Loaders express an unspecified wait time or display the length of a process.",
   "keywords": [
     "loading",

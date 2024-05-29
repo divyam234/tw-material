@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/tooltip",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A React Component for rendering dynamically positioned Tooltips",
   "keywords": [
     "tooltip"
@@ -37,27 +37,27 @@
   },
   "dependencies": {
     "@nextui-org/use-safe-layout-effect": "^2.0.5",
-    "@react-aria/focus": "^3.17.0",
-    "@react-aria/interactions": "^3.21.2",
-    "@react-aria/overlays": "^3.22.0",
-    "@react-aria/tooltip": "^3.7.3",
-    "@react-aria/utils": "^3.24.0",
-    "@react-stately/tooltip": "^3.4.8",
-    "@react-types/button": "^3.9.3",
-    "@react-types/shared": "^3.23.0",
+    "@react-aria/focus": "^3.17.1",
+    "@react-aria/interactions": "^3.21.3",
+    "@react-aria/overlays": "^3.22.1",
+    "@react-aria/tooltip": "^3.7.4",
+    "@react-aria/utils": "^3.24.1",
+    "@react-stately/tooltip": "^3.4.9",
+    "@react-types/button": "^3.9.4",
+    "@react-types/shared": "^3.23.1",
+    "@tw-material/aria-utils": "workspace:^",
     "@tw-material/framer-transitions": "workspace:^",
     "@tw-material/react-utils": "workspace:^",
     "@tw-material/ripple": "workspace:^",
     "@tw-material/shared-utils": "workspace:^",
     "@tw-material/theme": "workspace:^",
-    "@tw-material/aria-utils":"workspace:^",
     "clsx": "^2.1.1"
   },
   "devDependencies": {
     "@tw-material/button": "workspace:^",
     "@tw-material/system": "workspace:^",
     "clean-package": "2.2.0",
-    "framer-motion": "^11.1.9",
+    "framer-motion": "^11.2.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

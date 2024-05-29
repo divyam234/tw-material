@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/listbox",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A listbox displays a list of options and allows a user to select one or more of them.",
   "keywords": [
     "listbox"
@@ -37,13 +37,13 @@
   },
   "dependencies": {
     "@nextui-org/use-is-mobile": "^2.0.7",
-    "@react-aria/focus": "^3.17.0",
-    "@react-aria/interactions": "^3.21.2",
-    "@react-aria/listbox": "^3.12.0",
-    "@react-aria/utils": "^3.24.0",
-    "@react-stately/list": "^3.10.4",
-    "@react-types/menu": "^3.9.8",
-    "@react-types/shared": "^3.23.0",
+    "@react-aria/focus": "^3.17.1",
+    "@react-aria/interactions": "^3.21.3",
+    "@react-aria/listbox": "^3.12.1",
+    "@react-aria/utils": "^3.24.1",
+    "@react-stately/list": "^3.10.5",
+    "@react-types/menu": "^3.9.9",
+    "@react-types/shared": "^3.23.1",
     "@tw-material/aria-utils": "workspace:*",
     "@tw-material/divider": "workspace:*",
     "@tw-material/react-utils": "workspace:*",

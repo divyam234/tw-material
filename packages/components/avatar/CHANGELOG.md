@@ -1,5 +1,13 @@
 # @tw-material/avatar
 
+## 1.0.3
+
+### Patch Changes
+
+- added new components
+- Updated dependencies
+  - @tw-material/react-utils@1.1.3
+
 ## 1.0.2
 
 ### Patch Changes

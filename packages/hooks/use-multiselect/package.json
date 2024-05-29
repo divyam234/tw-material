@@ -1,12 +1,12 @@
 {
   "name": "@tw-material/use-multiselect",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides the behavior and accessibility implementation for a multi-select component.",
   "keywords": [
     "use-multiselect"
   ],
   "license": "MIT",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "sideEffects": false,
   "files": [
     "dist"
@@ -30,29 +30,34 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@react-aria/i18n": "^3.11.0",
-    "@react-aria/interactions": "^3.21.2",
-    "@react-aria/label": "^3.7.7",
-    "@react-aria/listbox": "^3.12.0",
-    "@react-aria/menu": "^3.14.0",
-    "@react-aria/selection": "^3.18.0",
-    "@react-aria/utils": "^3.24.0",
-    "@react-stately/list": "^3.10.4",
-    "@react-stately/menu": "^3.7.0",
-    "@react-types/button": "^3.9.3",
-    "@react-types/overlays": "^3.8.6",
-    "@react-types/select": "^3.9.3",
-    "@react-types/shared": "^3.23.0",
-    "@react-stately/form": "^3.0.2"
+    "@react-aria/i18n": "^3.11.1",
+    "@react-aria/interactions": "^3.21.3",
+    "@react-aria/label": "^3.7.8",
+    "@react-aria/listbox": "^3.12.1",
+    "@react-aria/menu": "^3.14.1",
+    "@react-aria/selection": "^3.18.1",
+    "@react-aria/utils": "^3.24.1",
+    "@react-stately/form": "^3.0.3",
+    "@react-stately/list": "^3.10.5",
+    "@react-stately/menu": "^3.7.1",
+    "@react-types/button": "^3.9.4",
+    "@react-types/overlays": "^3.8.7",
+    "@react-types/select": "^3.9.4",
+    "@react-types/shared": "^3.23.1"
   },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
   },
-  "devDependencies": {
-    "clean-package": "2.2.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "clean-package": "../../../clean-package.config.json"
+  "clean-package": "../../../clean-package.config.json",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  }
 }

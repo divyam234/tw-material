@@ -1,5 +1,12 @@
 # @tw-material/framer-transitions
 
+## 1.1.3
+
+### Patch Changes
+
+- added new components
+  - @tw-material/system@1.1.1
+
 ## 1.1.2
 
 ### Patch Changes

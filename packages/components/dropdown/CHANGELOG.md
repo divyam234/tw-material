@@ -1,5 +1,15 @@
 # @tw-material/dropdown
 
+## 1.1.15
+
+### Patch Changes
+
+- added new components
+- Updated dependencies
+  - @tw-material/react-utils@1.1.3
+  - @tw-material/popover@1.1.13
+  - @tw-material/menu@1.1.14
+
 ## 1.1.14
 
 ### Patch Changes

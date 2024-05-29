@@ -1,5 +1,13 @@
 # @tw-material/ripple
 
+## 1.1.5
+
+### Patch Changes
+
+- added new components
+- Updated dependencies
+  - @tw-material/react-utils@1.1.3
+
 ## 1.1.4
 
 ### Patch Changes

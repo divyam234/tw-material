@@ -1,5 +1,15 @@
 # @tw-material/modal
 
+## 1.1.8
+
+### Patch Changes
+
+- added new components
+- Updated dependencies
+  - @tw-material/framer-transitions@1.1.3
+  - @tw-material/react-utils@1.1.3
+  - @tw-material/aria-utils@1.1.3
+
 ## 1.1.7
 
 ### Patch Changes

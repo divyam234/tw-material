@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/menu",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "keywords": [
     "popover"
   ],
@@ -36,27 +36,27 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@nextui-org/use-aria-menu": "^2.0.3",
     "@nextui-org/use-is-mobile": "^2.0.7",
     "@nextui-org/use-safe-layout-effect": "^2.0.5",
-    "@react-aria/dialog": "^3.5.13",
-    "@react-aria/focus": "^3.17.0",
-    "@react-aria/interactions": "^3.21.2",
-    "@react-aria/overlays": "^3.22.0",
-    "@react-aria/utils": "^3.24.0",
-    "@react-stately/overlays": "^3.6.6",
-    "@react-stately/tree": "^3.8.0",
-    "@react-types/button": "^3.9.3",
-    "@react-types/menu": "^3.9.8",
-    "@react-types/overlays": "^3.8.6",
-    "@react-types/shared": "^3.23.0",
-    "@react-aria/menu": "^3.14.0",
+    "@react-aria/dialog": "^3.5.14",
+    "@react-aria/focus": "^3.17.1",
+    "@react-aria/interactions": "^3.21.3",
+    "@react-aria/menu": "^3.14.1",
+    "@react-aria/overlays": "^3.22.1",
+    "@react-aria/utils": "^3.24.1",
+    "@react-stately/overlays": "^3.6.7",
+    "@react-stately/tree": "^3.8.1",
+    "@react-types/button": "^3.9.4",
+    "@react-types/menu": "^3.9.9",
+    "@react-types/overlays": "^3.8.7",
+    "@react-types/shared": "^3.23.1",
     "@tw-material/aria-utils": "workspace:^",
     "@tw-material/button": "workspace:^",
+    "@tw-material/divider": "workspace:^",
     "@tw-material/framer-transitions": "workspace:^",
     "@tw-material/react-utils": "workspace:^",
     "@tw-material/shared-utils": "workspace:^",
-    "@tw-material/divider": "workspace:^",
-    "@nextui-org/use-aria-menu": "^2.0.2",
     "clsx": "^2.1.1"
   },
   "devDependencies": {
@@ -65,7 +65,7 @@
     "@tw-material/system": "workspace:^",
     "@tw-material/theme": "workspace:^",
     "clean-package": "2.2.0",
-    "framer-motion": "^11.1.9",
+    "framer-motion": "^11.2.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

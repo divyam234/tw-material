@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/divider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": ". A separator is a visual divider between two groups of content",
   "keywords": [
     "divider"
@@ -35,7 +35,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@react-types/shared": "^3.23.0",
+    "@react-types/shared": "^3.23.1",
     "@tw-material/react-utils": "workspace:*",
     "@tw-material/shared-utils": "workspace:*",
     "@tw-material/system": "workspace:*"

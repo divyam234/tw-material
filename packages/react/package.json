@@ -1,8 +1,8 @@
 {
   "name": "@tw-material/react",
-  "version": "1.1.18",
+  "version": "1.1.19",
   "license": "MIT",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "sideEffects": false,
   "files": [
     "dist"
@@ -44,15 +44,25 @@
     "@tw-material/divider": "workspace:*",
     "@tw-material/spinner": "workspace:*",
     "@tw-material/select": "workspace:*",
-    "@tw-material/autocomplete": "workspace:*"
+    "@tw-material/autocomplete": "workspace:*",
+    "@tw-material/chip": "workspace:*",
+    "@tw-material/checkbox": "workspace:*",
+    "@tw-material/switch": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18",
     "framer-motion": ">=4.0.0"
   },
-  "devDependencies": {
-    "clean-package": "2.2.0"
-  },
-  "clean-package": "../../clean-package.config.json"
+  "clean-package": "../../clean-package.config.json",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  }
 }

@@ -13,3 +13,6 @@ export * from "./spinner";
 export * from "./input";
 export * from "./scroll-shadow";
 export * from "./autocomplete";
+export * from "./checkbox";
+export * from "./toggle";
+export * from "./chip";

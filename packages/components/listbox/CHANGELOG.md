@@ -1,5 +1,15 @@
 # @tw-material/listbox
 
+## 1.0.5
+
+### Patch Changes
+
+- added new components
+- Updated dependencies
+  - @tw-material/react-utils@1.1.3
+  - @tw-material/aria-utils@1.1.3
+  - @tw-material/divider@1.0.3
+
 ## 1.0.4
 
 ### Patch Changes

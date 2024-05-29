@@ -1,5 +1,13 @@
 # @tw-material/input
 
+## 1.0.5
+
+### Patch Changes
+
+- added new components
+- Updated dependencies
+  - @tw-material/react-utils@1.1.3
+
 ## 1.0.4
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @tw-material/tooltip
 
+## 1.0.10
+
+### Patch Changes
+
+- added new components
+- Updated dependencies
+  - @tw-material/framer-transitions@1.1.3
+  - @tw-material/react-utils@1.1.3
+  - @tw-material/aria-utils@1.1.3
+  - @tw-material/ripple@1.1.5
+  - @tw-material/theme@1.1.10
+
 ## 1.0.9
 
 ### Patch Changes

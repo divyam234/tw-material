@@ -1,5 +1,11 @@
 # @tw-material/react-utils
 
+## 1.1.3
+
+### Patch Changes
+
+- added new components
+
 ## 1.1.2
 
 ### Patch Changes

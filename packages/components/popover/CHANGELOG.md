@@ -1,5 +1,16 @@
 # @tw-material/popover
 
+## 1.1.13
+
+### Patch Changes
+
+- added new components
+- Updated dependencies
+  - @tw-material/framer-transitions@1.1.3
+  - @tw-material/react-utils@1.1.3
+  - @tw-material/aria-utils@1.1.3
+  - @tw-material/button@1.1.13
+
 ## 1.1.12
 
 ### Patch Changes

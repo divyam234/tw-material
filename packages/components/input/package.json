@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/input",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The input component is designed for capturing user input within a text field.",
   "keywords": [
     "input"
@@ -37,18 +37,18 @@
   },
   "dependencies": {
     "@nextui-org/shared-icons": "^2.0.7",
-    "@react-aria/focus": "^3.17.0",
-    "@react-aria/interactions": "^3.21.2",
-    "@react-aria/textfield": "^3.14.4",
-    "@react-aria/utils": "^3.24.0",
-    "@react-stately/utils": "^3.10.0",
-    "@react-types/shared": "^3.23.0",
-    "@react-types/textfield": "^3.9.2",
+    "@nextui-org/use-safe-layout-effect": "^2.0.5",
+    "@react-aria/focus": "^3.17.1",
+    "@react-aria/interactions": "^3.21.3",
+    "@react-aria/textfield": "^3.14.5",
+    "@react-aria/utils": "^3.24.1",
+    "@react-stately/utils": "^3.10.1",
+    "@react-types/shared": "^3.23.1",
+    "@react-types/textfield": "^3.9.3",
     "@tw-material/react-utils": "workspace:*",
     "@tw-material/shared-utils": "workspace:*",
     "clsx": "^2.1.1",
-    "react-textarea-autosize": "^8.5.3",
-    "@nextui-org/use-safe-layout-effect": "^2.0.5"
+    "react-textarea-autosize": "^8.5.3"
   },
   "devDependencies": {
     "@tw-material/system": "workspace:*",

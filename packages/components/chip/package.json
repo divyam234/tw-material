@@ -1,0 +1,57 @@
+{
+  "name": "@tw-material/chip",
+  "version": "1.0.1",
+  "description": "Chips help people enter information, make selections, filter content, or trigger actions.",
+  "keywords": [
+    "chip"
+  ],
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyam234/tw-material3.git",
+    "directory": "packages/core/theme"
+  },
+  "bugs": {
+    "url": "https://github.com/divyam234/tw-material3/issues"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "@tw-material/system": ">=1",
+    "@tw-material/theme": ">=1",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@nextui-org/shared-icons": "^2.0.7",
+    "@react-aria/focus": "3.17.1",
+    "@react-aria/interactions": "3.21.3",
+    "@react-aria/utils": "3.24.1",
+    "@react-types/checkbox": "3.8.1",
+    "@tw-material/react-utils": "workspace:*",
+    "@tw-material/shared-utils": "workspace:*",
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@tw-material/avatar": "workspace:*",
+    "@tw-material/system": "workspace:*",
+    "@tw-material/theme": "workspace:*",
+    "clean-package": "2.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

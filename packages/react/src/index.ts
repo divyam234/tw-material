@@ -17,3 +17,6 @@ export * from "@tw-material/divider";
 export * from "@tw-material/spinner";
 export * from "@tw-material/select";
 export * from "@tw-material/autocomplete";
+export * from "@tw-material/checkbox";
+export * from "@tw-material/switch";
+export * from "@tw-material/chip";
