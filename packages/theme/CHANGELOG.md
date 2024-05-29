@@ -1,5 +1,11 @@
 # @tw-material/theme
 
+## 1.1.11
+
+### Patch Changes
+
+- added checkbox group
+
 ## 1.1.10
 
 ### Patch Changes

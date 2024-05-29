@@ -171,8 +171,54 @@ const checkbox = tv({
     lineThrough: false,
   },
 });
+/**
+ * CheckboxGroup wrapper **Tailwind Variants** component
+ *
+ * const {base, label, wrapper} = checkboxGroup({...})
+ *
+ * @example
+ * <div className={base())}>
+ *  <label className={label()}>Label</label>
+ *  <div className={wrapper()} data-orientation="vertical/horizontal">
+ *     // checkboxes
+ *  </div>
+ * </div>
+ */
+const checkboxGroup = tv({
+  slots: {
+    base: "relative flex flex-col gap-2",
+    label: "relative text-medium text-background",
+    wrapper: "flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row",
+    description: "text-small text-background",
+    errorMessage: "text-small text-error",
+  },
+  variants: {
+    isRequired: {
+      true: {
+        label: "after:content-['*'] after:text-error after:ml-0.5",
+      },
+    },
+    isInvalid: {
+      true: {
+        description: "text-error",
+      },
+    },
+    disableAnimation: {
+      true: {},
+      false: {
+        description: "transition-colors !duration-150 motion-reduce:transition-none",
+      },
+    },
+  },
+  defaultVariants: {
+    isInvalid: false,
+    isRequired: false,
+  },
+});
+
+export type CheckboxGroupSlots = keyof ReturnType<typeof checkboxGroup>
 
 export type CheckboxVariantProps = VariantProps<typeof checkbox>;
 export type CheckboxSlots = keyof ReturnType<typeof checkbox>;
 
-export {checkbox};
+export {checkbox,checkboxGroup};

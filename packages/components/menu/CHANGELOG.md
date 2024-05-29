@@ -1,5 +1,12 @@
 # @tw-material/menu
 
+## 1.1.15
+
+### Patch Changes
+
+- @tw-material/button@1.1.14
+- @tw-material/divider@1.0.3
+
 ## 1.1.14
 
 ### Patch Changes

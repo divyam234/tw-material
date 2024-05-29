@@ -11,9 +11,13 @@ import {useHover, usePress} from "@react-aria/interactions";
 import {useFocusRing} from "@react-aria/focus";
 import {mergeProps, chain} from "@react-aria/utils";
 import {dataAttr, safeAriaLabel} from "@tw-material/shared-utils";
-import {useCheckbox as useReactAriaCheckbox} from "@react-aria/checkbox";
+import {
+  useCheckbox as useReactAriaCheckbox,
+  useCheckboxGroupItem as useReactAriaCheckboxGroupItem,
+} from "@react-aria/checkbox";
 import {useSafeLayoutEffect} from "@nextui-org/use-safe-layout-effect";
 import {mergeRefs} from "@tw-material/react-utils";
+import {useCheckboxGroupContext} from "./checkbox-group-context";
 import clsx from "clsx";
 
 export type CheckboxIconProps = {
@@ -68,6 +72,10 @@ export type UseCheckboxProps = Omit<Props, "defaultChecked"> &
   CheckboxVariantProps;
 
 export function useCheckbox(props: UseCheckboxProps = {}) {
+  const groupContext = useCheckboxGroupContext();
+
+  const isInGroup = !!groupContext;
+
   const {
     as,
     ref,
@@ -79,19 +87,18 @@ export function useCheckbox(props: UseCheckboxProps = {}) {
     isReadOnly: isReadOnlyProp = false,
     autoFocus = false,
     isSelected: isSelectedProp,
-    size = "md",
-    radius = "md",
-    lineThrough = false,
-    isDisabled: isDisabledProp = false,
-    disableAnimation = false,
+    size = groupContext?.size ?? "md",
+    radius = groupContext?.radius,
+    lineThrough = groupContext?.lineThrough ?? false,
+    isDisabled: isDisabledProp = groupContext?.isDisabled ?? false,
+    disableAnimation = groupContext?.disableAnimation ?? false,
     validationState,
-    isInvalid = validationState ? (validationState === "invalid" ? true : false) : false,
+    isInvalid = validationState ? validationState === "invalid" : groupContext?.isInvalid ?? false,
     isIndeterminate = false,
-    validationBehavior = "aria",
+    validationBehavior = groupContext?.validationBehavior ?? "aria",
     defaultSelected,
     classNames,
     className,
-    onChange,
     onValueChange,
     ...otherProps
   } = props;
@@ -101,6 +108,16 @@ export function useCheckbox(props: UseCheckboxProps = {}) {
   const domRef = useRef<HTMLLabelElement>(null);
 
   const inputRef = useRef<HTMLInputElement>(null);
+
+  let onChange = props.onChange;
+
+  if (isInGroup) {
+    const dispatch = () => {
+      groupContext.groupState.resetValidation();
+    };
+
+    onChange = chain(dispatch, onChange);
+  }
 
   const labelId = useId();
 
@@ -148,7 +165,11 @@ export function useCheckbox(props: UseCheckboxProps = {}) {
     isDisabled,
     isReadOnly,
     isPressed: isPressedKeyboard,
-  } = useReactAriaCheckbox({...ariaCheckboxProps}, toggleState, inputRef);
+  } = isInGroup
+    ? // eslint-disable-next-line
+      useReactAriaCheckboxGroupItem({...ariaCheckboxProps}, groupContext.groupState, inputRef)
+    : // eslint-disable-next-line
+      useReactAriaCheckbox({...ariaCheckboxProps}, toggleState, inputRef);
 
   const isInteractionDisabled = isDisabled || isReadOnly;
 

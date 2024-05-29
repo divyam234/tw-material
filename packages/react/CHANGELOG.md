@@ -1,5 +1,32 @@
 # @tw-material/react
 
+## 1.1.20
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/checkbox@1.0.2
+  - @tw-material/theme@1.1.11
+  - @tw-material/autocomplete@1.0.5
+  - @tw-material/avatar@1.0.3
+  - @tw-material/breadcrumbs@1.1.4
+  - @tw-material/button@1.1.14
+  - @tw-material/chip@1.0.1
+  - @tw-material/divider@1.0.3
+  - @tw-material/dropdown@1.1.16
+  - @tw-material/input@1.0.5
+  - @tw-material/listbox@1.0.5
+  - @tw-material/menu@1.1.15
+  - @tw-material/modal@1.1.8
+  - @tw-material/popover@1.1.14
+  - @tw-material/ripple@1.1.5
+  - @tw-material/select@1.0.12
+  - @tw-material/slider@1.0.12
+  - @tw-material/spinner@1.0.3
+  - @tw-material/switch@1.0.1
+  - @tw-material/tooltip@1.0.11
+  - @tw-material/system@1.1.1
+
 ## 1.1.19
 
 ### Patch Changes

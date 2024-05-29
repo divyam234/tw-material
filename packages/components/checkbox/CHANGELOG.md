@@ -1,5 +1,11 @@
 # @tw-material/checkbox
 
+## 1.0.2
+
+### Patch Changes
+
+- added checkbox group
+
 ## 1.0.1
 
 ### Patch Changes

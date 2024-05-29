@@ -1,5 +1,14 @@
 # @tw-material/select
 
+## 1.0.12
+
+### Patch Changes
+
+- @tw-material/listbox@1.0.5
+- @tw-material/popover@1.1.14
+- @tw-material/scroll-shadow@1.0.2
+- @tw-material/spinner@1.0.3
+
 ## 1.0.11
 
 ### Patch Changes
