@@ -1,5 +1,14 @@
 # @tw-material/button
 
+## 1.1.15
+
+### Patch Changes
+
+- Updated dependencies
+  - @tw-material/ripple@1.1.6
+  - @tw-material/theme@1.1.12
+  - @tw-material/spinner@1.0.3
+
 ## 1.1.14
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @tw-material/switch
 
+## 1.0.2
+
+### Patch Changes
+
+- added radiobutton
+
 ## 1.0.1
 
 ### Patch Changes

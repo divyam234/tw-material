@@ -16,3 +16,4 @@ export * from "./autocomplete";
 export * from "./checkbox";
 export * from "./toggle";
 export * from "./chip";
+export * from "./radio";

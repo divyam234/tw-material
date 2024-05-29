@@ -1,6 +1,6 @@
 {
   "name": "@tw-material/modal",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "keywords": [
     "modal"
   ],
@@ -61,7 +61,7 @@
     "@tw-material/system": "workspace:^",
     "@tw-material/theme": "workspace:^",
     "clean-package": "2.2.0",
-    "framer-motion": "^11.2.8",
+    "framer-motion": "^11.2.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-lorem-component": "^0.13.0"
